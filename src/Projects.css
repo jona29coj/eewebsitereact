@@ -1,0 +1,109 @@
+.projects-page {
+  background: #f0f4fc;
+  padding: 7rem 4rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  z-index:-1
+}
+
+.projects-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.projects-subtitle {
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 16px;
+  width: 600px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image1 {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-image: url("/public/quantum.png")
+}
+.card-image2 {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-image: url("/public/mw.png")
+}
+.card-image3 {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-image: url("/public/eco.png")
+}
+.tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #7456ff;
+  color: white;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.25rem;
+  color: #1a1a1a;
+}
+
+.category {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #7456ff;
+  margin-bottom: 0.75rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.view-button {
+  background: #7456ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+ 
+}
+
+.view-button:hover {
+  background: #5a40d6;
+}

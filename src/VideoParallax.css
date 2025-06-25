@@ -1,0 +1,169 @@
+/* VideoParallax.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* Your other CSS rules */
+/* --- Main Section Styling (Mostly unchanged) --- */
+.video-parallax-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center;
+    color: white; /* Default text color for content */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds subtle shadow for readability */
+    
+    background-color: #044423c5; /* Dark solid background color */
+}
+
+.section-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #044621 ;
+   /* your texture image in public folder */
+  background-repeat: repeat; /* or 'no-repeat' depending on the texture */
+  background-size: cover; /* or 'contain' or 'auto' */
+  z-index: 0;
+}
+
+/* --- NEW: Background Text Styling --- */
+.background-text {
+    position: absolute;
+    top: 25px; /* Centr vertically */
+    left: 30px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:bold;
+    font-size: 30px; /* Large, responsive font size */
+    color: rgb(255, 255, 255); /* Very subtle, transparent white */
+    white-space: nowrap; /* Keep text on one line */
+    user-select: none; /* Prevent text selection */
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: 0; /* Ensures it's behind the desktop frame and parallax effect */
+    /* You might want a subtle text-shadow or blur for better effect */
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+
+
+.desktop-frame {
+    position: relative;
+    z-index: 1; /* Ensures it's above the background text and overlay */
+    width: 86.7vw; /* Much wider, takes up more viewport width */
+    max-width: 1400px; /* Increased max width */
+    height: 80vh; /* Set a substantial height */
+    max-height: 800px; /* Max height for larger screens */
+    margin-top: 50px;
+    background-color: white; /* The outer white border/casing */
+    border-radius: 20px; /* Slightly more rounded corners for larger size */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3%; /* This padding creates the visible white border */
+    flex-shrink: 0;
+}
+
+.desktop-screen {
+    width: 100%;
+    height: 100%;
+    background-color: black; /* The inner black screen bezel */
+    border-radius: 17px; /* Adjusted border-radius for larger screen */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Simplified: No more flex layout, just fill the screen with video */
+.desktop-screen-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* No flex properties needed here as it only contains video now */
+    /* z-index remains 1 to contain video */
+}
+
+/* --- Single Video Inside the Screen (Unchanged) --- */
+.screen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+
+
+/* Desktop (default handled above) */
+
+@media (max-width: 1200px) {
+  .desktop-frame {
+    width: 95vw;
+    height: 70vh;
+  }
+
+  .background-text {
+    font-size: 2.5rem;
+    left: 5%;
+    font-family:'Courier New', Courier, monospace
+    
+  }
+}
+
+@media (max-width: 992px) {
+  .desktop-frame {
+    height: 65vh;
+    max-height: 700px;
+  }
+
+  .background-text {
+    margin-top: 5% ;
+    font-size: 2rem;
+    left:-9%;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-frame {
+    height: 60vh;
+    border-radius: 15px;
+  }
+
+  .desktop-screen {
+    border-radius: 8px;
+  }
+
+  .background-text {
+    font-size: 1.5rem;
+    top: 10%;
+    left: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .background-text {
+    font-size: 1.2rem;
+    top: 8%;
+    left: 4%;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-text {
+    font-size: 1rem;
+    top: 6%;
+    left: 3%;
+    width: 90%;
+    text-align: left;
+    white-space: normal; /* allow wrapping if necessary */
+  }
+}

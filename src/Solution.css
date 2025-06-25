@@ -1,0 +1,106 @@
+#solutions {
+  position: relative;
+  z-index: 2;
+  background-color: #fff; /* or any other bg */
+}
+
+
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 2rem 1rem;
+  width: 410px; 
+  height:300px;          /* smaller width */
+  margin: 0 auto;             /* center within column */
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.solution-icon.is-gif {
+  object-fit: contain;
+  width: 70px;
+  height: 70px;
+}
+
+.solution-icon.is-gif {
+  object-fit: contain;
+  width: 55px;
+  height: 55px;
+}
+
+.solution-icon.is-image {
+  width: 40px;
+  height: 40px;
+  /* Optional: tweak if PNG needs special treatment */
+}
+
+.circle-icon  {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 0.1rem;
+  object-fit: contain;
+}
+
+/* Responsive text and spacing */
+.card-body h3 {
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+}
+.solution{
+  height:490px;
+}
+.focus{
+  top:2px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 550;
+  letter-spacing: 0.3px;
+}
+.text-center{
+  font-family: 'Inter', sans-serif;
+}
+.text-justify{
+  font-family: 'Inter', sans-serif;
+}
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem 1rem;
+  }
+
+  .circle-icon img.solution-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card-body h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+    text-align: left !important; /* override if needed */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

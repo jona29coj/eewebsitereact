@@ -1,0 +1,92 @@
+.impact-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: 'Inter', sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.impact-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+}
+
+.impact-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap; /* ✅ Allow wrapping for smaller screens */
+  gap: 2rem;
+}
+
+.impact-stat {
+  position: relative;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px; /* ✅ Adjusted for better flexibility */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.impact-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.impact-label {
+  font-size: 1.2rem;
+  color: #25463b;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-family:  'Inter', sans-serif;
+}
+
+
+.impact-description {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family:  'Inter', sans-serif;
+}
+
+.vertical-divider {
+  top: 0;
+  bottom: 0;
+  height: auto;
+  
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .impact-row {
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+
+  .impact-stat {
+    width: 25%;
+    padding: 0 3rem;
+  }
+
+  .vertical-divider {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 80%;
+    width: 2px;
+    background-color: #2c5b55;
+  }
+
+  .impact-stat:last-child .vertical-divider {
+    display: none;
+  }
+}

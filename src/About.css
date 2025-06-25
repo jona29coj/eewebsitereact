@@ -1,0 +1,14 @@
+.about-text p{
+  font-family: 'Inter', serif;  /* or any font you want */
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;  /* optional for readability */
+}
+
+.title{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:550;
+  font-size: 40px;
+  letter-spacing: 1px;
+  left:5px;
+}

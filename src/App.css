@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Nunito+Sans:wght@600;700&display=swap');
+
+.navbar {
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+  z-index: 9999;
+}
+.small-width-btn {
+  width: 190px;
+  text-align: center;
+}
+.small-width-btn:hover {
+  width: 190px;
+  text-align: center;
+  background-color: #28a768;
+
+}
+
+
+/* Unscrolled State (Transparent) */
+.navbar:not(.scrolled) {
+  background-color: transparent !important;
+}
+
+.navbar:not(.scrolled) .nav-link-custom {
+  color: rgb(0, 0, 0) !important;
+  font-family: 'Inter','sans-serif' !important;
+}
+
+.navbar:not(.scrolled) .nav-dropdown-custom .dropdown-toggle {
+  color: rgb(0, 0, 0) !important;
+  font-family: 'Inter','sans-serif'!important;
+}
+
+.navbar:not(.scrolled) .nav-button-custom {
+  background-color: #28a768 !important;
+  color: rgb(0, 0, 0) !important;
+  font-family: 'Inter','sans-serif' !important;
+}
+.nav-link-custom{
+  color:black;
+  font-family: 'Inter','sans-serif' !important;
+}
+.nav-dropdown-custom{
+  color:black;
+  font-family: 'Inter','sans-serif' !important;
+}
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 0.75rem 0;
+  height: 55px;
+}
+
+.navbar.scrolled .nav-link-custom {
+  color: #555 !important;
+  font-family: 'Inter','sans-serif' !important;
+}
+
+.nav-link-custom:hover{
+  background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.nav-dropdown-custom:hover{
+  background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.navbar.scrolled .nav-link-custom:hover {
+  background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.navbar.scrolled .nav-dropdown-custom:hover {
+  background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
+  text-decoration: none;
+  border-radius: 15px;
+  transition: border-radius 0.1s ease-in;
+}
+
+.navbar.scrolled .nav-dropdown-custom .dropdown-toggle {
+  color: #555 !important;
+  font-family: 'Inter','sans-serif' !important;
+}
+
+.navbar.scrolled .nav-button-custom {
+  background-color: #45d894 !important;
+  color: white !important;
+  font-family: 'Inter','sans-serif' !important;
+}
+
+/* Common Styles for Both States */
+.nav-link-custom {
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.25rem !important;
+  transition: all 0.3s ease;
+  font-family: 'Inter','sans-serif' !important;
+  
+}
+
+.nav-dropdown-custom .dropdown-menu {
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter','sans-serif';
+}
+
+.navbar:not(.scrolled) .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  font-family: 'Inter','sans-serif';
+}
+
+.navbar.scrolled .dropdown-menu {
+  background-color: white;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  font-family: 'Inter','sans-serif';
+}
+
+.dropdown-item-custom {
+  padding: 0.5rem 1.5rem;
+  transition: all 0.2s ease;
+  font-family: 'Inter','sans-serif';
+}
+
+.navbar:not(.scrolled) .dropdown-item-custom {
+  color: white !important;
+  font-family: 'Inter','sans-serif';
+}
+
+.navbar.scrolled .dropdown-item-custom {
+  color: #333 !important;
+  font-family: 'Inter','sans-serif';
+}
+
+.dropdown-item-custom:hover {
+  background-color: rgba(113, 175, 160, 0.74) !important;
+}
+
+.nav-button-custom {
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-family: 'Inter','sans-serif';
+}
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+.brand-logo, .brand-sub {
+  font-family:'Times New Roman', Times, serif !important;
+}
+
+
+.fw-bold {
+  font-family:'' !important;
+  font-weight: 700; 
+}
+.nav-link-custom, .nav-dropdown-custom{
+  font-family:'Times New Roman', Times, serif !important;
+  font-weight: 300;
+  
+}
+.nav-link-custom{
+  font-weight: 600;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.247); /* adjust opacity as needed */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section {
+  height: 104.55vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#about {
+  position: relative;
+  z-index: 3;
+  background-color: #fff !important;
+}
+
+.lead.about-text{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 20;
+}
+
+
+
+.bg-light{
+  z-index:9999;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-section > div {
+  position: relative;
+  z-index: 2;
+}
+
+/* Content Sections */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+
+.card-body p {
+  font-size: 1.2rem;  /* or 1.2rem for slightly bigger */
+  line-height: 1.7;   /* improves readability */
+}
+
+
+/* Button Styles */
+.btn-light {
+  background-color: rgba(44, 197, 182, 0.671);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  
+}
+
+.btn-light:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #2cc5b6;
+}
+
+.small-btn {
+  /* Your custom styles here */
+  font-size: 0.875rem; /* Example: make text slightly smaller */
+  min-width: 80px;     /* Example: set minimum w/* Base card and text styles remain unchanged above */
+
+/* Responsive FIXES – only scale card and font sizes down */
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .card-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-body p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .card-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-body p {
+    font-size: 0.8rem;
+  }
+}
+
+}
+
+/* If you need to target only success variant buttons with this class */
+.btn-success.small-btn {
+  /* Styles specific to success variant */
+  background-color: #0e7a5a;
+  border-color: #0e7a5a;
+}
+
+/* Hover state */
+.small-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.small-btn {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.small-btn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+/* Text Styles */
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #0000004d;
+}
+
+h2 {
+  color: #2a2a2a;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+
+
+/* Responsive */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Utility Classes */
+.z-3 {
+  z-index: 3;
+}
+
+@keyframes fadeText {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+}
+
+.changing-word::after {
+  content: 'Offices';
+  animation: fadeText 8s infinite;
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 4px;
+}
+
+@keyframes changeText {
+  0%   { content: 'Offices'; }
+  25%  { content: 'Hotels'; }
+  50%  { content: 'Residencies'; }
+  75%  { content: 'Utilities'; }
+  100% { content: 'Offices'; }
+}
+
+/* This overrides the animation to cycle words */
+.changing-word::after {
+  animation: changeText 8s infinite, fadeText 8s infinite;
+}
+.brand-logo {
+  min-width: 150px;
+  min-height: 40px;
+}
+
+.logo-dark {
+  height:60px;
+  width: 60px;
+  
+}
+
+.logo-light{
+  height:80px;
+  width: 110px;
+  
+}
+@media (max-width: 768px) {
+  .logo-light {
+    height: 35px;
+  }
+  .logo-dark {
+    height: 40px;
+  }
+}
+.mb-3{
+  height:80px;
+  width:105px;
+}
+.elements-footer{
+  background-color:#114944;
+  
+}
+.elements-footer h5,
+.elements-footer p,
+.elements-footer a,
+.elements-footer li {
+  color: white !important;
+}
+
+.mb-0{
+  color:white;
+}
+.d-flex:hover {
+  animation-play-state: paused;
+}
+*::selection {
+  background: none;
+}
+*::-moz-selection {
+  background: none;
+}
+.logo-dark, .logo-light {
+  
+  position: absolute;
+  margin-top: -17px;
+  
+}
+
+.logo-light {
+  opacity: 1;
+}
+
+.scrolled .logo-light {
+  opacity: 0;
+}
+
+.logo-dark {
+  opacity: 0;
+}
+
+.scrolled .logo-dark {
+  opacity: 1;
+}
+.scroll-track {
+  display: flex;
+  overflow: hidden;
+  animation: scroll-left 8s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.circle-icon {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: white;
+  border: 2px solid #eaeaea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.circle-icon img {
+  width: 55px;
+  height: 55px;
+}
+.cardpartner{
+  width: 1500px;
+}
+.py-5{
+  height: 600px;
+  
+}
+#solutions .carousel {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  top: unset !important;              /* Cancel out Bootstrap’s 50% top */
+  transform: none !important;         /* Cancel vertical centering */
+  bottom: 140px !important;            /* 🔥 This will now work */
+  position: absolute !;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+
+.custom-arrow {
+  background-color:#15e03794!important;
+  pointer-events: auto !important;
+  z-index: 9999;
+}
+
+
+.card * {
+  pointer-events: auto;
+}
+
+.partners-section {
+  background-color: #114944;
+}
+.partners-section{
+  height: 300px;
+  background-color: #fff;
+}
