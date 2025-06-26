@@ -107,3 +107,56 @@
 .view-button:hover {
   background: #5a40d6;
 }
+/* ---------- Responsive Styles ---------- */
+
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 4rem 1.5rem;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card-image1,
+  .card-image2,
+  .card-image3 {
+    height: 200px;
+  }
+
+  .card-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-content p {
+    font-size: 0.95rem;
+  }
+
+  .view-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 1.8rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .projects-page {
+    padding: 3rem 1rem;
+  }
+}

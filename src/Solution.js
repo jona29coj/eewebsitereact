@@ -22,7 +22,7 @@ const Solutions = () => {
               
                 <div
                   className="card h-100 position-relative"
-                  style={{ paddingTop: '50px' }}
+                  style={{ paddingTop: '50px',}}
                   onMouseEnter={() => setHovered('monitor')}
                   onMouseLeave={() => setHovered(null)}
                 >

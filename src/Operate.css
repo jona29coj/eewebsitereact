@@ -582,6 +582,54 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 768px) {
+  .heroop-right {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .heroop-left {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .info-card {
+    padding: 2rem 1.5rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%; /* Ensure it fills the available space */
+  }
+
+  .info-title {
+    font-size: 1.4rem; /* Slightly bigger */
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .info-description {
+    font-size: 1.05rem; /* Slightly bigger */
+    text-align: center;
+    margin-top: 0.75rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .info-link {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1.25rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .heroop-section {
@@ -589,15 +637,7 @@
   }
 
   .benefits-section {
-    padding: 70px 0;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .section-description {
-    font-size: 1rem;
+    padding: 80px 0;
   }
 
   .card-title {
@@ -608,82 +648,118 @@
     font-size: 0.9rem;
   }
 
-  .info-card, .feature-card {
+  .info-card,
+  .feature-card {
     padding: 24px;
+    
   }
 
   .cta-button {
     padding: 12px 28px;
     font-size: 1rem;
   }
+
   .container {
     padding: 0 16px;
   }
-  
+
   .nav-buttons {
     gap: 16px;
     padding: 16px 0;
   }
-  
+
   .nav-button {
     padding: 10px 20px;
     font-size: 13px;
   }
-  
+
   .hero-section {
     padding: 60px 0;
   }
-  
+
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .hero-content {
     margin-bottom: 60px;
   }
-  
-  
-  
+
+  /* EMS Section Adjustments */
+  .steps-container {
+    display: none; /* ✅ Hide Monitor, Control, Optimize steps */
+  }
+
+  .heroop-left {
+    width: 100%; /* ✅ Make the left card full width */
+  }
+
+  .info-card {
+    padding: 32px;
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+  }
+
+  .info-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .info-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #374151;
+  }
+
+  .info-link {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
   .step-card {
     padding: 24px;
     flex-direction: column;
     text-align: center;
     gap: 20px;
   }
-  
+
   .step-header {
     justify-content: center;
   }
-  
-  .benefits-section {
-    padding: 80px 0;
-  }
-  
+
   .benefit-group {
     margin-bottom: 80px;
   }
-  
+
   .benefit-header {
     margin-bottom: 40px;
   }
-  
+
   .cards-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  
-  
+
   .features-section {
     padding: 80px 0;
   }
-  
+
   .features-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 32px;
     margin-bottom: 60px;
   }
 }
+
 
 @media (max-width: 480px) {
   .nav-buttons {

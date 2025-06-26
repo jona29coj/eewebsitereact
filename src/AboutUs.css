@@ -64,7 +64,7 @@
   margin-right: 8px;
 }
 .company-content{
-    width: 1500;
+    width: 100%;
 }
 .content-sheets {
   position: relative;
@@ -460,4 +460,80 @@
 
 .submit-button:hover {
   background-color: #005f3e;
+}
+/* ---------- ADDITIONAL RESPONSIVENESS FIXES ---------- */
+
+/* Make sure content sections don't overflow on small screens */
+@media (max-width: 768px) {
+  .about-us-container {
+    padding: 15px;
+  }
+
+  .content-section,
+  .company-content {
+    width: 100% !important;
+  }
+
+  .section-layout,
+  .section-layout.reverse {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-image-container,
+  .section-content {
+    width: 100% !important;
+    flex: unset !important;
+  }
+
+  .section-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .section-tabs {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tab {
+    justify-content: center;
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+}
+
+/* Handle very small screens like iPhone SE */
+@media (max-width: 400px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .page-title {
+    font-size: 1.7rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
 }

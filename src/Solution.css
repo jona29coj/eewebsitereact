@@ -13,9 +13,9 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   padding: 2rem 1rem;
-  width: 410px; 
-  height:300px;          /* smaller width */
-  margin: 0 auto;             /* center within column */
+  max-width: 370px; /* max width on large screens */
+  height: auto;      /* smaller width */
+              /* center within column */
 }
 
 
@@ -57,8 +57,12 @@
 .card-body p {
   font-size: 0.95rem;
 }
-.solution{
-  height:490px;
+.solution {
+  min-height: 70vh;         /* Still gives a tall section on large screens */
+  padding: 3rem 1rem;        /* Add some breathing room */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .focus{
   top:2px;
@@ -104,3 +108,16 @@
     max-width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .solution {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .solution {
+    padding: 1.5rem 1rem;
+  }
+}
+

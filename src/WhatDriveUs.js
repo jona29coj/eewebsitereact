@@ -18,7 +18,6 @@ const WhatDrivesUs = () => {
 
   return (
     <section className="what-drives-section">
-      <div className="parallax-bg-text" ref={parallaxRef}></div>
 
       <div className="what-drives-container">
         <div className="heading-column">
@@ -26,7 +25,7 @@ const WhatDrivesUs = () => {
           <h2 className="heading-line">Drives<br /></h2>
           <h2 className="heading-line">Us<br /></h2>
         </div>
-        <div className="firsttext-column">
+        <div className="firsttext-column ">
           <p>
             Environmental changes are no longer distant threats — they are present-day risks
             impacting businesses, communities, and ecosystems alike. From rising energy demands to

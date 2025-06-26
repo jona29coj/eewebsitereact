@@ -12,3 +12,8 @@
   letter-spacing: 1px;
   left:5px;
 }
+@media (max-width: 576px) {
+  .responsive-img-wrapper {
+    display: none;
+  }
+}

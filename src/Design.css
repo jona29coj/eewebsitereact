@@ -765,3 +765,64 @@ body {
   line-height: 1.6;
   color: #4B5563;
 }
+/* ===========================
+   Responsive: Hero + Design Sections
+   =========================== */
+
+/* Hero Section */
+@media (max-width: 768px) {
+  .hero-sectionbuild {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .herobuild-title {
+    font-size: 2.25rem;
+  }
+
+  .herobuild-description {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .transformation-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .arrow-container {
+    transform: rotate(90deg);
+  }
+}
+
+/* Design Section */
+@media (max-width: 768px) {
+  .design-title {
+    font-size: 1.75rem;
+  }
+
+  .design-description {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .strategies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-card {
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .feature-list,
+  .additional-features,
+  .active-systems {
+    grid-template-columns: 1fr !important;
+  }
+
+  .appliances-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

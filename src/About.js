@@ -52,13 +52,14 @@ const About = () => {
           </div>
 
           {/* Left: Image */}
-          <div className="col-md-6 text-center mb-4 mb-md-0">
+          <div className="col-md-6 text-center mb-4 mb-md-0 responsive-img-wrapper">
             <img
               src="/introimage.png"
               alt="Elements Energy Logo"
               data-aos="zoom-in"
               data-aos-duration="800"
-              style={{ maxWidth: '1050px', height: 'auto' }}
+             style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
+             className="img-fluid"
             />
           </div>
 

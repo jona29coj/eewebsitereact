@@ -70,3 +70,8 @@
   text-align:left;
   padding: 0.1rem;
 }
+@media (max-width: 576px) {
+  .spotlight-text {
+    display: none;
+  }
+}

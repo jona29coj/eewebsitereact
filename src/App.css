@@ -174,6 +174,54 @@
 .nav-link-custom{
   font-weight: 600;
 }
+
+/* Base styles */
+.empoweringtext {
+  font-size: 43px;
+  font-family: 'Times New Roman', serif;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding-left: 1rem; /* Optional for spacing instead of hard-coded &nbsp; */
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .empoweringtext {
+    font-size: 15vh;
+    padding-left: 0.5rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .empoweringtext {
+    font-size: 24px;
+    padding-left: 0.25rem;
+  }
+}
+.Typingtext {
+  
+  font-size: 43px;
+  
+}
+
+@media (max-width: 768px) {
+  .Typingtext {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Typingtext {
+    font-size: 24px;
+  }
+}
+
+
+
 .hero-section::before {
   content: '';
   position: absolute;
@@ -238,9 +286,9 @@ section {
 
 /* Button Styles */
 .btn-light {
-  background-color: rgba(44, 197, 182, 0.671);
+  
   color: white;
-  border: none;
+
   transition: all 0.3s ease;
   
 }
@@ -254,41 +302,7 @@ section {
   /* Your custom styles here */
   font-size: 0.875rem; /* Example: make text slightly smaller */
   min-width: 80px;     /* Example: set minimum w/* Base card and text styles remain unchanged above */
-
-/* Responsive FIXES – only scale card and font sizes down */
-@media (max-width: 768px) {
-  .card {
-    padding: 1rem;
-    border-radius: 15px;
-  }
-
-  .card-body h3 {
-    font-size: 1.2rem;
-  }
-
-  .card-body p {
-    font-size: 0.85rem;
-  }
 }
-
-@media (max-width: 576px) {
-  .card {
-    padding: 1rem;
-    border-radius: 12px;
-  }
-
-  .card-body h3 {
-    font-size: 1.2rem;
-  }
-
-  .card-body p {
-    font-size: 0.8rem;
-  }
-}
-
-}
-
-/* If you need to target only success variant buttons with this class */
 .btn-success.small-btn {
   /* Styles specific to success variant */
   background-color: #0e7a5a;
@@ -309,36 +323,15 @@ section {
   transform: scale(0.95);
   opacity: 0.8;
 }
-
-/* Text Styles */
-
-h1 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px #0000004d;
+.btna {
+  display: inline-block;
+  text-align: center;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
-h2 {
-  color: #2a2a2a;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-
-
-/* Responsive */
-@media (min-width: 768px) {
-  h1 {
-    font-size: 3.5rem;
-  }
-  
-  section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-}
 
 /* Utility Classes */
 .z-3 {
@@ -386,14 +379,7 @@ h2 {
   width: 110px;
   
 }
-@media (max-width: 768px) {
-  .logo-light {
-    height: 35px;
-  }
-  .logo-dark {
-    height: 40px;
-  }
-}
+
 .mb-3{
   height:80px;
   width:105px;
@@ -479,9 +465,12 @@ h2 {
   width: 55px;
   height: 55px;
 }
-.cardpartner{
-  width: 1500px;
+.cardpartner {
+  width: 100%;
+  max-width: 1140px; /* or 1000px or whatever matches other sections */
+  margin: 0 auto;
 }
+
 .py-5{
   height: 600px;
   
@@ -530,4 +519,112 @@ h2 {
 .partners-section{
   height: 300px;
   background-color: #fff;
+}
+/* === Responsive Enhancements === */
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .card-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-body p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+ 
+  .navbar:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+    backdrop-filter: blur(8px); /* blur effect */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
+
+
+  .card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .card-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-body p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Centering on small screens */
+@media (max-width: 768px) {
+  .btna {
+    display: block;
+    margin: 1rem auto 0 auto; /* centers the button */
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+    width: 160px; /* smaller width */
+  }
+
+  .small-width-btn {
+    width: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btna {
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+    width: 140px;
+  }
+
+  .small-width-btn {
+    width: 140px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+    backdrop-filter: blur(8px); /* blur effect */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
+
+
+  .navbar {
+    padding: 0.25rem 0.5rem !important;
+    min-height: 40px !important;
+  }
+
+  .navbar-brand {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .logo-light,
+  .logo-dark {
+    height: 25px !important;
+    width: auto !important;
+    margin-top: 0 !important;
+  }
+
+  .nav-link-custom,
+  .nav-dropdown-custom {
+    font-size: 0.75rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+
+  .nav-button-custom {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.6rem !important;
+  }
+
+  .navbar-toggler {
+    padding: 0.2rem 0.4rem !important;
+    font-size: 0.8rem !important;
+  }
 }
