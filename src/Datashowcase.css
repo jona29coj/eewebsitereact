@@ -50,3 +50,36 @@
 }
 
 /* 🔁 Responsive Adjustments */
+/* Swiper Carousel Styles */
+.swiper-container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+  transition: background 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+}
+
+/* Hide desktop stack layout on mobile */
+@media (max-width: 768px) {
+  .images-stack {
+    display: none;
+  }
+}
+

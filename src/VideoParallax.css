@@ -151,12 +151,13 @@
 
 /* Default styles (desktop/laptop) */
 .background-text {
-  font-size: 1.5rem;
-  top: 10%;
-  left: 5%;
   position: absolute;
+  top: 6%;
+  left: 2%;
+  font-size: 1.7rem;
   width: auto;
-  white-space: nowrap; /* default: no wrapping */
+  white-space: nowrap; /* prevent wrapping by default */
+  text-align: left;
 }
 
 /* Medium-small screens (≤600px) */
@@ -164,8 +165,7 @@
   .background-text {
     font-size: 1.2rem;
     top: 8%;
-    left: 4%;
-    white-space: nowrap;
+    left: 2%;
   }
 }
 
@@ -173,13 +173,14 @@
 @media (max-width: 480px) {
   .background-text {
     font-size: 1rem;
-    top: 7%;
-    left: 3%;
+    top: 6%;
+    left: 2%;
     width: 90%;
-    text-align: left;
-    white-space: normal; /* allow wrapping on very small screens */
+    white-space: normal; /* allow wrapping */
   }
 }
+
+/* Small screens (phones ≤480px) */
 
 @media (max-width: 768px) {
   .video-parallax-section {
