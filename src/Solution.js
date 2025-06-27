@@ -85,7 +85,7 @@ const Solutions = () => {
                     
                     <img
                       className={`solution-icon ${hovered === 'optimize' ? 'is-gif' : 'is-image'}`}
-                      src={hovered === 'optimize' ? '/optimize-hover.gif' : '/optimize.png'}
+                      src={hovered === 'optimize' ? '/optimize-hover.gif' : '/Optimize.png'}
                       alt="Optimize Icon"
                     />
                   </div>

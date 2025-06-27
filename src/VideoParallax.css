@@ -149,24 +149,38 @@
   }
 }
 
+/* Default styles (desktop/laptop) */
+.background-text {
+  font-size: 1.5rem;
+  top: 10%;
+  left: 5%;
+  position: absolute;
+  width: auto;
+  white-space: nowrap; /* default: no wrapping */
+}
+
+/* Medium-small screens (≤600px) */
 @media (max-width: 600px) {
   .background-text {
     font-size: 1.2rem;
     top: 8%;
     left: 4%;
+    white-space: nowrap;
   }
 }
 
+/* Small screens (phones ≤480px) */
 @media (max-width: 480px) {
   .background-text {
     font-size: 1rem;
-    top: 6%;
+    top: 7%;
     left: 3%;
     width: 90%;
     text-align: left;
-    white-space: normal; /* allow wrapping if necessary */
+    white-space: normal; /* allow wrapping on very small screens */
   }
 }
+
 @media (max-width: 768px) {
   .video-parallax-section {
     min-height: auto;
