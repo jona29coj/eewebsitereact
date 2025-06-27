@@ -25,13 +25,11 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
   const [blink, setBlink] = useState(true);
-  
 
   useEffect(() => {
     const blinkInterval = setInterval(() => setBlink(b => !b), 500);
     return () => clearInterval(blinkInterval);
   }, []);
-
 
   useEffect(() => {
     let timeout;
@@ -78,7 +76,6 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
           display: 'inline-block',
           whiteSpace: 'pre',
           textAlign: 'left',
-          
         }}
       >
         {paddedText
@@ -106,11 +103,24 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // ✅ Sync activePage with URL hash
+  useEffect(() => {
+    const syncWithHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      setActivePage(hash || 'home');
+    };
+
+    syncWithHash(); // Run on initial mount
+
+    window.addEventListener('hashchange', syncWithHash);
+    return () => window.removeEventListener('hashchange', syncWithHash);
+  }, []);
+
   return (
     <>
       <Navbar expand="lg" fixed="top" className={`py-3 ${scrolled ? 'scrolled' : ''}`}>
         <Container>
-          <Navbar.Brand href="#home" className="brand-logo">
+          <Navbar.Brand href="#home" onClick={() => setActivePage('home')} className="brand-logo">
             <img
               src={scrolled ? './logo-light.png' : './logo-dark.png'}
               alt=""
@@ -125,18 +135,18 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto align-items-center">
-              <Nav.Link href="#Home" onClick={() => setActivePage('home')} className="nav-link-custom">Home</Nav.Link>
-              <Nav.Link href="#AboutUs" onClick={() => setActivePage('AboutUs')} className="nav-link-custom">About Us</Nav.Link>
+              <Nav.Link href="#home" className="nav-link-custom">Home</Nav.Link>
+              <Nav.Link href="#AboutUs" className="nav-link-custom">About Us</Nav.Link>
 
               <NavDropdown title="Solutions" id="solutions-dropdown" className="nav-dropdown-custom">
-                <NavDropdown.Item href="#design" onClick={() => setActivePage('Design')} className="dropdown-item-custom">Design</NavDropdown.Item>
-                <NavDropdown.Item href="#build" onClick={() => setActivePage('Build')} className="dropdown-item-custom">Build</NavDropdown.Item>
-                <NavDropdown.Item href="#operate" onClick={() => setActivePage('operate')} className="dropdown-item-custom">Operate</NavDropdown.Item>
+                <NavDropdown.Item href="#Design" className="dropdown-item-custom">Design</NavDropdown.Item>
+                <NavDropdown.Item href="#Build" className="dropdown-item-custom">Build</NavDropdown.Item>
+                <NavDropdown.Item href="#operate" className="dropdown-item-custom">Operate</NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Link href="#projects" onClick={() => setActivePage('Projects')} className="nav-link-custom">Projects</Nav.Link>
-              <Nav.Link href="#contact" onClick={() => setActivePage('Contact')} className="nav-link-custom">Contact</Nav.Link>
-              <Button href="#login" onClick={() => setActivePage('Login')} variant="success" className="ms-2 px-2 py-1 small-btn">Login</Button>
+              <Nav.Link href="#Projects" className="nav-link-custom">Projects</Nav.Link>
+              <Nav.Link href="#Contact" className="nav-link-custom">Contact</Nav.Link>
+              <Button href="#Login" variant="success" className="ms-2 px-2 py-1 small-btn">Login</Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -160,7 +170,6 @@ function App() {
                 }}>
                   Sustainable Energy Solutions
                 </div>
-
                 <div style={{ margin: '0rem 0' }} className='typewords'>
                   <Typewriter
                     texts={['Hotels', 'Residencies', 'Utilities', 'Industries']}
@@ -168,7 +177,6 @@ function App() {
                     pause={1000}
                   />
                 </div>
-
                 <div style={{
                   fontSize: 'clamp(1.2rem, 4vw, 2rem)',
                   fontWeight: 600,
@@ -179,7 +187,7 @@ function App() {
                 </div>
               </h1>
 
-              <a href="#about" className="btn btn-light mt-4 px-4 py-2 fw-semibold">Explore More</a>
+              <a href="#AboutUs" className="btn btn-light mt-4 px-4 py-2 fw-semibold">Explore More</a>
             </div>
           </section>
 
@@ -211,9 +219,9 @@ function App() {
               <img src="/logo-white.png" alt="Elements Energy Logo" height="40" className="mb-3" />
               <h5>Quick Links</h5>
               <ul className="list-unstyled">
-                <li className="mb-2"><a href="#about" className="text-white text-decoration-none">About Us</a></li>
-                <li className="mb-2"><a href="#solutions" className="text-white text-decoration-none">Solutions</a></li>
-                <li className="mb-2"><a href="#projects" className="text-white text-decoration-none">Projects</a></li>
+                <li className="mb-2"><a href="#AboutUs" className="text-white text-decoration-none">About Us</a></li>
+                <li className="mb-2"><a href="#Design" className="text-white text-decoration-none">Solutions</a></li>
+                <li className="mb-2"><a href="#Projects" className="text-white text-decoration-none">Projects</a></li>
               </ul>
             </div>
             <div className="col-md-4 mb-4">

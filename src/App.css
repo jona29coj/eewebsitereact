@@ -194,7 +194,16 @@
     padding-left: 0.5rem;
   }
 }
+@media (max-width: 768px) {
+  .empoweringtext {
+    font-size: 4vh;
+    padding-left: 0.5rem;
+  }
 
+  .Typingtext {
+    font-size: 28px;
+  }
+}
 /* Small screens (phones) */
 @media (max-width: 480px) {
   .empoweringtext {

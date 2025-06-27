@@ -25,11 +25,7 @@
   top: 55px;
   width: 100%;
   left:495px;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0); /* semi-transparent */
-  backdrop-filter: blur(2px); /* actual blur */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  
+  z-index: 999;  
   transition: top 0.3s ease;
   display: flex;
   justify-content: flex-end;

@@ -103,14 +103,14 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 48px;
+  margin-bottom: 25px;
 }
 
 .contact-method {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  padding: 24px;
+  padding: 5px;
   background: #f8fafc;
   border-radius: 16px;
   border: 1px solid #e2e8f0;
@@ -125,14 +125,33 @@
 }
 
 .method-icon {
-  width: 56px;
-  height: 56px;
+  width: 53px;
+  height: 53px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   flex-shrink: 0;
+}
+.map-redirect-button {
+  margin-top: 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.map-redirect-button:hover {
+  background-color: #2563eb;
 }
 
 .email-icon {

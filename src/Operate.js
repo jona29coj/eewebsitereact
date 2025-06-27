@@ -14,6 +14,7 @@ import {
   Building2,
 } from 'lucide-react';
 import './Operate.css';
+import DataShowcase from './Datashowcase';
 
 
 function Operate() {
@@ -163,6 +164,7 @@ function Operate() {
           </div>
         </div>
       </section>
+      <DataShowcase/>
 
       <section id="benefits" className="benefits-section">
         <div className="container">

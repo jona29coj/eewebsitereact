@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
 import './Contact.css';
+
+// Fix for default marker icon issue in Leaflet + React
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+});
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -27,12 +41,7 @@ function Contact() {
 
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({
-        name: '',
-        contact: '',
-        email: '',
-        message: ''
-      });
+      setFormData({ name: '', contact: '', email: '', message: '' });
     }, 3000);
   };
 
@@ -126,60 +135,24 @@ function Contact() {
                 <form className="contact-form" onSubmit={handleSubmit}>
                   <div className="form-group">
                     <label htmlFor="name" className="form-label">Full Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="form-input"
-                      placeholder="Enter your full name"
-                      required
-                    />
+                    <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} className="form-input" placeholder="Enter your full name" required />
                   </div>
 
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="contact" className="form-label">Contact Number</label>
-                      <input
-                        type="tel"
-                        id="contact"
-                        name="contact"
-                        value={formData.contact}
-                        onChange={handleInputChange}
-                        className="form-input"
-                        placeholder="+91 XXXXX XXXXX"
-                        required
-                      />
+                      <input type="tel" id="contact" name="contact" value={formData.contact} onChange={handleInputChange} className="form-input" placeholder="+91 XXXXX XXXXX" required />
                     </div>
 
                     <div className="form-group">
                       <label htmlFor="email" className="form-label">Email Address</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        className="form-input"
-                        placeholder="your.email@example.com"
-                        required
-                      />
+                      <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className="form-input" placeholder="your.email@example.com" required />
                     </div>
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="message" className="form-label">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      className="form-textarea"
-                      placeholder="Tell us about your energy management needs..."
-                      rows={6}
-                      required
-                    ></textarea>
+                    <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} className="form-textarea" placeholder="Tell us about your energy management needs..." rows={6} required></textarea>
                   </div>
 
                   <button type="submit" className="submit-button">
@@ -191,9 +164,7 @@ function Contact() {
                 <div className="success-message">
                   <div className="success-icon"><CheckCircle /></div>
                   <h3 className="success-title">Message Sent Successfully!</h3>
-                  <p className="success-description">
-                    Thank you for reaching out. We'll get back to you within 24 hours.
-                  </p>
+                  <p className="success-description">Thank you for reaching out. We'll get back to you within 24 hours.</p>
                 </div>
               )}
             </div>
@@ -210,25 +181,41 @@ function Contact() {
               Located at the prestigious IITM Research Park in Chennai
             </p>
           </div>
-          <div className="map-container">
-            <div className="map-placeholder">
-              <div className="map-content">
-                <MapPin className="map-icon" />
-                <h3>IITM Research Park</h3>
-                <p>E-301, Tharamani, Chennai - 600113</p>
-                <a
-                  href="https://www.google.com/maps?q=12.9915,80.2478"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="directions-button">Get Directions</button>
-                </a>
-              </div>
-            </div>
-          </div>
 
+          <div className="map-container">
+            {/* Map with marker */}
+            <MapContainer
+              center={[12.992094754411658, 80.24367697935722]}
+              zoom={17}
+              style={{ height: '400px', width: '100%', borderRadius: '20px' }}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={[12.992094754411658, 80.24367697935722]}>
+                <Popup>
+                  E-301, IITM Research Park<br />Tharamani, Chennai - 600113
+                </Popup>
+              </Marker>
+            </MapContainer>
+
+            {/* Button below map */}
+            <button
+              className="map-redirect-button"
+              onClick={() =>
+                window.open(
+                  'https://www.google.com/maps/search/?api=1&query=12.992094754411658,80.24367697935722',
+                  '_blank'
+                )
+              }
+            >
+              Open in Google Maps
+            </button>
+          </div>
         </div>
       </section>
+
     </div>
   );
 }
