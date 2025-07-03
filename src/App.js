@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container, Button, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import './App.css';
 
 import Partners from './Partner';
@@ -19,7 +19,9 @@ import Project2 from './Project2';
 import Project3 from './Project3';
 import Project4 from './Project4';
 import Login from './Login';
-
+import CompanySection from './CompanySection';
+import TeamSection from './TeamSection';
+import CareerSection from './CareerSection';
 function Typewriter({ texts, speed = 100, pause = 2000 }) {
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -57,10 +59,10 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
     <div className='texttype'
       style={{
         display: 'flex',
-        fontSize: '43px',
-        justifyContent: 'center',
+        fontSize: '2rem',
+        justifyContent: 'left',
         fontWeight: '600',
-        fontFamily: 'Times New Roman, serif',
+        fontFamily:'Poppins, sans-serif',
         color: '#fff',
         gap: '1rem',
         minWidth: '12ch',
@@ -71,7 +73,8 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
       </span>
       <span className='Typingtext'
         style={{
-          fontFamily: 'Times New Roman, serif',
+          fontFamily:'Poppins, sans-serif',
+          fontSize: '2rem',
           minWidth: '12ch',
           display: 'inline-block',
           whiteSpace: 'pre',
@@ -90,8 +93,12 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
 }
 
 function App() {
+  const [showAssessmentForm, setShowAssessmentForm] = useState(false);
+
   const [scrolled, setScrolled] = useState(false);
   const [activePage, setActivePage] = useState('home');
+  const [showAboutMega, setShowAboutMega] = useState(false);
+  const [showMega, setShowMega] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -103,22 +110,30 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ✅ Sync activePage with URL hash
   useEffect(() => {
     const syncWithHash = () => {
       const hash = window.location.hash.replace('#', '');
       setActivePage(hash || 'home');
     };
 
-    syncWithHash(); // Run on initial mount
-
+    syncWithHash();
     window.addEventListener('hashchange', syncWithHash);
     return () => window.removeEventListener('hashchange', syncWithHash);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.target.closest('.megamenu')) {
+        setShowMega(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
   return (
     <>
-      <Navbar expand="lg" fixed="top" className={`py-3 ${scrolled ? 'scrolled' : ''}`}>
+      <Navbar expand="lg" collapseOnSelect fixed="top" className={`py-3 ${scrolled ? 'scrolled' : ''}`}>
         <Container>
           <Navbar.Brand href="#home" onClick={() => setActivePage('home')} className="brand-logo">
             <img
@@ -136,13 +151,104 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto align-items-center">
               <Nav.Link href="#home" className="nav-link-custom">Home</Nav.Link>
-              <Nav.Link href="#AboutUs" className="nav-link-custom">About Us</Nav.Link>
+              <div className="nav-item dropdown megamenu position-relative">
+                <span
+                  className="nav-link-custom dropdown-toggle"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setShowAboutMega((prev) => {
+                      if (!prev) setShowMega(false); // Close Solutions if About is opening
+                      return !prev;
+                    });
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
+                  About Us
+                </span>
+                {showAboutMega && (
+                  <div
+                    className="megamenu-content position-absolute p-3 bg-white shadow rounded"
+                    style={{
+                      top: '140%',
+                      left: -200,
+                      zIndex: 1000,
+                      width: '600px',
+                      padding: '2rem 2rem',
+                      fontFamily: 'Inter, sans-serif',
+                      fontWeight: 400,
+                      display: 'flex',             // ✅ Make it a flex container
+                      flexDirection: 'row',        // ✅ Arrange items in a row
+                      justifyContent: 'space-around',
+                      alignItems: 'center',
+                      gap: '3rem',   
+                      fontSize: '0.95rem'               // ✅ Optional spacing
+                    }}
+                  >
+                  
+                    <div className="text-start">
+                      <a href="#CompanySection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Company</a>
+                      <p className="text-muted mb-0">Smart building layouts and passive energy strategies.</p>
+                    </div>
+                    <div className="text-start">
+                      <a href="#TeamSection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Team</a>
+                      <p className="text-muted mb-0">Efficient construction with integrated energy systems.</p>
+                    </div>
+                    <div className="text-start">
+                      <a href="#CareerSection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Career</a>
+                      <p className="text-muted mb-0">Manage and monitor usage with intelligent analytics.</p>
+                    </div>
+                  </div>
+                )}
+              </div>
 
-              <NavDropdown title="Solutions" id="solutions-dropdown" className="nav-dropdown-custom">
-                <NavDropdown.Item href="#Design" className="dropdown-item-custom">Design</NavDropdown.Item>
-                <NavDropdown.Item href="#Build" className="dropdown-item-custom">Build</NavDropdown.Item>
-                <NavDropdown.Item href="#operate" className="dropdown-item-custom">Operate</NavDropdown.Item>
-              </NavDropdown>
+              <div className="nav-item dropdown megamenu position-relative">
+                <span
+                  className="nav-link-custom dropdown-toggle"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setShowMega((prev) => {
+                      if (!prev) setShowAboutMega(false); // Close About if Solutions is opening
+                      return !prev;
+                    });
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
+                  Solutions
+                </span>
+                {showMega && (
+                  <div
+                    className="megamenu-content position-absolute p-3 bg-white shadow rounded"
+                    style={{
+                      top: '140%',
+                      left: -200,
+                      zIndex: 1000,
+                      width: '600px',
+                      padding: '2rem 2rem',
+                      fontFamily: 'Inter, sans-serif',
+                      display: 'flex',             
+                      flexDirection: 'row',        
+                      justifyContent: 'space-around',
+                      alignItems: 'center',
+                      gap: '3rem',   
+                      fontSize: '0.95rem'               
+                    }}
+                  >
+                  
+                    <div className="text-start">
+                      <a href="#Design" className="d-block fw-semibold text-dark text-decoration-none mb-1">Design</a>
+                      <p className="text-muted mb-0">Smart building layouts and passive energy strategies.</p>
+                    </div>
+                    <div className="text-start">
+                      <a href="#Build" className="d-block fw-semibold text-dark text-decoration-none mb-1">Build</a>
+                      <p className="text-muted mb-0">Efficient construction with integrated energy systems.</p>
+                    </div>
+                    <div className="text-start">
+                      <a href="#operate" className="d-block fw-semibold text-dark text-decoration-none mb-1">Operate</a>
+                      <p className="text-muted mb-0">Manage and monitor usage with intelligent analytics.</p>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               <Nav.Link href="#Projects" className="nav-link-custom">Projects</Nav.Link>
               <Nav.Link href="#Contact" className="nav-link-custom">Contact</Nav.Link>
@@ -160,34 +266,90 @@ function App() {
               Your browser does not support the video tag.
             </video>
             <div className="overlay" />
-            <div className="z-3 hero-text-container">
+            <div className="z-3 hero-text-container" style={{ paddingRight:'50vw', paddingTop: '45vh' }}>
               <h1 className="fw-bold" style={{ lineHeight: 1.2 }}>
                 <div style={{
-                  fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
-                  fontFamily: 'Times New Roman, serif',
+                  fontSize: '2rem',
+                  fontFamily:'Poppins, sans-serif',
                   color: '#fff',
-                  textAlign: 'center'
+                  textAlign: 'left',
+                  paddingLeft: ' 5.9vw'
                 }}>
                   Sustainable Energy Solutions
                 </div>
-                <div style={{ margin: '0rem 0' }} className='typewords'>
+                <div
+                  style={{
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '2rem',
+                    color: '#fff',
+                  }}
+                  className="typewords"
+                >
                   <Typewriter
                     texts={['Hotels', 'Residencies', 'Utilities', 'Industries']}
                     speed={70}
                     pause={1000}
+                    
                   />
                 </div>
                 <div style={{
-                  fontSize: 'clamp(1.2rem, 4vw, 2rem)',
+                  fontSize: '2rem',
                   fontWeight: 600,
-                  fontFamily: 'Times New Roman, serif',
-                  color: '#fff'
+                  fontFamily:'Poppins, sans-serif',
+                  color: '#fff',
+                  paddingRight: '0vw',
                 }}>
-                  For a Greener Tomorrow
+                 
+                For a Greener Tomorrow
                 </div>
               </h1>
+              <br/>
+              <button
+                className="btn-light mt-0 px-4 py-2 text-decoration-none"
+                style={{ marginLeft: '-100px' }}
+                onClick={() => setShowAssessmentForm(true)}
+              >
+                Book a Free Energy Assessment
+              </button>
 
-              <a href="#AboutUs" className="btn btn-light mt-4 px-4 py-2 fw-semibold">Explore More</a>
+              {showAssessmentForm && (
+                <div className="form-overlay">
+                  <div className="form-popup">
+                    <button className="close-button" onClick={() => setShowAssessmentForm(false)}>×</button>
+
+                    <form className="cta-form">
+                      <div className="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your full name" required />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Contact Number</label>
+                        <input type="tel" placeholder="Your contact number" required />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Your email address" required />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Subject of message" />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Upload Resume (PDF only)</label>
+                        <input type="file" accept=".pdf" required />
+                      </div>
+
+                      <button type="submit" className="submit-button">Submit Application</button>
+                    </form>
+                  </div>
+                </div>
+              )}
+
+
             </div>
           </section>
 
@@ -198,6 +360,7 @@ function App() {
           <section className="section impact-section"><ImpactStats /></section>
           <section className="section spotlight-section"><Spotlight /></section>
           <section className="section partners-section"><Partners /></section>
+          
         </>
       )}
 
@@ -211,12 +374,20 @@ function App() {
       {activePage === 'Project3' && <Project3 />}
       {activePage === 'Project4' && <Project4 />}
       {activePage === 'Login' && <Login />}
+      {activePage === 'CompanySection' && <CompanySection />}
+      {activePage === 'TeamSection' && <TeamSection />}
+      {activePage === 'CareerSection' && <CareerSection />}
 
-      <footer className="elements-footer py-2">
+      <footer className="elements-footer py-2 tight-footer">
         <Container>
-          <div className="row">
-            <div className="col-md-4 mb-4">
+          <div className="row justify-content-between align-items-start">
+            {/* Logo column with just the logo */}
+            <div className="col-md-auto mb-4 d-flex align-items-start">
               <img src="/logo-white.png" alt="Elements Energy Logo" height="40" className="mb-3" />
+            </div>
+
+            {/* Quick Links */}
+            <div className="col-md mb-4">
               <h5>Quick Links</h5>
               <ul className="list-unstyled">
                 <li className="mb-2"><a href="#AboutUs" className="text-white text-decoration-none">About Us</a></li>
@@ -224,7 +395,9 @@ function App() {
                 <li className="mb-2"><a href="#Projects" className="text-white text-decoration-none">Projects</a></li>
               </ul>
             </div>
-            <div className="col-md-4 mb-4">
+
+            {/* Contact */}
+            <div className="col-md mb-4">
               <h5>Contact Us</h5>
               <ul className="list-unstyled">
                 <li className="mb-2"><a href="tel:+919916585292" className="text-white text-decoration-none">+91 99165 85292</a></li>
@@ -239,7 +412,9 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="col-md-4 mb-4">
+
+            {/* Social Links */}
+            <div className="col-md mb-4">
               <h5>Follow Us</h5>
               <div className="d-flex gap-3 mt-3">
                 <a href="https://in.linkedin.com/company/elements.energies">
@@ -253,6 +428,7 @@ function App() {
           </div>
         </Container>
       </footer>
+
     </>
   );
 }

@@ -1,16 +1,21 @@
 .impact-section {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 0.8rem 2rem;
   font-family: 'Inter', sans-serif;
   max-width: 1400px;
   margin: 0 auto;
 }
+.impact-subtitle{
+  color: black;
+  font-family:'Inter', sans-serif;
+  font-size: 1rem;
+}
 
 .impact-heading {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 600;
-  margin-bottom: 3rem;
-  font-family: 'Times New Roman', Times, serif;
+ 
+  font-family:'Poppins', sans-serif;
   letter-spacing: 1px;
 }
 
@@ -40,7 +45,7 @@
 
 .impact-label {
   font-size: 1.2rem;
-  color: #25463b;
+  color: #048d22;
   margin-top: 0.5rem;
   font-weight: bold;
   font-family:  'Inter', sans-serif;
@@ -56,11 +61,24 @@
   text-justify: inter-word;
   font-family:  'Inter', sans-serif;
 }
-
+.impact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* So the dividers grow to match height */
+}
+.impact-stat .vertical-divider {
+  
+  position: absolute;
+  right: -1px; /* Position it to the right of the stat box */
+  top: 0;
+  height: auto;
+  background-color: #727272; /* Divider color */
+}
 .vertical-divider {
   top: 0;
   bottom: 0;
   height: auto;
+  
   
 }
 

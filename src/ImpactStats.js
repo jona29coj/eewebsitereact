@@ -39,7 +39,21 @@ const ImpactStats = () => {
 
   return (
     <section className="impact-section" ref={ref}>
-      <h3 className="impact-heading">Impact</h3>
+      <h3 className="impact-heading"> Our Impact</h3>
+      <div className="impact-section text-white">  
+        <p className="impact-subtitle text-center">
+          Real change. Real numbers. Real sustainability.
+        </p>
+
+        <p className="impact-description text-center">
+          At Elements Energy, impact isn't an afterthought — it's at the core of everything we do.
+          From slashing energy bills to cutting carbon emissions, we help organizations turn their
+          sustainability goals into tangible results. Backed by intelligent design and real-time data,
+          our solutions are driving meaningful change across campuses, industries, and communities —
+          proving that technology can be both smart and sustainable.
+        </p>
+      </div>
+
       <div className="impact-row">
         {stats.map((stat, index) => (
           <div key={index} className="impact-stat">

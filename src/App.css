@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Nunito+Sans:wght@600;700&display=swap');
 
-.navbar {
-  transition: all 0.3s ease;
-  padding: 1rem 0;
-  z-index: 9999;
-}
 .small-width-btn {
   width: 190px;
   text-align: center;
@@ -15,11 +10,112 @@
   background-color: #28a768;
 
 }
+/* === Custom Mega Dropdown === */
+.navbar-nav .megamenu {
+  position: relative;
+  list-style: none;
+}
+
+.navbar-nav .megamenu .dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar-nav .megamenu .dropdown-toggle:hover {
+  color: #00ffae;
+}
+.megamenu-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.megamenu-content.show {
+  display: block;
+}
+
+.megamenu a:hover {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.megamenu {
+  position: relative;
+}
+
+
+
+.megamenu:hover .megamenu-content {
+  display: block;
+}
+
+.megamenu-content .col-md-4 {
+  padding: 0 1rem;
+}
+
+.menu-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.menu-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.megamenu-content a.stretched-link {
+  display: inline-block;
+  font-weight: 500;
+  color: #0a8f61;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.megamenu-content a.stretched-link:hover {
+  color: #00c28b;
+}
+
+/* Ensure dropdown works on smaller screens */
+@media (max-width: 991px) {
+  .megamenu-content {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    min-width: auto;
+    border-radius: 0;
+    padding: 1rem;
+  }
+
+  .navbar-nav .megamenu:hover .megamenu-content {
+    display: block;
+  }
+
+  .megamenu-content .row {
+    flex-direction: column;
+  }
+
+  .megamenu-content .col-md-4 {
+    padding: 0.75rem 0;
+  }
+}
 
 
 /* Unscrolled State (Transparent) */
 .navbar:not(.scrolled) {
   background-color: transparent !important;
+  font-family: 'Inter, sans-serif'
 }
 
 .navbar:not(.scrolled) .nav-link-custom {
@@ -27,7 +123,7 @@
   font-family: 'Inter','sans-serif' !important;
 }
 
-.navbar:not(.scrolled) .nav-dropdown-custom .dropdown-toggle {
+.navbar:not(.scrolled) {
   color: rgb(0, 0, 0) !important;
   font-family: 'Inter','sans-serif'!important;
 }
@@ -41,10 +137,7 @@
   color:black;
   font-family: 'Inter','sans-serif' !important;
 }
-.nav-dropdown-custom{
-  color:black;
-  font-family: 'Inter','sans-serif' !important;
-}
+
 .navbar.scrolled {
   background-color: white !important;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -63,11 +156,6 @@
   border-radius: 10px;
 }
 
-.nav-dropdown-custom:hover{
-  background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
-  text-decoration: none;
-  border-radius: 15px;
-}
 
 .navbar.scrolled .nav-link-custom:hover {
   background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
@@ -75,14 +163,14 @@
   border-radius: 15px;
 }
 
-.navbar.scrolled .nav-dropdown-custom:hover {
+.navbar.scrolled  {
   background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
   text-decoration: none;
-  border-radius: 15px;
+  
   transition: border-radius 0.1s ease-in;
 }
 
-.navbar.scrolled .nav-dropdown-custom .dropdown-toggle {
+.navbar.scrolled {
   color: #555 !important;
   font-family: 'Inter','sans-serif' !important;
 }
@@ -103,43 +191,6 @@
   
 }
 
-.nav-dropdown-custom .dropdown-menu {
-  border: none;
-  border-radius: 8px;
-  font-family: 'Inter','sans-serif';
-}
-
-.navbar:not(.scrolled) .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.9);
-  font-family: 'Inter','sans-serif';
-}
-
-.navbar.scrolled .dropdown-menu {
-  background-color: white;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-  font-family: 'Inter','sans-serif';
-}
-
-.dropdown-item-custom {
-  padding: 0.5rem 1.5rem;
-  transition: all 0.2s ease;
-  font-family: 'Inter','sans-serif';
-}
-
-.navbar:not(.scrolled) .dropdown-item-custom {
-  color: white !important;
-  font-family: 'Inter','sans-serif';
-}
-
-.navbar.scrolled .dropdown-item-custom {
-  color: #333 !important;
-  font-family: 'Inter','sans-serif';
-}
-
-.dropdown-item-custom:hover {
-  background-color: rgba(113, 175, 160, 0.74) !important;
-}
-
 .nav-button-custom {
   font-size: 0.8rem;
   transition: all 0.3s ease;
@@ -156,9 +207,12 @@
   z-index: -1;
 }
 
-
+.typewords{
+  font-size: '2rem';
+  font-family: 'Poppins', sans-serif !important;
+}
 .brand-logo, .brand-sub {
-  font-family:'Times New Roman', Times, serif !important;
+  font-family: 'Inter, sans-serif' !important;
 }
 
 
@@ -167,7 +221,7 @@
   font-weight: 700; 
 }
 .nav-link-custom, .nav-dropdown-custom{
-  font-family:'Times New Roman', Times, serif !important;
+  font-family: 'Inter, sans-serif' !important;
   font-weight: 300;
   
 }
@@ -177,8 +231,8 @@
 
 /* Base styles */
 .empoweringtext {
-  font-size: 43px;
-  font-family: 'Times New Roman', serif;
+  font-size: 2rem ;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   white-space: nowrap;
   color: #fff;
@@ -249,6 +303,8 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  font-family: 'Poppins', sans-serif;
+
 }
 #about {
   position: relative;
@@ -257,7 +313,7 @@
 }
 
 .lead.about-text{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 100;
   font-size: 20;
 }
@@ -266,6 +322,8 @@
 
 .bg-light{
   z-index:9999;
+  
+  
 }
 
 .overlay {
@@ -297,6 +355,12 @@ section {
 .btn-light {
   
   color: white;
+  background-color: rgba(21, 212, 107, 0.9);
+
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
 
   transition: all 0.3s ease;
   
@@ -310,7 +374,9 @@ section {
 .small-btn {
   /* Your custom styles here */
   font-size: 0.875rem; /* Example: make text slightly smaller */
-  min-width: 80px;     /* Example: set minimum w/* Base card and text styles remain unchanged above */
+  min-width: 80px; 
+   
+     /* Example: set minimum w/* Base card and text styles remain unchanged above */
 }
 .btn-success.small-btn {
   /* Styles specific to success variant */
@@ -326,20 +392,14 @@ section {
 
 .small-btn {
   transition: transform 0.2s ease, opacity 0.2s ease;
+  
 }
 
 .small-btn:active {
   transform: scale(0.95);
   opacity: 0.8;
 }
-.btna {
-  display: inline-block;
-  text-align: center;
-  padding: 0.6rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
+
 
 
 /* Utility Classes */
@@ -397,6 +457,40 @@ section {
   background-color:#114944;
   
 }
+.tight-footer .row {
+  margin-left: 0;
+  margin-right: 0;
+  gap: 0rem; /* tighter spacing between columns */
+}
+
+.tight-footer .col-md {
+  padding-left: 5rem;
+  padding-right: 0rem;
+}
+
+.elements-footer {
+  background-color: #033825; /* dark green or black as per your theme */
+  color: white;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+/* Optional: Make links & text spacing a bit tighter */
+.elements-footer h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.elements-footer p,
+.elements-footer li,
+.elements-footer a {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 .elements-footer h5,
 .elements-footer p,
 .elements-footer a,
@@ -482,6 +576,7 @@ section {
 
 .py-5{
   height: 600px;
+  
   
 }
 #solutions .carousel {
@@ -595,45 +690,148 @@ section {
     width: 140px;
   }
 }
-@media (max-width: 768px) {
-  .navbar:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
-    backdrop-filter: blur(8px); /* blur effect */
-    -webkit-backdrop-filter: blur(8px); /* Safari support */
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-  }
-
-
+@media (max-width: 576px) {
   .navbar {
-    padding: 0.25rem 0.5rem !important;
-    min-height: 40px !important;
+    padding: 0.6rem 1rem !important;
+    background-color: white !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    height:70px;
   }
 
-  .navbar-brand {
-    margin: 0 !important;
-    padding: 0 !important;
+  .navbar-collapse {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0rem;
+    width: 100%;
+    
   }
 
-  .logo-light,
-  .logo-dark {
-    height: 25px !important;
-    width: auto !important;
-    margin-top: 0 !important;
+  .navbar-custom {
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+  background-color: white;
+  height: 64px; /* default height */
+}
+
+  .navbar-custom.scrolled {
+  padding: 1.5rem 2rem; /* more space inside */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 65px; /* increased height when scrolled */
   }
 
   .nav-link-custom,
   .nav-dropdown-custom {
-    font-size: 0.75rem !important;
-    padding: 0.2rem 0.4rem !important;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    width: 100%;
   }
 
-  .nav-button-custom {
-    font-size: 0.7rem !important;
-    padding: 0.2rem 0.6rem !important;
+  .nav-button-custom,
+  .small-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.6rem;
+    background-color: #28a768 !important;
+    color: white !important;
+    text-align: center;
+    border-radius: 4px;
   }
 
   .navbar-toggler {
-    padding: 0.2rem 0.4rem !important;
-    font-size: 0.8rem !important;
+  font-size: 1.4rem;              /* Inner spacing */
+  margin-top: -28px ;       /* Align right and lower slightly */
+  line-height: 1;
+  vertical-align: middle;
+  background-color: transparent;
+  border: none;
+}
+
+  .dropdown-menu {
+    background-color: #fff;
+    width: 100%;
+    border: none;
+    margin-top: 0.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   }
+
+  .dropdown-item-custom {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    color: #333 !important;
+  }
+
+  .dropdown-item-custom:hover {
+    background-color: #e9f5ee !important;
+  }
+
+  .brand-logo img {
+    height: 36px !important;
+    width: auto !important;
+  }
+
+  .hero-section {
+    margin-top: 70px; /* Prevents navbar from overlapping content */
+  }
+}
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.form-popup {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.cta-form .form-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.cta-form .form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #00aa88;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+
+  border-radius: 5px;
+  cursor: pointer;
 }

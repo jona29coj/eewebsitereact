@@ -26,6 +26,7 @@
   width: 100%;
   left:495px;
   z-index: 999;  
+  
   transition: top 0.3s ease;
   display: flex;
   justify-content: flex-end;
@@ -50,7 +51,7 @@
   border: none;
   font-size: 1rem;
   font-weight: 500;
-  color: #222;
+  color: #53eead;
   cursor: pointer;
   position: relative;
   padding: 0;

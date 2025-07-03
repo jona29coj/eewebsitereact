@@ -33,7 +33,7 @@ function Build() {
             <div className="stat-label">Energy Reduction</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">4+</div>
+            <div className="stat-number">5+</div>
             <div className="stat-label">Green Projects</div>
           </div>
           <div className="stat-item">

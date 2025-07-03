@@ -6,60 +6,84 @@ import './About.css';
 
 const About = () => {
   useEffect(() => {
-    AOS.init({ once: true });
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-cubic', // smoother float-like easing
+      once: true,
+      offset: 120,              // triggers a bit later in scroll
+    });
   }, []);
 
   return (
-    <section id="about" className="py-5 bg-light" style={{ backgroundColor: '#fff' }}>
+    <section id="about" className="section-large-padding bg-light" style={{ backgroundColor: '#fff'  }}>
       <Container>
         <div className="row align-items-center justify-content-center">
 
-          {/* Right: Text */}
+          {/* Text Section */}
           <div className="col-md-6 text-md-start text-center">
             <h2
-              className="mb-4 title"
-              data-aos="fade-up"
-              data-aos-duration="800"
+              className="mb-4 title" 
+              
             >
-              Designing Energy,
-              <br /> Driving Change
+              Elements Energy: The Sustainability OS,
+              for Future-ready Buildings
             </h2>
 
-            <div className="about-text" data-aos="fade-up" data-aos-delay="750">
-              <p className="lead">
-                At <strong>Elements Energy</strong>, we believe that a sustainable tomorrow starts with smart
-                innovation today, and we are dedicated to driving that transformation forward.
+            <div
+              className="about-text"
+              
+            >
+              <p className="lead"style={{ fontSize: '0.9em' }}>
+                At <strong>Elements Energy</strong>, we are reimagining sustainability from the ground up. Not
+                just energy — but air, water, carbon, and everything in between. We are a
+                full-stack sustainability platform that helps organizations design smarter spaces,
+                operate greener systems, and meet their climate goals — without the complexity.
               </p>
-              <p>
-                Backed by the IIT Madras Incubation Cell, we are pushing the boundaries of clean energy
-                advancements. Our mission is to make clean energy more accessible and efficient by empowering
-                businesses to transition toward low-carbon operations seamlessly.
+              <p style={{ fontSize: '0.9rem' }}>
+               As a climate-tech startup incubated at IIT Madras, our solutions are rooted in
+                deep tech and real-world performance. Much of our platform has been developed
+                and tested within the IIT Madras Research Park, India’s leading innovation
+                ecosystem for clean energy.
+              </p>
+              <p style={{ fontSize: '0.9rem' }}>
+               Our platform brings together intelligent design, real-time monitoring, AI-powered
+                optimization, and ESG compliance into one seamless ecosystem. Whether you're
+                retrofitting a building or managing a multi-campus operation, we make
+                sustainability measurable, manageable, and meaningful.
               </p>
             </div>
 
-            <p className="mt-3 last" data-aos="fade-up" data-aos-delay="600">
-              Join us in driving the shift to a cleaner, greener future — powered by tech, guided by purpose.
+            <p
+              className="mt-3 last"
+              style={{ fontSize: '0.9rem' }}
+            >
+              Join us in shaping infrastructure that works better — for business, for people, and
+for the Earth.
             </p>
 
             <a
-              href="#about"
-              className="btna btn-primary mt-3 small-width-btn"
-              data-aos="fade-up"
-              data-aos-delay="600"
+              href="#AboutUs"
+              className="btn-primary mt-3 small-width-btn text-decoration-none"
+              style={{
+                borderRadius: '6px',    // less rounded
+                width: 'fit-content' ,
+                height:'40px'   // makes it longer but not full-width
+              }}
             >
-              Learn More
+              Request a Demo
             </a>
           </div>
 
-          {/* Left: Image */}
-          <div className="col-md-6 text-center mb-4 mb-md-0 responsive-img-wrapper">
+          {/* Image Section */}
+          <div
+            className="col-md-6 text-center mb-4 mb-md-0 responsive-img-wrapper"
+            
+          >
             <img
               src="/introimage.png"
               alt="Elements Energy Logo"
-              data-aos="zoom-in"
-              data-aos-duration="800"
-             style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
-             className="img-fluid"
+              style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
+              className="img-fluid"
             />
           </div>
 

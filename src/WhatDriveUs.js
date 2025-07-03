@@ -21,27 +21,36 @@ const WhatDrivesUs = () => {
 
       <div className="what-drives-container">
         <div className="heading-column">
-          <h2 className="heading-line">What<br /></h2>
-          <h2 className="heading-line">Drives<br /></h2>
-          <h2 className="heading-line">Us<br /></h2>
+          
         </div>
         <div className="firsttext-column ">
+          <h2 className="text-center heading-gradient">What Drives Us<br /></h2>
           <p>
-            Environmental changes are no longer distant threats — they are present-day risks
-            impacting businesses, communities, and ecosystems alike. From rising energy demands to
-            climate volatility, the challenges we face are urgent, interconnected, and complex.
+            Climate change is no longer a distant concern — it's a present, accelerating crisis
+            that touches every building, business, and community. From energy shortages to
+            air quality declines, from water stress to rising emissions, the risks we face are
+            urgent, systemic, and deeply interconnected.<br/>
+            At Elements Energy, we see these challenges not as roadblocks — but as a call
+            to build smarter.<br/>
+            We exist because the built environment accounts for over 40% of global
+            emissions — and yet most buildings remain blind to how they consume
+            resources. We believe that every structure, whether new or existing, can be
+            transformed into a living, learning, low-carbon system.<br/>
+
+            That’s why we’ve built a sustainability operating system — born out of
+            research, tested in the real world at <strong>IIT Madras Research Park</strong>, and refined with
+            every building we touch. Our mission is to turn environmental risks into drivers of
+            resilience and growth — through smart technology, climate-conscious design,
+            and data-driven insight.<br/>
+            We’re not just responding to the climate crisis.
+            We’re designing the infrastructure of a cleaner, more cost-effective, and
+            future-ready world.<br/><br/>
+            
+
+            
           </p>
-          <p>
-            At Elements Energies, we're driven by the belief that every challenge holds the
-            potential for transformation. We exist to turn environmental risks into opportunities
-            for smarter, more sustainable growth. Through data-driven insights, innovative design,
-            and reliable operations, we help organizations build solutions that are not only
-            resilient — but responsible.
-          </p>
-          <p>
-            We're not just responding to change. We're designing the systems that shape a cleaner,
-            more cost-effective, and climate-ready future.
-          </p>
+        
+        
         </div>
       </div>
     </section>

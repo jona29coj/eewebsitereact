@@ -14,7 +14,7 @@
     color: white; /* Default text color for content */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds subtle shadow for readability */
     
-    background-color: #044423c5; /* Dark solid background color */
+    background: linear-gradient(135deg, #a0d3ff 5%, #5c95ce 20%, #003366 40%, #000814 70%);
 }
 
 .section-background-overlay {
@@ -23,7 +23,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #044621 ;
+  background: linear-gradient(135deg, #a0d3ff 5%, #5c95ce 10%, #003366 30%, #000814 70%);
    /* your texture image in public folder */
   background-repeat: repeat; /* or 'no-repeat' depending on the texture */
   background-size: cover; /* or 'contain' or 'auto' */
@@ -31,36 +31,18 @@
 }
 
 /* --- NEW: Background Text Styling --- */
-.background-text {
-    position: absolute;
-    top: 25px; /* Centr vertically */
-    left: 30px;
-    word-spacing: 3px;
-    letter-spacing: 1px;
-    font-family:'Times New Roman', Times, serif;
-    font-weight:bold;
-    font-size: 30px; /* Large, responsive font size */
-    color: rgb(255, 255, 255); /* Very subtle, transparent white */
-    white-space: nowrap; /* Keep text on one line */
-    user-select: none; /* Prevent text selection */
-    pointer-events: none; /* Allow clicks to pass through */
-    z-index: 0; /* Ensures it's behind the desktop frame and parallax effect */
-    /* You might want a subtle text-shadow or blur for better effect */
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
 
 
 
 .desktop-frame {
-    position: relative;
+    margin-left: 50px;
     z-index: 1; /* Ensures it's above the background text and overlay */
-    width: 86.7vw; /* Much wider, takes up more viewport width */
-    max-width: 1400px; /* Increased max width */
+    width: 76.7vw; /* Much wider, takes up more viewport width */
+    max-width: 1200px; /* Increased max width */
     height: 80vh; /* Set a substantial height */
     max-height: 800px; /* Max height for larger screens */
-    margin-top: 50px;
-    background-color: white; /* The outer white border/casing */
+    margin-top: 3px;
+    background-color: rgb(133, 128, 128); /* The outer white border/casing */
     border-radius: 20px; /* Slightly more rounded corners for larger size */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Deeper shadow */
     display: flex;
@@ -97,19 +79,110 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     
     
 }
+.background-text {
+  padding: 2rem;
+  line-height: 1.7;
+  white-space: normal; /* allow wrapping */
+  z-index: 2;
+  position: relative;
+  max-width: 900px;
+}
+.text-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.main-heading {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family:'Poppins', sans-serif;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+
+.bullet-points {
+  text-align: left;
+  font-size: 1rem;
+  
+  line-height: 1.05;
+  padding-right: 5rem;
+}
+
+.bullet-points ul {
+  padding-left: 0rem;
+  
+}
+
+.bullet-points li {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .desktop-frame {
+    width: 90vw;
+    height: 70vh;
+    margin-left: -60px;
+    border-radius: 16px;
+  }
+
+  .desktop-screen {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-frame {
+    width: 95vw;
+    height: 60vh;
+    margin-left: 0; /* No negative margin on smaller screens */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .desktop-screen {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .desktop-frame {
+    width: 90vw;
+    height: 30vh;
+    margin-top: 30px;
+    margin-left: 0;
+    border-radius: 10px;
+    padding: 0.2%;
+  }
+
+  .desktop-screen {
+    border-radius: 8px;
+  }
+
+  .screen-video {
+    object-fit: cover; /* Better for filling on small screens */
+  }
+}
+
 
 
 /* Desktop (default handled above) */
 
 @media (max-width: 1200px) {
-  .desktop-frame {
-    width: 95vw;
-    height: 50vh;
-  }
+  
 
   .background-text {
     font-size: 2.5rem;
@@ -120,11 +193,7 @@
 }
 
 @media (max-width: 992px) {
-  .desktop-frame {
-    height: 65vh;
-    max-height: 700px;
-  }
-
+  
   .background-text {
     margin-top: 5% ;
     font-size: 2rem;
@@ -133,15 +202,7 @@
 }
 
 @media (max-width: 768px) {
-  .desktop-frame {
-    height: 60vh;
-    border-radius: 15px;
-  }
-
-  .desktop-screen {
-    border-radius: 8px;
-  }
-
+  
   .background-text {
     font-size: 1.5rem;
     top: 10%;
@@ -173,8 +234,8 @@
 @media (max-width: 480px) {
   .background-text {
     font-size: 1rem;
-    top: 6%;
-    left: 2%;
+    top: 1%;
+    left: -20px;
     width: 90%;
     white-space: normal; /* allow wrapping */
   }
