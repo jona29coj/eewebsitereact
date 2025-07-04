@@ -20,8 +20,8 @@ const Partners = () => {
                   <img src="/partner5.png" alt="Partner 5" style={{ maxHeight: '60px', margin: '0 40px' }} />
                   <img src="/DPIIT-logo.png" alt="Partner 6" style={{ maxHeight: '60px', margin: '0 40px' }} />
                   <img src="/Metal-logo.png" alt="Partner 7" style={{ maxHeight: '60px', margin: '0 40px' }} />
-                  <img src="/Startup India Logo.png" alt="Partner 8" style={{ maxHeight: '60px', margin: '0 70px' }} />
-                  <img src="/StartupTN Logo.png" alt="Partner 9" style={{ maxHeight: '40px', margin: '0 70px' , marginTop:'10px' }} />
+                  <img src="/Startup_India.png" alt="Partner 8" style={{ maxHeight: '60px', margin: '0 70px' }} />
+                  <img src="/StartupTN Logo.png" alt="Partner 9" style={{ maxHeight: '40px', margin: '0 70px' , marginTop:'20px' }} />
                 </React.Fragment>
               ))}
             </div>

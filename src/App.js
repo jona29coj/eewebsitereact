@@ -191,15 +191,15 @@ function App() {
                   >
                     <div className="text-start">
                       <a href="#CompanySection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Company</a>
-                      <p className="text-muted mb-0">Smart building layouts and passive energy strategies.</p>
+                      <p className="text-muted mb-0 " style={{ fontSize: '10px' }}>Smart building layouts and passive energy strategies.</p>
                     </div>
                     <div className="text-start">
                       <a href="#TeamSection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Team</a>
-                      <p className="text-muted mb-0">Efficient construction with integrated energy systems.</p>
+                      <p className="text-muted mb-0" style={{ fontSize: '10px' }}>Efficient construction with integrated energy systems.</p>
                     </div>
                     <div className="text-start">
                       <a href="#CareerSection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Career</a>
-                      <p className="text-muted mb-0">Manage and monitor usage with intelligent analytics.</p>
+                      <p className="text-muted mb-0" style={{ fontSize: '10px' }}>Manage and monitor usage with intelligent analytics.</p>
                     </div>
                   </div>
                 )}
@@ -239,15 +239,15 @@ function App() {
                   >
                     <div className="text-start">
                       <a href="#Design" className="d-block fw-semibold text-dark text-decoration-none mb-1">Design</a>
-                      <p className="text-muted mb-0">Smart building layouts and passive energy strategies.</p>
+                      <p className="text-muted mb-0" style={{ fontSize: '10px' }}>Smart building layouts and passive energy strategies.</p>
                     </div>
                     <div className="text-start">
                       <a href="#Build" className="d-block fw-semibold text-dark text-decoration-none mb-1">Build</a>
-                      <p className="text-muted mb-0">Efficient construction with integrated energy systems.</p>
+                      <p className="text-muted mb-0"style={{ fontSize: '10px' }}>Efficient construction with integrated energy systems.</p>
                     </div>
                     <div className="text-start">
                       <a href="#operate" className="d-block fw-semibold text-dark text-decoration-none mb-1">Operate</a>
-                      <p className="text-muted mb-0">Manage and monitor usage with intelligent analytics.</p>
+                      <p className="text-muted mb-0" style={{ fontSize: '10px' }}>Manage and monitor usage with intelligent analytics.</p>
                     </div>
                   </div>
                 )}
