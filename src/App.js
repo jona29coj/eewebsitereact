@@ -81,7 +81,7 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
           minWidth: '12ch',
           fontWeight: '600',
           display: 'inline-block',
-          lineHeight:1.5,
+          lineHeight:1.55,
           
           
           textAlign: 'left',
