@@ -60,7 +60,9 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
     <div className='texttype'
       style={{
         display: 'flex',
-        fontSize: 'clamp(1.8rem, 5vw, 2.5rem)',
+        fontSize: 'clamp(1rem, 2vw, 1.2rem)',
+        lineHeight: 1.3,
+        
         textAlign: 'left',
         fontWeight: '600',
         fontFamily:'Poppins, sans-serif',
@@ -75,10 +77,13 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
       <span className='Typingtext'
         style={{
           fontFamily:'Poppins, sans-serif',
-          fontSize: 'clamp(1.8rem, 5vw, 2.5rem)',
+          fontSize: 'clamp(1rem, 2vw, 1.2rem)',
           minWidth: '12ch',
+          fontWeight: '600',
           display: 'inline-block',
-          whiteSpace: 'pre',
+          lineHeight:1.5,
+          
+          
           textAlign: 'left',
         }}
       >
