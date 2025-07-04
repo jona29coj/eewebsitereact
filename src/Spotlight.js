@@ -10,13 +10,25 @@ const Spotlight = () => {
           Real change. Real numbers. Real sustainability.
         </p>
 
-        <p className="spotlight-description text-center">
+        <p
+          className="spotlight-description"
+          style={{
+            fontSize: '0.95rem',
+            maxWidth: '1150px',          // Fixed readable width
+            paddingLeft: '0.1rem',      // Fixed left padding
+            paddingRight: '0.1rem',     // Fixed right padding
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            textAlign: 'center'
+          }}
+        >
           At Elements Energy, impact isn’t an afterthought — it’s at the core of everything we do.
           From slashing energy bills to cutting carbon emissions, we help organizations turn their
           sustainability goals into tangible results. Backed by intelligent design and real-time data,
           our solutions are driving meaningful change across campuses, industries, and communities —
           proving that technology can be both smart and sustainable.
         </p>
+
               <div className="spotlight-row">
           <a 
             href="https://revolve.media/views/sustainable-energy-transition-india" 

@@ -22,6 +22,7 @@ import Login from './Login';
 import CompanySection from './CompanySection';
 import TeamSection from './TeamSection';
 import CareerSection from './CareerSection';
+
 function Typewriter({ texts, speed = 100, pause = 2000 }) {
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -59,8 +60,8 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
     <div className='texttype'
       style={{
         display: 'flex',
-        fontSize: '2rem',
-        justifyContent: 'left',
+        fontSize: 'clamp(1.8rem, 5vw, 2.5rem)',
+        textAlign: 'left',
         fontWeight: '600',
         fontFamily:'Poppins, sans-serif',
         color: '#fff',
@@ -69,12 +70,12 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
       }}
     >
       <span style={{ whiteSpace: 'nowrap' }} className='empoweringtext'>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Empowering
+        Empowering
       </span>
       <span className='Typingtext'
         style={{
           fontFamily:'Poppins, sans-serif',
-          fontSize: '2rem',
+          fontSize: 'clamp(1.8rem, 5vw, 2.5rem)',
           minWidth: '12ch',
           display: 'inline-block',
           whiteSpace: 'pre',
@@ -94,7 +95,6 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
 
 function App() {
   const [showAssessmentForm, setShowAssessmentForm] = useState(false);
-
   const [scrolled, setScrolled] = useState(false);
   const [activePage, setActivePage] = useState('home');
   const [showAboutMega, setShowAboutMega] = useState(false);
@@ -157,7 +157,7 @@ function App() {
                   onClick={(e) => {
                     e.preventDefault();
                     setShowAboutMega((prev) => {
-                      if (!prev) setShowMega(false); // Close Solutions if About is opening
+                      if (!prev) setShowMega(false);
                       return !prev;
                     });
                   }}
@@ -176,15 +176,14 @@ function App() {
                       padding: '2rem 2rem',
                       fontFamily: 'Inter, sans-serif',
                       fontWeight: 400,
-                      display: 'flex',             // ✅ Make it a flex container
-                      flexDirection: 'row',        // ✅ Arrange items in a row
+                      display: 'flex',
+                      flexDirection: 'row',
                       justifyContent: 'space-around',
                       alignItems: 'center',
-                      gap: '3rem',   
-                      fontSize: '0.95rem'               // ✅ Optional spacing
+                      gap: '3rem',
+                      fontSize: '0.95rem'
                     }}
                   >
-                  
                     <div className="text-start">
                       <a href="#CompanySection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Company</a>
                       <p className="text-muted mb-0">Smart building layouts and passive energy strategies.</p>
@@ -207,7 +206,7 @@ function App() {
                   onClick={(e) => {
                     e.preventDefault();
                     setShowMega((prev) => {
-                      if (!prev) setShowAboutMega(false); // Close About if Solutions is opening
+                      if (!prev) setShowAboutMega(false);
                       return !prev;
                     });
                   }}
@@ -225,15 +224,14 @@ function App() {
                       width: '600px',
                       padding: '2rem 2rem',
                       fontFamily: 'Inter, sans-serif',
-                      display: 'flex',             
-                      flexDirection: 'row',        
+                      display: 'flex',
+                      flexDirection: 'row',
                       justifyContent: 'space-around',
                       alignItems: 'center',
-                      gap: '3rem',   
-                      fontSize: '0.95rem'               
+                      gap: '3rem',
+                      fontSize: '0.95rem'
                     }}
                   >
-                  
                     <div className="text-start">
                       <a href="#Design" className="d-block fw-semibold text-dark text-decoration-none mb-1">Design</a>
                       <p className="text-muted mb-0">Smart building layouts and passive energy strategies.</p>
@@ -260,97 +258,222 @@ function App() {
 
       {activePage === 'home' && (
         <>
-          <section className="hero-section d-flex align-items-center justify-content-center text-white text-center">
-            <video autoPlay loop muted playsInline className="hero-video">
+          <section className="hero-section" style={{
+            position: 'relative',
+            width: '100%',
+            
+            height: '100vh',
+            overflow: 'hidden',
+            display: 'flex',
+            alignItems:'end',
+            
+            textAlign: 'left',
+            background: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))',
+          }}>
+            {/* Hero background would go here */}
+            <video autoPlay loop muted playsInline className="hero-video" style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: 1
+            }}>
               <source src="hero.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="overlay" />
-            <div className="z-3 hero-text-container" style={{ paddingRight:'50vw', paddingTop: '45vh' }}>
-              <h1 className="fw-bold" style={{ lineHeight: 1.2 }}>
-                <div style={{
-                  fontSize: '2rem',
-                  fontFamily:'Poppins, sans-serif',
-                  color: '#fff',
-                  textAlign: 'left',
-                  paddingLeft: ' 5.9vw'
+            
+            <Container className="col-md-6 text-md-start text-center" style={{
+              position: 'relative',
+              zIndex: 2,
+              color: '#fff',
+              padding: '0 20px',
+              marginRight: '700px',
+            }}>
+              <div style={{
+                maxWidth: '800px',
+                margin: '0 auto',
+                textAlign: 'left'
+              }}>
+                <h1 style={{
+                  fontSize: 'clamp(0.5rem, 3vw, 2rem)',
+                  fontWeight: 700,
+                  lineHeight: 0.3,
+                  marginBottom: '1rem',
+                  fontFamily: 'Poppins, sans-serif'
                 }}>
                   Sustainable Energy Solutions
-                </div>
-                <div
-                  style={{
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '2rem',
-                    color: '#fff',
-                  }}
-                  className="typewords"
-                >
-                  <Typewriter
-                    texts={['Hotels', 'Residencies', 'Utilities', 'Industries']}
-                    speed={70}
-                    pause={1000}
-                    
+                </h1>
+                
+                <div style={{
+                  fontFamily: 'Poppins, sans-serif',
+                  marginBottom: '0rem',
+                  minHeight: '3.5rem'
+                }}>
+                  <Typewriter 
+                    texts={['Industries', 'Hotels', 'Residencies', 'Utilities']} 
+                    speed={70} 
+                    pause={1000} 
                   />
                 </div>
-                <div style={{
-                  fontSize: '2rem',
+                
+                <h2 style={{
+                  fontSize: 'clamp(0.5rem, 3vw, 2rem',
                   fontWeight: 600,
-                  fontFamily:'Poppins, sans-serif',
-                  color: '#fff',
-                  paddingRight: '0vw',
+                  lineHeight: 0.3,
+                  marginTop: '0.4rem',
+                  marginBottom: '1.5rem',
+                  fontFamily: 'Poppins, sans-serif'
                 }}>
-                 
-                For a Greener Tomorrow
+                  For a Greener Tomorrow
+                </h2>
+                
+                <Button
+                  variant="success"
+                  onClick={() => setShowAssessmentForm(true)}
+                  style={{
+                    fontSize: 'clamp(1rem, 2vw, 1.2rem)',
+                    padding: '12px 24px',
+                    fontWeight: 600,
+                    borderRadius: '4px'
+                  }}
+                >
+                  Book a Free Energy Assessment
+                </Button>
+              </div>
+            </Container>
+
+            {showAssessmentForm && (
+              <div className="form-overlay" style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: 'rgba(0,0,0,0.7)',
+                zIndex: 1000,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}>
+                <div className="form-popup" style={{
+                  backgroundColor: 'white',
+                  padding: '2rem',
+                  borderRadius: '8px',
+                  width: '90%',
+                  maxWidth: '500px',
+                  position: 'relative'
+                }}>
+                  <button 
+                    className="close-button" 
+                    onClick={() => setShowAssessmentForm(false)}
+                    style={{
+                      position: 'absolute',
+                      top: '10px',
+                      right: '10px',
+                      background: 'none',
+                      border: 'none',
+                      fontSize: '1.5rem',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    ×
+                  </button>
+
+                  <form className="cta-form">
+                    <div className="form-group" style={{ marginBottom: '1rem' }}>
+                      <label style={{ display: 'block', marginBottom: '0.5rem' }}>Name</label>
+                      <input 
+                        type="text" 
+                        placeholder="Your full name" 
+                        required 
+                        style={{
+                          width: '100%',
+                          padding: '0.5rem',
+                          borderRadius: '4px',
+                          border: '1px solid #ccc'
+                        }}
+                      />
+                    </div>
+
+                    <div className="form-group" style={{ marginBottom: '1rem' }}>
+                      <label style={{ display: 'block', marginBottom: '0.5rem' }}>Contact Number</label>
+                      <input 
+                        type="tel" 
+                        placeholder="Your contact number" 
+                        required 
+                        style={{
+                          width: '100%',
+                          padding: '0.5rem',
+                          borderRadius: '4px',
+                          border: '1px solid #ccc'
+                        }}
+                      />
+                    </div>
+
+                    <div className="form-group" style={{ marginBottom: '1rem' }}>
+                      <label style={{ display: 'block', marginBottom: '0.5rem' }}>Email</label>
+                      <input 
+                        type="email" 
+                        placeholder="Your email address" 
+                        required 
+                        style={{
+                          width: '100%',
+                          padding: '0.5rem',
+                          borderRadius: '4px',
+                          border: '1px solid #ccc'
+                        }}
+                      />
+                    </div>
+
+                    <div className="form-group" style={{ marginBottom: '1rem' }}>
+                      <label style={{ display: 'block', marginBottom: '0.5rem' }}>Subject</label>
+                      <input 
+                        type="text" 
+                        placeholder="Subject of message" 
+                        style={{
+                          width: '100%',
+                          padding: '0.5rem',
+                          borderRadius: '4px',
+                          border: '1px solid #ccc'
+                        }}
+                      />
+                    </div>
+
+                    <div className="form-group" style={{ marginBottom: '1.5rem' }}>
+                      <label style={{ display: 'block', marginBottom: '0.5rem' }}>Upload Resume (PDF only)</label>
+                      <input 
+                        type="file" 
+                        accept=".pdf" 
+                        required 
+                        style={{
+                          width: '100%',
+                          padding: '0.5rem',
+                          borderRadius: '4px',
+                          border: '1px solid #ccc'
+                        }}
+                      />
+                    </div>
+
+                    <button 
+                      type="submit" 
+                      className="submit-button"
+                      style={{
+                        backgroundColor: '#28a745',
+                        color: 'white',
+                        border: 'none',
+                        padding: '0.75rem 1.5rem',
+                        borderRadius: '4px',
+                        fontWeight: '600',
+                        width: '100%',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      Submit Application
+                    </button>
+                  </form>
                 </div>
-              </h1>
-              <br/>
-              <button
-                className="btn-light mt-0 px-4 py-2 text-decoration-none"
-                style={{ marginLeft: '-100px' }}
-                onClick={() => setShowAssessmentForm(true)}
-              >
-                Book a Free Energy Assessment
-              </button>
-
-              {showAssessmentForm && (
-                <div className="form-overlay">
-                  <div className="form-popup">
-                    <button className="close-button" onClick={() => setShowAssessmentForm(false)}>×</button>
-
-                    <form className="cta-form">
-                      <div className="form-group">
-                        <label>Name</label>
-                        <input type="text" placeholder="Your full name" required />
-                      </div>
-
-                      <div className="form-group">
-                        <label>Contact Number</label>
-                        <input type="tel" placeholder="Your contact number" required />
-                      </div>
-
-                      <div className="form-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Your email address" required />
-                      </div>
-
-                      <div className="form-group">
-                        <label>Subject</label>
-                        <input type="text" placeholder="Subject of message" />
-                      </div>
-
-                      <div className="form-group">
-                        <label>Upload Resume (PDF only)</label>
-                        <input type="file" accept=".pdf" required />
-                      </div>
-
-                      <button type="submit" className="submit-button">Submit Application</button>
-                    </form>
-                  </div>
-                </div>
-              )}
-
-
-            </div>
+              </div>
+            )}
           </section>
 
           <section className="section about-section"><About /></section>
@@ -360,7 +483,6 @@ function App() {
           <section className="section impact-section"><ImpactStats /></section>
           <section className="section spotlight-section"><Spotlight /></section>
           <section className="section partners-section"><Partners /></section>
-          
         </>
       )}
 
@@ -378,15 +500,17 @@ function App() {
       {activePage === 'TeamSection' && <TeamSection />}
       {activePage === 'CareerSection' && <CareerSection />}
 
-      <footer className="elements-footer py-2 tight-footer">
+      <footer className="elements-footer py-2 tight-footer" style={{
+        backgroundColor: '#343a40',
+        color: 'white',
+        padding: '2rem 0'
+      }}>
         <Container>
           <div className="row justify-content-between align-items-start">
-            {/* Logo column with just the logo */}
             <div className="col-md-auto mb-4 d-flex align-items-start">
               <img src="/logo-white.png" alt="Elements Energy Logo" height="40" className="mb-3" />
             </div>
 
-            {/* Quick Links */}
             <div className="col-md mb-4">
               <h5>Quick Links</h5>
               <ul className="list-unstyled">
@@ -396,7 +520,6 @@ function App() {
               </ul>
             </div>
 
-            {/* Contact */}
             <div className="col-md mb-4">
               <h5>Contact Us</h5>
               <ul className="list-unstyled">
@@ -413,7 +536,6 @@ function App() {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="col-md mb-4">
               <h5>Follow Us</h5>
               <div className="d-flex gap-3 mt-3">
@@ -428,7 +550,6 @@ function App() {
           </div>
         </Container>
       </footer>
-
     </>
   );
 }
