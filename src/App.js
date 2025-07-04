@@ -77,7 +77,7 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
       <span className='Typingtext'
         style={{
           fontFamily:'Poppins, sans-serif',
-          fontSize: 'clamp(1rem, 2vw, 1.2rem)',
+          fontSize: 'clamp(2rem, 3vw, 1.5rem)',
           minWidth: '12ch',
           fontWeight: '600',
           display: 'inline-block',
