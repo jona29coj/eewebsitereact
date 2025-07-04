@@ -273,6 +273,7 @@ function App() {
             alignItems:'end',
             
             textAlign: 'left',
+            
             background: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))',
           }}>
             {/* Hero background would go here */}
@@ -292,6 +293,7 @@ function App() {
               zIndex: 2,
               color: '#fff',
               padding: '0 20px',
+              left: 90,
               marginRight: '700px',
             }}>
               <div style={{

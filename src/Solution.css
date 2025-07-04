@@ -48,7 +48,19 @@
   margin-bottom: 0.1rem;
   object-fit: contain;
 }
+.card-details ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+.card-details {
+  margin-top: 1rem;
+  animation: fadeIn 0.5s ease;
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 /* Responsive text and spacing */
 .card-body h3 {
   font-size: 1.5rem;
@@ -66,16 +78,30 @@
   justify-content: center;
 }
 .focus {
-  font-size: 1.9rem; /* Responsive large size */
+  font-size: 1.9rem;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #79e400, #00dd37, #00df94);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  background: linear-gradient(
+    90deg,
+    #00ff7b 0%,
+    #00ff7b 10%,
+    #00b7ff 45%,
+    #007bff 80%,
+    #0047ff 100%
+  );
+
+  background-size: 200%;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
-  margin-bottom: 1rem;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;
+  white-space: nowrap;
 }
+
+
 .subtext{
   font-size: 1.4rem; /* Responsive large size */
   font-weight: 350;
