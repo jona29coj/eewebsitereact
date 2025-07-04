@@ -5,7 +5,7 @@ const Partners = () => {
   return (
     <section id="partners" className="partners-section">
       <div className="containerpartner">
-        <div className="cardpartner shadow-sm p-4 bg-white">
+        <div className="cardpartner  p-4 bg-white">
           <h3 className="text-center mb-4">Trusted Partners</h3>
 
           <div className="partner-carousel overflow-hidden">
