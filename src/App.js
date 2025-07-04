@@ -305,6 +305,7 @@ function App() {
                 </h1>
                 
                 <div style={{
+                  git fontSize: 'clamp(0.5rem, 3vw, 2rem)',
                   fontFamily: 'Poppins, sans-serif',
                   marginBottom: '0rem',
                   minHeight: '3.5rem'
