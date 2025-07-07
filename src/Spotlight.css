@@ -76,7 +76,7 @@
 }
 .spotlightsection {
   padding: 2rem 1rem;
-   background: rgba(192, 217, 223, 0.219);
+  background: rgba(192, 217, 223, 0.219);
 
 
   color: rgb(0, 0, 0);
@@ -147,4 +147,14 @@
   .spotlight-text {
     font-size: 1.1rem;
   }
+}
+/* Last content section */
+.content-section:last-of-type {
+  margin-bottom: 20px !important;  /* Reduce bottom margin */
+}
+
+/* Partners section top padding */
+.partners-section {
+  padding-top: 20px;  /* Reduce this if needed */
+  margin-top: 0 !important;
 }
