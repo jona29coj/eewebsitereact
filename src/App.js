@@ -11,7 +11,6 @@ import ImpactStats from './ImpactStats';
 import Spotlight from './Spotlight';
 import Operate from './Operate';
 import Design from './Design';
-import AboutUs from './AboutUs';
 import Contact from './Contact';
 import Build from './Build';
 import ProjectsContent from './Projects';
@@ -290,23 +289,10 @@ function App() {
             </video>
             
            <Container
-              className="col-12 col-md-6 text-md-start text-center px-4 px-md-5"
-              style={{
-                position: 'relative',
-                zIndex: 2,
-                color: '#fff',
-                paddingLeft: '5rem',    // Optional: match Navbar padding
-                paddingRight: '5rem',
-              }}
+              className="hero-inner-text"
+              
             >
-              <div
-                style={{
-                  maxWidth: '800px',
-                  marginLeft: '-230px',
-                  textAlign: 'left',
-                  
-                }}
-              >
+              
                 <h1
                   style={{
                     fontSize: 'clamp(1.5rem, 3vw, 2rem)',
@@ -360,7 +346,7 @@ function App() {
                 >
                   Book a Free Energy Assessment
                 </Button>
-              </div>
+              
             </Container>
 
 
@@ -511,7 +497,7 @@ function App() {
       )}
 
       {activePage === 'Contact' && <Contact />}
-      {activePage === 'AboutUs' && <AboutUs />}
+      
       {activePage === 'operate' && <Operate />}
       {activePage === 'Design' && <Design />}
       {activePage === 'Build' && <Build />}
