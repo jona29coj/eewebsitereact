@@ -14,7 +14,14 @@
 .impact-heading {
   font-size: 1.9rem;
   font-weight: 600;
- 
+   background: linear-gradient(to right, 
+    #02ee74 0%, 
+    #01e06d 30%, 
+    #0080ca 65%, 
+    #01205e 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-family:'Poppins', sans-serif;
   letter-spacing: 1px;
 }

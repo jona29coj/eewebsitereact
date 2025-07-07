@@ -6,6 +6,14 @@
   letter-spacing: 0.5px;
   font-weight:550;
   font-size: 1.8rem;
+   background: linear-gradient(to right, 
+    #02ee74 0%, 
+    #01e06d 30%, 
+    #0080ca 65%, 
+    #01205e 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .spotlight-wrapper {
   width: 100%;
@@ -20,11 +28,47 @@
 }
 
 .spotlight-img {
-  height: 400px;  
-  width:1350px;   /* Adjust as needed */
-  margin: 0rem;
+  width: 100%;
+  max-width: 1350px;
+  height: auto;
+  aspect-ratio: 1350/400;
+  margin: 0;
   opacity: 0.9;
   transition: transform 0.3s ease;
+  object-fit: cover;
+  display: block; /* Ensures margin-left works properly */
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 992px) {
+  .spotlight-img {
+    margin-left: -5%; /* Pull left slightly */
+    width: 105%; /* Compensate for negative margin */
+  }
+}
+
+/* For small screens (mobile) */
+@media (max-width: 768px) {
+  .spotlight-img {
+    margin-left: -10%; /* Pull left more aggressively */
+    width: 110%;
+    aspect-ratio: 1/0.7; /* Adjust ratio for mobile */
+  }
+}
+
+/* For extra small screens */
+@media (max-width: 576px) {
+  .spotlight-img {
+    margin-left: -15%;
+    width: 115%;
+    aspect-ratio: 1/0.6;
+  }
+}
+@media (max-width: 768px) {
+  .spotlight-img {
+    transform: translateX(-10%);
+    width: 110%;
+  }
 }
 
 .spotlight-img:hover {
@@ -32,10 +76,10 @@
 }
 .spotlightsection {
   padding: 2rem 1rem;
-  background: linear-gradient(135deg, #8bdaa6 2%, #29975b 10%, #206849 40%, #0b3b2e 70%, #001d13 90%);
+   background: rgba(192, 217, 223, 0.219);
 
 
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 
 
 }

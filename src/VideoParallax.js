@@ -6,9 +6,9 @@ const VideoParallaxSection = () => {
     <section className="video-parallax-section">
       <div className="section-background-overlay"></div>
 
-      <div className="text-content text-white px-4">
+      <div className="text-content  px-4">
         <h2 className="main-heading">Behind the Scenes: The Tech That Powers Sustainability</h2>
-        <p className="subtitle">We combine human-centered design with machine intelligence.</p>
+        <p className="subtitle text-black " >We combine human-centered design with machine intelligence.</p>
       </div>
 
       <div className="desktop-frame">

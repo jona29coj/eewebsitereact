@@ -127,14 +127,18 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (!e.target.closest('.megamenu')) {
-        setShowMega(false);
-      }
-    };
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
+  const handleClickOutside = (e) => {
+    // Close menu when clicking outside OR when clicking any link inside
+    if (!e.target.closest('.megamenu') || e.target.closest('.mega-menu-link')) {
+      setShowMega(false);
+      setShowAboutMega(false);
+    }
+  };
+
+  document.addEventListener('click', handleClickOutside);
+  return () => document.removeEventListener('click', handleClickOutside);
+}, []);
+
 
   return (
     <>
@@ -190,16 +194,16 @@ function App() {
                     }}
                   >
                     <div className="text-start">
-                      <a href="#CompanySection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Company</a>
-                      <p className="text-muted mb-0 " style={{ fontSize: '10px' }}>Smart building layouts and passive energy strategies.</p>
+                      <a href="#CompanySection" className="d-block fw-semibold text-dark text-decoration-none mb-1" onClick={() => setShowAboutMega(false)}>Company</a>
+                      <p className="text-muted mb-0 " style={{ fontSize: '12px' }}>Smart building layouts and passive energy strategies.</p>
                     </div>
                     <div className="text-start">
-                      <a href="#TeamSection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Team</a>
-                      <p className="text-muted mb-0" style={{ fontSize: '10px' }}>Efficient construction with integrated energy systems.</p>
+                      <a href="#TeamSection" className="d-block fw-semibold text-dark text-decoration-none mb-1" onClick={() => setShowAboutMega(false)}>Team</a>
+                      <p className="text-muted mb-0" style={{ fontSize: '12px' }}>Efficient construction with integrated energy systems.</p>
                     </div>
                     <div className="text-start">
-                      <a href="#CareerSection" className="d-block fw-semibold text-dark text-decoration-none mb-1">Career</a>
-                      <p className="text-muted mb-0" style={{ fontSize: '10px' }}>Manage and monitor usage with intelligent analytics.</p>
+                      <a href="#CareerSection" className="d-block fw-semibold text-dark text-decoration-none mb-1" onClick={() => setShowAboutMega(false)}>Career</a>
+                      <p className="text-muted mb-0" style={{ fontSize: '12px' }}>Manage and monitor usage with intelligent analytics.</p>
                     </div>
                   </div>
                 )}
@@ -238,16 +242,16 @@ function App() {
                     }}
                   >
                     <div className="text-start">
-                      <a href="#Design" className="d-block fw-semibold text-dark text-decoration-none mb-1">Design</a>
-                      <p className="text-muted mb-0" style={{ fontSize: '10px' }}>Smart building layouts and passive energy strategies.</p>
+                      <a href="#Design" className="d-block fw-semibold text-dark text-decoration-none mb-1" onClick={() => setShowMega(false)}>Design</a>
+                      <p className="text-muted mb-0" style={{ fontSize: '12px' }}>Smart building layouts and passive energy strategies.</p>
                     </div>
                     <div className="text-start">
-                      <a href="#Build" className="d-block fw-semibold text-dark text-decoration-none mb-1">Build</a>
-                      <p className="text-muted mb-0"style={{ fontSize: '10px' }}>Efficient construction with integrated energy systems.</p>
+                      <a href="#Build" className="d-block fw-semibold text-dark text-decoration-none mb-1" onClick={() => setShowMega(false)}>Build</a>
+                      <p className="text-muted mb-0"style={{ fontSize: '12px' }}>Efficient construction with integrated energy systems.</p>
                     </div>
                     <div className="text-start">
-                      <a href="#operate" className="d-block fw-semibold text-dark text-decoration-none mb-1">Operate</a>
-                      <p className="text-muted mb-0" style={{ fontSize: '10px' }}>Manage and monitor usage with intelligent analytics.</p>
+                      <a href="#operate" className="d-block fw-semibold text-dark text-decoration-none mb-1" onClick={() => setShowMega(false)}>Operate</a>
+                      <p className="text-muted mb-0" style={{ fontSize: '12px' }}>Manage and monitor usage with intelligent analytics.</p>
                     </div>
                   </div>
                 )}
@@ -266,14 +270,11 @@ function App() {
           <section className="hero-section" style={{
             position: 'relative',
             width: '100%',
-            
             height: '100vh',
             overflow: 'hidden',
             display: 'flex',
             alignItems:'end',
-            
             textAlign: 'left',
-            
             background: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))',
           }}>
             {/* Hero background would go here */}
@@ -288,53 +289,65 @@ function App() {
               Your browser does not support the video tag.
             </video>
             
-            <Container className="col-md-6 text-md-start text-center" style={{
-              position: 'relative',
-              zIndex: 2,
-              color: '#fff',
-              padding: '0 20px',
-              left: 90,
-              marginRight: '700px',
-            }}>
-              <div style={{
-                maxWidth: '800px',
-                margin: '0 auto',
-                textAlign: 'left'
-              }}>
-                <h1 style={{
-                  fontSize: 'clamp(0.5rem, 3vw, 2rem)',
-                  fontWeight: 700,
-                  lineHeight: 0.3,
-                  marginBottom: '1rem',
-                  fontFamily: 'Poppins, sans-serif'
-                }}>
+           <Container
+              className="col-12 col-md-6 text-md-start text-center px-4 px-md-5"
+              style={{
+                position: 'relative',
+                zIndex: 2,
+                color: '#fff',
+                paddingLeft: '5rem',    // Optional: match Navbar padding
+                paddingRight: '5rem',
+              }}
+            >
+              <div
+                style={{
+                  maxWidth: '800px',
+                  marginLeft: '-230px',
+                  textAlign: 'left',
+                  
+                }}
+              >
+                <h1
+                  style={{
+                    fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+                    fontWeight: 700,
+                    lineHeight: 1,
+                    marginBottom: '0rem',
+                    fontFamily: 'Poppins, sans-serif',
+                  }}
+                >
                   Sustainable Energy Solutions
                 </h1>
-                
-                <div style={{
-                  fontSize: 'clamp(0.5rem, 3vw, 2rem)',
-                  fontFamily: 'Poppins, sans-serif',
-                  marginBottom: '0rem',
-                  minHeight: '3.5rem'
-                }}>
-                  <Typewriter 
-                    texts={['Industries', 'Hotels', 'Residencies', 'Utilities']} 
-                    speed={70} 
-                    pause={1000} 
+
+                <div
+                  style={{
+                    fontSize: 'clamp(1rem, 2.5vw, 1.75rem)',
+                    fontFamily: 'Poppins, sans-serif',
+                    marginBottom: '0rem',
+                    minHeight: '3.5rem',
+                  }}
+                >
+                  <Typewriter
+                    texts={['Industries', 'Hotels', 'Residencies', 'Utilities']}
+                    speed={70}
+                    pause={1000}
                   />
                 </div>
-                
-                <h2 style={{
-                  fontSize: 'clamp(0.5rem, 3vw, 2rem',
-                  fontWeight: 600,
-                  lineHeight: 0.3,
-                  marginTop: '0.4rem',
-                  marginBottom: '1.5rem',
-                  fontFamily: 'Poppins, sans-serif'
-                }}>
+
+                <h2
+                  style={{
+                    fontSize: 'clamp(1rem, 2.5vw, 1.75rem)',
+                    fontWeight: 600,
+                    lineHeight: 0.3,
+                    marginTop: '0rem',
+                    marginBottom: '2rem',
+                    marginLeft: '0rem',
+                    fontFamily: 'Poppins, sans-serif',
+                  }}
+                >
                   For a Greener Tomorrow
                 </h2>
-                
+
                 <Button
                   variant="success"
                   onClick={() => setShowAssessmentForm(true)}
@@ -342,13 +355,16 @@ function App() {
                     fontSize: 'clamp(1rem, 2vw, 1.2rem)',
                     padding: '12px 24px',
                     fontWeight: 600,
-                    borderRadius: '4px'
+                    borderRadius: '4px',
                   }}
                 >
                   Book a Free Energy Assessment
                 </Button>
               </div>
             </Container>
+
+
+           
 
             {showAssessmentForm && (
               <div className="form-overlay" style={{
@@ -387,11 +403,23 @@ function App() {
                     ×
                   </button>
 
-                  <form className="cta-form">
+                  <form 
+                    action="https://formspree.io/f/xzzgwqrr" 
+                    method="POST"
+                    className="cta-form"
+                    encType="multipart/form-data"
+                  >
+                    {/* FormSubmit hidden fields */}
+                    <input type="hidden" name="_subject" value="New Energy Assessment Request" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+                    <input type="hidden" name="_template" value="table" />
+
                     <div className="form-group" style={{ marginBottom: '1rem' }}>
                       <label style={{ display: 'block', marginBottom: '0.5rem' }}>Name</label>
                       <input 
                         type="text" 
+                        name="name" 
                         placeholder="Your full name" 
                         required 
                         style={{
@@ -407,6 +435,7 @@ function App() {
                       <label style={{ display: 'block', marginBottom: '0.5rem' }}>Contact Number</label>
                       <input 
                         type="tel" 
+                        name="phone" 
                         placeholder="Your contact number" 
                         required 
                         style={{
@@ -422,6 +451,7 @@ function App() {
                       <label style={{ display: 'block', marginBottom: '0.5rem' }}>Email</label>
                       <input 
                         type="email" 
+                        name="email" 
                         placeholder="Your email address" 
                         required 
                         style={{
@@ -437,22 +467,8 @@ function App() {
                       <label style={{ display: 'block', marginBottom: '0.5rem' }}>Subject</label>
                       <input 
                         type="text" 
+                        name="subject" 
                         placeholder="Subject of message" 
-                        style={{
-                          width: '100%',
-                          padding: '0.5rem',
-                          borderRadius: '4px',
-                          border: '1px solid #ccc'
-                        }}
-                      />
-                    </div>
-
-                    <div className="form-group" style={{ marginBottom: '1.5rem' }}>
-                      <label style={{ display: 'block', marginBottom: '0.5rem' }}>Upload Resume (PDF only)</label>
-                      <input 
-                        type="file" 
-                        accept=".pdf" 
-                        required 
                         style={{
                           width: '100%',
                           padding: '0.5rem',
