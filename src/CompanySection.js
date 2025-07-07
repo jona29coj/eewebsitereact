@@ -16,7 +16,7 @@ function CompanySection() {
       </div>
 
       {/* Buildings Reimagined */}
-      <div className="content-section full-width-image-section">
+      <div className="content-section centered">
         <div className="full-width-container">
           <div className="section-image-container" style={{ marginBottom: '2rem' }}>
             <img
