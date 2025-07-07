@@ -6,7 +6,9 @@ const Partners = () => {
     <section id="partners" className="partners-section">
       <div className="containerpartner">
         <div className="cardpartner  p-4 bg-white">
-          <h3 className="text-center mb-4">Trusted Partners</h3>
+          <div className="partner-divider">
+            <span className="divider-text">PARTNERED WITH</span>
+          </div>
 
           <div className="partner-carousel overflow-hidden">
             <div className="scroll-track d-flex">

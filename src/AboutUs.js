@@ -114,6 +114,30 @@ function AboutUs() {
                   Driving the global shift towards a greener and more sustainable future through innovation and advanced technologies.
                 </p>
               </div>
+              {/* Buildings Reimagined Section */}
+              <div className="content-section buildings-reimagined-section">
+                <div className="section-layout vertical-on-mobile">
+                  <div className="section-image-container">
+                    <img
+                      src="/images/buildings-reimagined.png" // Save the uploaded image here
+                      alt="Buildings Before and After"
+                      className="section-image"
+                      style={{ maxWidth: '100%', borderRadius: '8px' }}
+                    />
+                  </div>
+                  <div className="section-content">
+                    <h2 className="section-title" style={{ color: '#1f7145', fontWeight: '600' }}>
+                      Buildings Reimagined: From Passive Consumers to Active Contributors
+                    </h2>
+                    <p style={{ marginTop: '0.5rem' }}>
+                      A visual shift from high-emission, energy-hungry buildings to intelligent, climate-responsive infrastructure.
+                      Powered by Elements Energy, buildings become active participants in the clean energy future —
+                      <strong> monitoring, optimizing, and decarbonizing</strong> every day.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
 
               {/* Our Commitment */}
               <div className="content-section2">

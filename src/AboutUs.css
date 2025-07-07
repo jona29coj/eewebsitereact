@@ -1,21 +1,38 @@
-
 .about-us-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
+}
+
+.vertical-section .vertical-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.vertical-section .section-image-container {
+  text-align: center;
+}
+
+.vertical-section .wide-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .section-tabs {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-   padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem;
   font-size: 1.2rem;
   gap: 10px;
+  flex-wrap: wrap;
 }
-.section-layout.reverse {
-  flex-direction: row-reverse;
-}
+
 .tab {
   display: flex;
   align-items: center;
@@ -27,28 +44,7 @@
   font-weight: 600;
   color: #555;
   gap: 10px;
-}
-.section-header.centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* if you want vertical centering too */
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.section-main-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-top: 0.2rem;
-}
-
-.section-subtitle {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: #555;
+  justify-content: center;
 }
 
 .tab:hover {
@@ -63,66 +59,12 @@
 .tab-icon {
   margin-right: 8px;
 }
-.company-content{
-    width: 100%;
-}
-.content-sheets {
-  position: relative;
-  margin-top: 1%;
-}
 
-.sheet {
-  transition: all 0.4s ease;
-  overflow: hidden;
-}
-.page-sectionab {
-  padding-top: 10px; /* or even 0 if you want it very close */
-}
-
-
-.sheet.expanded {
-  max-height: 5000px;
-  opacity: 1;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.sheet.collapsed {
-  max-height: 0;
-  opacity: 0;
-  padding: 0 20px;
-}
-
-/* Rest of your existing CSS styles */
-.page-intro {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.page-title {
-  font-size: 2.5rem;
-  margin-bottom: 3px;
-}
-
-.title-highlight {
-  color: #2e7d32;
-}
-
-.page-subtitle {
-  font-size: 1.2rem;
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
+.company-content,
 .content-section {
+  width: 100%;
   margin: 30px 0;
-  width: 1100px;
-
 }
-
 
 .section-layout {
   display: flex;
@@ -134,14 +76,29 @@
   flex-direction: row-reverse;
 }
 
-.section-content {
+.section-content,
+.section-image-container {
   flex: 1;
+}
+
+.section-image {
+  width: 600px;
+  height: 550px;
+  border-radius: 8px;
+  object-fit: fill;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section-header {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.section-header.centered {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .section-icon {
@@ -154,8 +111,12 @@
 }
 
 .section-title {
-  font-size: 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
   margin: 0;
+  color: #2e2e2e;
+  letter-spacing: 0.3px;
+  text-align: center;
 }
 
 .section-text {
@@ -163,19 +124,55 @@
   color: #555;
 }
 
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 3px;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.title-highlight,
 .text-highlight {
-  font-weight: bold;
   color: #2e7d32;
+  font-weight: bold;
+}
+.section-heading-black {
+  color: black !important;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.main-title {
+  margin-bottom: 0rem; /* reduce from default */
+}
+.para1 {
+  font-size: 1.4rem !important; /* or try 18px / 20px */
+  font-weight: 400;
+  color: #0c0c0c !important;
 }
 
-.section-image-container {
-  flex: 1;
-}
-
-.section-image {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.sub-title {
+  margin-top:-7px;         /* remove extra top gap */
+  color: black;
+  font-weight: 400;
+  font-size: 1rem;        /* optional: reduce size */
 }
 
 .dark-section {
@@ -184,27 +181,14 @@
   border-radius: 8px;
 }
 
-.team-content, .career-content {
+.team-content,
+.career-content {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .section-intro {
-  left: 70;
   margin-bottom: 40px;
-}
-
-.section-main-title {
-  left: 70;
-  font-size: 2.2rem;
-  margin: 15px 0;
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 .team-grid {
@@ -258,7 +242,6 @@
   font-size: 0.9rem;
   color: #666;
 }
-
 
 .career-grid {
   display: grid;
@@ -327,6 +310,7 @@
   margin: 0;
 }
 
+/* Call To Action */
 .cta-section {
   text-align: center;
   padding: 40px 20px;
@@ -343,7 +327,7 @@
   font-size: 1.1rem;
   color: #ffffff;
   max-width: 600px;
-  margin: 0 auto 25px auto;
+  margin: 0 auto 25px;
 }
 
 .cta-button {
@@ -355,27 +339,61 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top:70px;
-  margin-left: 180px; /* or use float/text-align depending on layout */
+  margin: 70px auto 0;
+  display: block;
 }
 
 .cta-button:hover {
   background-color: #1b5e20;
 }
 
-@media (max-width: 768px) {
-  .section-layout, .section-layout.reverse {
-    flex-direction: column;
-  }
-  
-  .section-tabs {
-    flex-direction: column;
-  }
-  
-  .tab {
-    justify-content: center;
-  }
+/* CTA Form Popup */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 15vh;
+  z-index: 1000;
 }
+
+.form-popup {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.close-button:hover {
+  color: #e63946;
+  transform: scale(1.2);
+}
+
 .cta-form {
   margin-top: 2rem;
   display: flex;
@@ -395,49 +413,7 @@
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
-.form-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(6px);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* changed from center to top */
-  padding-top: 15vh;         /* added vertical offset */
-  z-index: 1000;
-}
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  background: transparent;
-  border: none;
-  color: #333;
-  cursor: pointer;
-  z-index: 10;
-  transition: transform 0.2s ease;
-}
 
-.close-button:hover {
-  color: #e63946;
-  transform: scale(1.2);
-}
-.form-popup {
-  background: #fff;
-  padding: 1.5rem 2rem;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 600px; /* smaller than before */
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  position: relative;
-  animation: fadeInUp 0.3s ease-out;
-}
 .form-group input[type="text"],
 .form-group input[type="tel"],
 .form-group input[type="email"],
@@ -461,22 +437,15 @@
 .submit-button:hover {
   background-color: #005f3e;
 }
-/* ---------- ADDITIONAL RESPONSIVENESS FIXES ---------- */
 
-/* Make sure content sections don't overflow on small screens */
+/* Responsive */
 @media (max-width: 768px) {
   .about-us-container {
     padding: 15px;
   }
 
-  .content-section,
-  .company-content {
-    width: 100% !important;
-  }
-
-  .section-layout,
-  .section-layout.reverse {
-    flex-direction: column;
+  .section-layout {
+    flex-direction: column !important;
     gap: 20px;
   }
 
@@ -487,24 +456,16 @@
   }
 
   .section-image {
-    width: 100%;
     max-height: 300px;
     object-fit: cover;
   }
 
   .section-title {
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.3rem;
   }
 
   .page-title {
     font-size: 2rem;
-  }
-
-  .cta-button {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
   }
 
   .section-tabs {
@@ -513,27 +474,46 @@
   }
 
   .tab {
-    justify-content: center;
     font-size: 1rem;
     padding: 12px 18px;
   }
+
+  .cta-button {
+    margin: 40px auto 0;
+  }
 }
 
-/* Handle very small screens like iPhone SE */
 @media (max-width: 400px) {
   .section-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .page-title {
     font-size: 1.7rem;
   }
 
-  .section-subtitle {
+  .section-subtitle,
+  .cta-title {
     font-size: 1rem;
   }
+}
 
-  .cta-title {
-    font-size: 1.5rem;
-  }
+.full-width-image-section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.full-width-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.expanded-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
