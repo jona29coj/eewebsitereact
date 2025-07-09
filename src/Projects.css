@@ -142,21 +142,3 @@
     padding: 0.4rem 0.9rem;
   }
 }
-
-@media (max-width: 480px) {
-  .projects-title {
-    font-size: 1.8rem;
-  }
-
-  .card-content h3 {
-    font-size: 1.2rem;
-  }
-
-  .card-content p {
-    font-size: 0.9rem;
-  }
-
-  .projects-page {
-    padding: 6rem 1rem;
-  }
-}

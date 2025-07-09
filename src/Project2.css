@@ -510,38 +510,46 @@
     margin-top: 2rem;
   }
 }
-
 @media (max-width: 480px) {
-  .hero-sectionpro,
+  .project-container {
+    padding-top: 10rem; /* Pushes content lower on phones */
+  }
+
+  /* Optional: adjust other paddings if needed */
   .content-section,
   .full-width-section,
   .sustainability-section {
-    padding: 3rem 4%;
+    padding: 4rem 6%;
   }
-  
+
   .project-details {
     padding: 3rem 4%;
   }
-  
+
   .hero-titlepro {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitlepro {
     font-size: 1.125rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .content-text p,
   .content-text li,
   .sustainability-text li {
     font-size: 1rem;
   }
-  
+
   .full-width-content p {
     font-size: 1.125rem;
+  }
+}  
+@media (max-width: 480px) {
+  .hero-contentpro {
+    padding-top: 1rem !important; /* or more if needed */
   }
 }
