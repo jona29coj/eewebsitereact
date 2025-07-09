@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+.section-description,
+.section-description * {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
 
 .project-container {
    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

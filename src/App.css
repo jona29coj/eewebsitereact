@@ -374,13 +374,13 @@ section {
   /* Your custom styles here */
   font-size: 0.875rem; /* Example: make text slightly smaller */
   min-width: 80px; 
-   
+  background-color:#02ad7d;
      /* Example: set minimum w/* Base card and text styles remain unchanged above */
 }
 .btn-success.small-btn {
   /* Styles specific to success variant */
-  background-color: #0e7a5a;
-  border-color: #0e7a5a;
+  background-color: #02ad7d;
+  border-color: #02ad7d;
 }
 
 /* Hover state */
@@ -453,7 +453,7 @@ section {
   width:105px;
 }
 .elements-footer{
-  background-color:#114944;
+  background-color: #4d7768;
   
 }
 .tight-footer .row {
@@ -468,7 +468,7 @@ section {
 }
 
 .elements-footer {
-  background-color: #033825; /* dark green or black as per your theme */
+  background-color: #4d7768; /* dark green or black as per your theme */
   color: white;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;

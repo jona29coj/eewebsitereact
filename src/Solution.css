@@ -69,6 +69,7 @@
 
 .card-body p {
   font-size: 0.95rem;
+  
 }
 .solution {
   min-height: auto;         /* Still gives a tall section on large screens */

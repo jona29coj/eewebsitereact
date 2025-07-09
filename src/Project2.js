@@ -60,8 +60,9 @@ const Project2 = () => {
       <section className="content-section">
         <div className="section-header">
           <div className="section-number">01</div>
-          <h2 className="section-title">Project Overview</h2>
+          <h2 className="section-title">Project Overview<br/></h2>
           <p className="section-description">
+          <br/>
             Pioneering the future of quantum computing through innovative design and sustainable practices
           </p>
         </div>
@@ -90,6 +91,7 @@ const Project2 = () => {
           <div className="section-number">02</div>
           <h2 className="section-title">Design Approach</h2>
           <p className="section-description">
+            <br/>
             A futuristic design concept that embodies innovation and cutting-edge technology
           </p>
         </div>
@@ -118,7 +120,7 @@ const Project2 = () => {
           <div className="section-number">03</div>
           <h2 className="section-title">Energy Analysis</h2>
           <p className="section-description">
-            Comprehensive energy optimization for maximum efficiency and sustainability
+            <br/>Comprehensive energy optimization for maximum efficiency and sustainability
           </p>
         </div>
         <div className="content-layout">
@@ -146,7 +148,7 @@ const Project2 = () => {
           <div className="section-number">04</div>
           <h2 className="section-title">Material Selection</h2>
           <p className="section-description">
-            Thoughtfully curated materials that balance aesthetics, functionality, and sustainability
+            <br/>Thoughtfully curated materials that balance aesthetics, functionality, and sustainability
           </p>
         </div>
         <div className="content-layout reverse">

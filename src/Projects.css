@@ -60,7 +60,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #7456ff;
+  background: #1b75b1;
   color: white;
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
@@ -80,7 +80,7 @@
 .category {
   font-size: 0.75rem;
   font-weight: bold;
-  color: #7456ff;
+  
   margin-bottom: 0.75rem;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .view-button {
-  background: #7456ff;
+  background: #1b75b1;
   color: white;
   border: none;
   padding: 0.5rem 1rem;

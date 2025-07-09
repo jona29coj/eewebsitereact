@@ -42,7 +42,8 @@
   background-clip: text;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  font-size: 2rem; /* adjust as needed */
+  font-size: 2rem;
+  text-align: justify; /* adjust as needed */
   /* stronger shadow */
 }
 

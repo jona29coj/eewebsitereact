@@ -138,6 +138,23 @@ function App() {
   return () => document.removeEventListener('click', handleClickOutside);
 }, []);
 
+useEffect(() => {
+  const handleClickOutside = (e) => {
+    const clickedInDropdown = e.target.closest('.megamenu');
+    const clickedDropdownLink = e.target.classList.contains('mega-menu-link');
+
+    // If clicked outside dropdown or on a link inside dropdown, close
+    if (!clickedInDropdown || clickedDropdownLink) {
+      setShowMega(false);
+      setShowAboutMega(false);
+    }
+  };
+
+  document.addEventListener('click', handleClickOutside);
+  return () => document.removeEventListener('click', handleClickOutside);
+}, []);
+
+
 
   return (
     <>
@@ -511,7 +528,7 @@ function App() {
       {activePage === 'CareerSection' && <CareerSection />}
 
       <footer className="elements-footer py-2 tight-footer" style={{
-        backgroundColor: '#343a40',
+       
         color: 'white',
         padding: '2rem 0'
       }}>

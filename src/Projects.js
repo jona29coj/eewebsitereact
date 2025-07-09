@@ -17,7 +17,7 @@ function ProjectsContent({ setActivePage }) {
           <div className="card-content">
             <h3>Centre for Quantum Information, Communication and Computing Lab</h3>
             <p className="category">SPACE DESIGN</p>
-            <p>...</p>
+            
             <button className="view-button" href="#CQuICC" onClick={() => setActivePage('Project2')}>
               View Details <ArrowRight size={16} />
             </button>
@@ -32,7 +32,7 @@ function ProjectsContent({ setActivePage }) {
           <div className="card-content">
             <h3>Metalware Corporation</h3>
             <p className="category">ENERGY ANALYSIS</p>
-            <p>...</p>
+            
             <button className="view-button" href="#Elements energy" onClick={() => setActivePage('Project3')}>
               View Details <ArrowRight size={16} />
             </button>
@@ -47,7 +47,7 @@ function ProjectsContent({ setActivePage }) {
           <div className="card-content">
             <h3>Ecotech Factory</h3>
             <p className="category">ENERGY ANALYSIS</p>
-            <p>...</p>
+            
             <button className="view-button" href="Ecotech " onClick={() => setActivePage('Project4')}>
               View Details <ArrowRight size={16} />
             </button>
