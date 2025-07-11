@@ -5,7 +5,13 @@
   margin: 0;
   left: 80px;
 }
-
+* {
+  user-select: text;
+}
+*::selection {
+  background-color: rgba(0, 128, 0, 0.3); /* light green */
+  color: #000;
+}
 /* Section Container */
 .section {
   border-radius: 6px;

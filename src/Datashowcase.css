@@ -83,3 +83,10 @@
   }
 }
 
+* {
+  user-select: text;
+}
+*::selection {
+  background-color: rgba(0, 128, 0, 0.3); /* light green */
+  color: #000;
+}

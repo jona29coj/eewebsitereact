@@ -373,3 +373,10 @@ body {
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
+* {
+  user-select: text;
+}
+*::selection {
+  background-color: rgba(0, 128, 0, 0.3); /* light green */
+  color: #000;
+}

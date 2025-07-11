@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import React from 'react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -17,34 +17,6 @@ L.Icon.Default.mergeOptions({
 });
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    contact: '',
-    email: '',
-    message: ''
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', contact: '', email: '', message: '' });
-    }, 3000);
-  };
-
   return (
     <div className="contact-container">
       {/* Hero Section */}
@@ -131,42 +103,40 @@ function Contact() {
                 </p>
               </div>
 
-              {!isSubmitted ? (
-                <form className="contact-form" onSubmit={handleSubmit}>
-                  <div className="form-group">
-                    <label htmlFor="name" className="form-label">Full Name</label>
-                    <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} className="form-input" placeholder="Enter your full name" required />
-                  </div>
+              <form
+                className="contact-form"
+                action="https://formspree.io/f/xzzgwqrr"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="New Contact Message from Website" />
 
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label htmlFor="contact" className="form-label">Contact Number</label>
-                      <input type="tel" id="contact" name="contact" value={formData.contact} onChange={handleInputChange} className="form-input" placeholder="+91 XXXXX XXXXX" required />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="email" className="form-label">Email Address</label>
-                      <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className="form-input" placeholder="your.email@example.com" required />
-                    </div>
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="message" className="form-label">Message</label>
-                    <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} className="form-textarea" placeholder="Tell us about your energy management needs..." rows={6} required></textarea>
-                  </div>
-
-                  <button type="submit" className="submit-button">
-                    <Send className="button-icon" />
-                    Send Message
-                  </button>
-                </form>
-              ) : (
-                <div className="success-message">
-                  <div className="success-icon"><CheckCircle /></div>
-                  <h3 className="success-title">Message Sent Successfully!</h3>
-                  <p className="success-description">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                <div className="form-group">
+                  <label htmlFor="name" className="form-label">Full Name</label>
+                  <input type="text" id="name" name="name" className="form-input" placeholder="Enter your full name" required />
                 </div>
-              )}
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="contact" className="form-label">Contact Number</label>
+                    <input type="tel" id="contact" name="contact" className="form-input" placeholder="+91 XXXXX XXXXX" required />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="email" className="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" className="form-input" placeholder="your.email@example.com" required />
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="message" className="form-label">Message</label>
+                  <textarea id="message" name="message" className="form-textarea" placeholder="Tell us about your energy management needs..." rows={6} required></textarea>
+                </div>
+
+                <button type="submit" className="submit-button">
+                  <Send className="button-icon" />
+                  Send Message
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -183,7 +153,6 @@ function Contact() {
           </div>
 
           <div className="map-container">
-            {/* Map with marker */}
             <MapContainer
               center={[12.992094754411658, 80.24367697935722]}
               zoom={17}
@@ -200,7 +169,6 @@ function Contact() {
               </Marker>
             </MapContainer>
 
-            {/* Button below map */}
             <button
               className="map-redirect-button"
               onClick={() =>
@@ -215,7 +183,6 @@ function Contact() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

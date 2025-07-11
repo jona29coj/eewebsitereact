@@ -142,3 +142,10 @@
     padding: 0.4rem 0.9rem;
   }
 }
+* {
+  user-select: text;
+}
+*::selection {
+  background-color: rgba(0, 128, 0, 0.3); /* light green */
+  color: #000;
+}

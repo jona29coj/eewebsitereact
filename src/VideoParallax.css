@@ -1,4 +1,10 @@
-
+* {
+  user-select: text;
+}
+*::selection {
+  background-color: rgba(0, 128, 0, 0.3); /* light green */
+  color: #000;
+}
 /* --- Main Section Styling (Mostly unchanged) --- */
 .video-parallax-section {
     position: relative;
