@@ -77,7 +77,7 @@ const DataShowcase = () => {
             const isLastTwo = index >= images.length - 2;
             const isExpanded = expandedIndex === index;
             const yPos = index * 65;
-            const xPos = index * 300;
+            const xPos = index * 230;
 
             return (
               <motion.img
