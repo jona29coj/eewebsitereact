@@ -14,7 +14,7 @@
 .small-width-btn:hover {
   width: 190px;
   text-align: center;
-  background-color: #28a768;
+  background-color:  #22a46f;
 
 }
 /* === Custom Mega Dropdown === */
@@ -35,7 +35,7 @@
 }
 
 .navbar-nav .megamenu .dropdown-toggle:hover {
-  color: #00ffae;
+  color: #22a46f;
 }
 .megamenu-content {
   display: none;
@@ -85,13 +85,13 @@
 .megamenu-content a.stretched-link {
   display: inline-block;
   font-weight: 500;
-  color: #0a8f61;
+  color: #22a46f;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .megamenu-content a.stretched-link:hover {
-  color: #00c28b;
+  color:  #22a46f;
 }
 
 /* Ensure dropdown works on smaller screens */
@@ -158,20 +158,20 @@
 }
 
 .nav-link-custom:hover{
-  background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
+  background-color:  #22a46f ;/* Light green with transparency */
   text-decoration: none;
   border-radius: 10px;
 }
 
 
 .navbar.scrolled .nav-link-custom:hover {
-  background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
+  background-color:  #22a46f ;/* Light green with transparency */
   text-decoration: none;
   border-radius: 15px;
 }
 
 .navbar.scrolled  {
-  background-color: rgba(60, 192, 131, 0.548); /* Light green with transparency */
+  background-color: #22a46f ;/* Light green with transparency */
   text-decoration: none;
   
   transition: border-radius 0.1s ease-in;
@@ -183,7 +183,7 @@
 }
 
 .navbar.scrolled .nav-button-custom {
-  background-color: #45d894 !important;
+  background-color:  #22a46f !important;
   color: white !important;
   font-family: 'Inter','sans-serif' !important;
 }
@@ -361,7 +361,7 @@ section {
 .btn-light {
   
   color: white;
-  background-color: rgba(21, 212, 107, 0.9);
+  background-color:  #22a46f;
 
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -381,13 +381,13 @@ section {
   /* Your custom styles here */
   font-size: 0.875rem; /* Example: make text slightly smaller */
   min-width: 80px; 
-  background-color:#02ad7d;
+  background-color: #22a46f;
      /* Example: set minimum w/* Base card and text styles remain unchanged above */
 }
 .btn-success.small-btn {
   /* Styles specific to success variant */
-  background-color: #02ad7d;
-  border-color: #02ad7d;
+  background-color: #22a46f;
+  border-color:  #22a46f;
 }
 
 /* Hover state */
@@ -460,7 +460,7 @@ section {
   width:105px;
 }
 .elements-footer{
-  background-color: #4d7768;
+  background-color:  #22a46f;
   
 }
 .tight-footer .row {
@@ -475,7 +475,7 @@ section {
 }
 
 .elements-footer {
-  background-color: #4d7768; /* dark green or black as per your theme */
+  background-color: #146444; /* dark green or black as per your theme */
   color: white;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;

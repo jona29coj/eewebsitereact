@@ -75,7 +75,7 @@ const About = () => {
             {/* Image Section */}
             <div className="col-md-6 text-center mb-4 mb-md-0 responsive-img-wrapper">
               <img
-                src="/introimage.png"
+                src="/buildingimg.png"
                 alt="Elements Energy Logo"
                 style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
                 className="img-fluid"
