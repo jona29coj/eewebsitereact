@@ -62,7 +62,7 @@ const About = () => {
                 onClick={() => setShowForm(true)}
                 className="btn-primary mt-3 small-width-btn text-decoration-none"
                 style={{
-                  borderRadius: '6px',
+                  borderRadius: '3px',
                   width: 'fit-content',
                   height: '40px',
                   cursor: 'pointer'
@@ -75,9 +75,9 @@ const About = () => {
             {/* Image Section */}
             <div className="col-md-6 text-center mb-4 mb-md-0 responsive-img-wrapper">
               <img
-                src="/buildingimg.png"
+                src="/pic1.png"
                 alt="Elements Energy Logo"
-                style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
+                style={{ width: '100%', maxWidth: '700px', height: '500px' }}
                 className="img-fluid"
               />
             </div>
