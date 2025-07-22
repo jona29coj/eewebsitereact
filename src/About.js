@@ -74,13 +74,53 @@ const About = () => {
 
             {/* Image Section */}
             <div className="col-md-6 text-center mb-4 mb-md-0 responsive-img-wrapper">
-              <img
-                src="/pic1.png"
-                alt="Elements Energy Logo"
-                style={{ width: '100%', maxWidth: '700px', height: '500px' }}
-                className="img-fluid"
-              />
+              <div className="bubble-container">
+                <img
+                  src="pic2.png"
+                  alt="Smart Buildings"
+                  className="img-fluid hover-bubble-map"
+                  style={{ width: '100%', maxWidth: '400px', zIndex: 1 }}
+                />
+                
+                <div className="bubble">
+                  <div className="bubble-content">
+                    <h7><strong>Rooftop Solar</strong></h7>
+                    <p>Utilise our terrace and open spaces to generate renewables within the facility.</p>
+                  </div>
+                </div>
+                <div className="bubble1">
+                  <div className="bubble-content1">
+                    <h7><strong>Thermal Storage</strong></h7>
+                    <p>Using excess renewable energy to chill our water tank to use it for circulating cold air during peak tariff hours and power cuts.</p>
+                  </div>
+                </div>
+                <div className="bubble2">
+                  <div className="bubble-content2">
+                    <h7><strong>UPS Battery</strong></h7>
+                    <p>Fast discharge batteries which are used during power cuts.</p>
+                  </div>
+                </div>
+                <div className="bubble3">
+                  <div className="bubble-content3">
+                    <h7><strong>LTO Battery</strong></h7>
+                    <p>Fast discharge batteries which are used for peak demand saving.</p>
+                  </div>
+                </div>
+                <div className="bubble4">
+                  <div className="bubble-content4">
+                    <h7><strong>IOE Battery</strong></h7>
+                    <p>Slow discharge batteries which are used during peak tariff hours to save costs.</p>
+                  </div>
+                </div>
+                <div className="bubble5">
+                  <div className="bubble-content5">
+                    <h7><strong>Wheeled-in Renewables</strong></h7>
+                    <p>Wheel in solar and wind energy to power our buildings with the help of open access to renewble plants.</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
         </Container>
       </section>

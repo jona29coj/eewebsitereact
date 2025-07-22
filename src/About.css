@@ -107,3 +107,170 @@
     font-size: 1.2rem;
   }
 }
+
+
+.bubble-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bubble {
+  position: absolute;
+  top: -30px;         /* Adjust as needed */
+  left: 80%;         /* Center horizontally */
+  transform: translateX(-50%);
+}
+.bubble1 {
+  position: absolute;
+  top: 95px;         /* Adjust as needed */
+  left: 90%;   
+        /* Center horizontally */
+  transform: translateX(-50%);
+}
+.bubble-content1{
+  position: relative;
+  background: white;
+  padding: 12px;
+  border: 2px solid #e0e0e0;        /* Optional light border */
+  border-top: 2px solid #00ce64;    /* Green "margin border" on top */
+  border-radius: 10px;
+  width: 190px;
+  height: 67px;                     /* Let it grow naturally */
+  font-size: 0.52rem;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: none;                 /* No shadow as requested */
+}
+.bubble2 {
+  position: absolute;
+  top: 35px;         /* Adjust as needed */
+  left: 90%;   
+        /* Center horizontally */
+  transform: translateX(-50%);
+}
+.bubble-content2{
+  position: relative;
+  background: white;
+  padding: 12px;
+  border: 2px solid #e0e0e0;        /* Optional light border */
+  border-top: 2px solid #00ce64;    /* Green "margin border" on top */
+  border-radius: 10px;
+  width: 180px;
+  height: 52px;                     /* Let it grow naturally */
+  font-size: 0.52rem;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: none;                 /* No shadow as requested */
+}
+.bubble3{
+  position: absolute;
+  top: 35px;         /* Adjust as needed */
+  left: 14%;   
+        /* Center horizontally */
+  transform: translateX(-50%);
+}
+.bubble-content3{
+  position: relative;
+  background: white;
+  padding: 12px;
+  border: 2px solid #e0e0e0;        /* Optional light border */
+  border-top: 2px solid #00ce64;    /* Green "margin border" on top */
+  border-radius: 10px;
+  width: 153px;
+  height: 52px;                     /* Let it grow naturally */
+  font-size: 0.52rem;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: none;                 /* No shadow as requested */
+}
+.bubble4 {
+  position: absolute;
+  top: 95px;         /* Adjust as needed */
+  left: 12%;   
+        /* Center horizontally */
+  transform: translateX(-50%);
+}
+.bubble-content4{
+  position: relative;
+  background: white;
+  padding: 10px;
+  border: 2px solid #e0e0e0;        /* Optional light border */
+  border-top: 2px solid #00ce64;    /* Green "margin border" on top */
+  border-radius: 10px;
+  width: 180px;
+  height: 52px;                     /* Let it grow naturally */
+  font-size: 0.52rem;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: none;                 /* No shadow as requested */
+}
+.bubble5 {
+  position: absolute;
+  top: -35px;         /* Adjust as needed */
+  left: 12%;   
+        /* Center horizontally */
+  transform: translateX(-50%);
+}
+.bubble-content5{
+  position: relative;
+  background: white;
+  padding: 12px;
+  border: 2px solid #e0e0e0;        /* Optional light border */
+  border-top: 2px solid #00ce64;    /* Green "margin border" on top */
+  border-radius: 10px;
+  width: 180px;
+  height: 67px;                     /* Let it grow naturally */
+  font-size: 0.52rem;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: none;                 /* No shadow as requested */
+}
+/* Tooltip Box (Always Visible) */
+.bubble-content {
+  position: relative;
+  background: white;
+  padding: 12px;
+  border: 2px solid #e0e0e0;        /* Optional light border */
+  border-top: 2px solid #00ce64;   /* Green "margin border" on top */
+  border-radius: 10px;
+  width: 190px;
+  height: 57px;                     /* Let it grow naturally */
+  font-size: 0.52rem;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: none;                 /* No shadow as requested */
+}
+
+
+/* Optional: Curve at top (connecting visually to bubble-dot) */
+.bubble-content::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 10px);
+  width: 8px;
+  height: 10px;
+  background: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+.bubble-content,
+.bubble-content1,
+.bubble-content2,
+.bubble-content3,
+.bubble-content4,
+.bubble-content5 {
+  transition: transform 0.3s ease;
+}
+
+.bubble-content:hover,
+.bubble-content1:hover,
+.bubble-content2:hover,
+.bubble-content3:hover,
+.bubble-content4:hover,
+.bubble-content5:hover {
+  transform: scale(1.05);
+  z-index: 1100; /* Bring to front if overlapping */
+}
