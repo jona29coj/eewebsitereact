@@ -178,7 +178,7 @@
 .bubble2 {
   position: absolute;
   top: 35px;         /* Adjust as needed */
-  left: 90%;   
+  left: 91%;   
         /* Center horizontally */
   transform: translateX(-50%);
 }
@@ -189,7 +189,7 @@
   border: 2px solid #e0e0e0;        /* Optional light border */
   border-top: 2px solid #00ce64;    /* Green "margin border" on top */
   border-radius: 10px;
-  width: 180px;
+  width: 185px;
   height: 52px;                     /* Let it grow naturally */
   font-size: 0.52rem;
   z-index: 1000;
@@ -199,7 +199,7 @@
 .bubble3{
   position: absolute;
   top: 35px;         /* Adjust as needed */
-  left: 23%;   
+  left: 18%;   
         /* Center horizontally */
   transform: translateX(-50%);
 }
@@ -210,7 +210,7 @@
   border: 2px solid #e0e0e0;        /* Optional light border */
   border-top: 2px solid #00ce64;    /* Green "margin border" on top */
   border-radius: 10px;
-  width: 153px;
+  width: 183px;
   height: 52px;                     /* Let it grow naturally */
   font-size: 0.52rem;
   z-index: 1000;
