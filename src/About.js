@@ -33,7 +33,7 @@ const About = () => {
               </h2>
 
               <div className="about-text">
-                <p className="lead" style={{ fontSize: '0.9em' }}>
+                <p  style={{ fontSize: '0.9em' }}>
                   At <strong>Elements Energy</strong>, we are reimagining sustainability from the ground up. Not
                   just energy — but air, water, carbon, and everything in between. We are a
                   full-stack sustainability platform that helps organizations design smarter spaces,
