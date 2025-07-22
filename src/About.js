@@ -79,7 +79,7 @@ const About = () => {
                   src="pic2.png"
                   alt="Smart Buildings"
                   className="img-fluid hover-bubble-map"
-                  style={{ width: '100%', maxWidth: '400px', zIndex: 1 }}
+                  style={{ width: '100%', maxWidth: '400px', zIndex: 1 , paddingLeft:'45px'}}
                 />
                 
                 <div className="bubble">

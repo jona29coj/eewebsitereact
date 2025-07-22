@@ -6,6 +6,39 @@
   text-align: justify;  /* optional for readability */
 }
 
+.about-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.about-text-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .about-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image-section {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
 
 .title{
   font-family: 'Poppins', sans-serif;
@@ -118,13 +151,13 @@
 .bubble {
   position: absolute;
   top: -30px;         /* Adjust as needed */
-  left: 80%;         /* Center horizontally */
+  left: 90%;         /* Center horizontally */
   transform: translateX(-50%);
 }
 .bubble1 {
   position: absolute;
   top: 95px;         /* Adjust as needed */
-  left: 90%;   
+  left: 91%;   
         /* Center horizontally */
   transform: translateX(-50%);
 }
@@ -166,7 +199,7 @@
 .bubble3{
   position: absolute;
   top: 35px;         /* Adjust as needed */
-  left: 14%;   
+  left: 23%;   
         /* Center horizontally */
   transform: translateX(-50%);
 }
@@ -187,7 +220,7 @@
 .bubble4 {
   position: absolute;
   top: 95px;         /* Adjust as needed */
-  left: 12%;   
+  left: 18%;   
         /* Center horizontally */
   transform: translateX(-50%);
 }
@@ -208,7 +241,7 @@
 .bubble5 {
   position: absolute;
   top: -35px;         /* Adjust as needed */
-  left: 12%;   
+  left: 18%;   
         /* Center horizontally */
   transform: translateX(-50%);
 }
