@@ -277,3 +277,61 @@
   background-color: rgba(0, 128, 0, 0.3); /* light green */
   color: #000;
 }
+/* Responsive behavior */
+@media (max-width: 992px) {
+  .features-container,
+  .features-container1,
+  .features-container2,
+  .features-container3 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features-text,
+  .features-text1,
+  .features-text2,
+  .features-text3 {
+    max-width: 100%;
+  }
+
+  .features-image-wrapper,
+  .features-image-wrapper1,
+  .features-image-wrapper2,
+  .features-image-wrapper3 {
+    margin-top: 1.5rem;
+  }
+
+  .features-image,
+  .features-image1,
+  .features-image2,
+  .features-image3 {
+    max-width: 90%;
+  }
+
+  .features-text-bg,
+  .features-text-bg1,
+  .features-text-bg2,
+  .features-text-bg3 {
+    display: none; /* Hide background on small screens to avoid overlap */
+  }
+}
+
+@media (max-width: 576px) {
+  .features-section {
+    padding: 2rem 1rem;
+  }
+
+  .features-text h2,
+  .features-text1 h2,
+  .features-text2 h2,
+  .features-text3 h2 {
+    font-size: 1.5rem;
+  }
+
+  .features-text li,
+  .features-text1 li,
+  .features-text2 li,
+  .features-text3 li {
+    font-size: 0.9rem;
+  }
+}

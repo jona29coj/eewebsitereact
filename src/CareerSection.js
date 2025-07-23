@@ -58,30 +58,38 @@ function CareerSection() {
               <div className="form-popup">
                 <button className="close-button" onClick={handleToggleForm}>×</button>
 
-                <form className="cta-form">
+                <form
+                  className="cta-form"
+                  action="https://formsubmit.co/harshetha.venkatesan@gmail.com"
+                  method="POST"
+                  
+                >
+                  {/* Hidden Subject Line */}
+                  <input type="hidden" name="_subject" value="New Contact Message from Website" />
+
                   <div className="form-group">
                     <label>Name</label>
-                    <input type="text" placeholder="Your full name" required />
+                    <input type="text" name="name" placeholder="Your full name" required />
                   </div>
 
                   <div className="form-group">
                     <label>Contact Number</label>
-                    <input type="tel" placeholder="Your contact number" required />
+                    <input type="tel" name="contact" placeholder="Your contact number" required />
                   </div>
 
                   <div className="form-group">
                     <label>Email</label>
-                    <input type="email" placeholder="Your email address" required />
+                    <input type="email" name="email" placeholder="Your email address" required />
                   </div>
 
                   <div className="form-group">
                     <label>Subject</label>
-                    <input type="text" placeholder="Subject of message" />
+                    <input type="text" name="subject" placeholder="Subject of message" />
                   </div>
 
                   <div className="form-group">
-                    <label>Upload Resume (PDF only)</label>
-                    <input type="file" accept=".pdf" required />
+                    <label>Resume Link (Google Drive)</label>
+                    <input type="file" name="resume" accept=".pdf" required />
                   </div>
 
                   <button type="submit" className="submit-button">Submit Application</button>
@@ -89,6 +97,7 @@ function CareerSection() {
               </div>
             </div>
           )}
+
         </div>
       </div>
     </div>

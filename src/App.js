@@ -407,15 +407,14 @@ useEffect(() => {
                   </button>
 
                   <form 
-                    action="https://formspree.io/f/xzzgwqrr" 
-                    method="POST"
+                    action="https://formsubmit.co/harshetha.venkatesan@gmail.com" method="POST"
                     className="cta-form"
                     encType="multipart/form-data"
                   >
                     {/* FormSubmit hidden fields */}
                     <input type="hidden" name="_subject" value="New Energy Assessment Request" />
                     <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+                    
                     <input type="hidden" name="_template" value="table" />
 
                     <div className="form-group" style={{ marginBottom: '1rem' }}>

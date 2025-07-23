@@ -135,8 +135,7 @@ const About = () => {
             <h4 className="text-center">Request a Demo</h4>
             <form
               className="cta-form"
-              action="https://formspree.io/f/xzzgwqrr"
-              method="POST"
+              action="https://formsubmit.co/harshetha.venkatesan@gmail.com" method="POST"
             >
               <input type="hidden" name="_subject" value="New Demo Request from Website" />
 
