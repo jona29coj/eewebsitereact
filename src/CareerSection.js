@@ -89,8 +89,14 @@ function CareerSection() {
 
                   <div className="form-group">
                     <label>Resume Link (Google Drive)</label>
-                    <input type="file" name="resume" accept=".pdf" required />
+                    <input
+                      type="url"
+                      name="resumeLink"
+                      placeholder="https://drive.google.com/..."
+                      required
+                    />
                   </div>
+
 
                   <button type="submit" className="submit-button">Submit Application</button>
                 </form>

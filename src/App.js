@@ -526,31 +526,33 @@ useEffect(() => {
       {activePage === 'TeamSection' && <TeamSection />}
       {activePage === 'CareerSection' && <CareerSection />}
 
-      <footer className="elements-footer py-2 tight-footer" style={{
+      <footer className="elements-footer py-2 " style={{
        
         color: 'white',
-        padding: '2rem 0'
+        padding: '7rem ',
+        marginTop: '0rem',
       }}>
+
         <Container>
-          <div className="row justify-content-between align-items-start">
-            <div className="col-md-auto mb-4 d-flex align-items-start">
+          <div className="row justify-content-between align-items-start gx-5 gy-4" style={{marginTop: '1rem'}}>
+            <div className="col-md-auto mb-4">
               <img src="/logo-white.png" alt="Elements Energy Logo" height="40" className="mb-3" />
             </div>
 
-            <div className="col-md mb-4">
+            <div className="col-md mb-4 ms-md-5" >
               <h5>Quick Links</h5>
-              <ul className="list-unstyled">
-                <li className="mb-2"><a href="#AboutUs" className="text-white text-decoration-none">About Us</a></li>
-                <li className="mb-2"><a href="#Design" className="text-white text-decoration-none">Solutions</a></li>
-                <li className="mb-2"><a href="#Projects" className="text-white text-decoration-none">Projects</a></li>
+              <ul className="list-unstyled" >
+                <li><a href="#CompanySection" className="text-white text-decoration-none">About Us</a></li>
+                <li><a href="#Design" className="text-white text-decoration-none">Solutions</a></li>
+                <li><a href="#Projects" className="text-white text-decoration-none">Projects</a></li>
               </ul>
             </div>
 
             <div className="col-md mb-4">
               <h5>Contact Us</h5>
               <ul className="list-unstyled">
-                <li className="mb-2"><a href="tel:+919916585292" className="text-white text-decoration-none">+91 99165 85292</a></li>
-                <li className="mb-2"><a href="mailto:info@elementsenergies.com" className="text-white text-decoration-none">info@elementsenergies.com</a></li>
+                <li><a href="tel:+919916585292" className="text-white text-decoration-none">+91 99165 85292</a></li>
+                <li><a href="mailto:info@elementsenergies.com" className="text-white text-decoration-none">info@elementsenergies.com</a></li>
               </ul>
               <div className="mt-3">
                 <h5>Address</h5>
@@ -564,12 +566,12 @@ useEffect(() => {
 
             <div className="col-md mb-4">
               <h5>Follow Us</h5>
-              <div className="d-flex gap-3 mt-3">
+              <div className="d-flex align-items-center gap-3 mt-3">
                 <a href="https://in.linkedin.com/company/elements.energies">
-                  <img src="./linkdin.png" alt="LinkedIn" style={{ height: '24px', width: '24px' }} />
+                  <img src="./linkdin.png" alt="LinkedIn" className="social-icon" />
                 </a>
                 <a href="https://www.instagram.com/elements_energies">
-                  <img src="./insta.png" alt="Instagram" style={{ height: '24px', width: '24px' }} />
+                  <img src="./insta.png" alt="Instagram" className="social-icon" />
                 </a>
               </div>
             </div>

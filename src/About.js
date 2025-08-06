@@ -75,12 +75,17 @@ const About = () => {
             {/* Image Section */}
             <div className="col-md-6 text-center mb-4 mb-md-0 responsive-img-wrapper">
               <div className="bubble-container">
-                <img
-                  src="pic2.png"
-                  alt="Smart Buildings"
-                  className="img-fluid hover-bubble-map"
-                  style={{ width: '100%', maxWidth: '400px', zIndex: 1 , paddingLeft:'45px'}}
-                />
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/buildingimg.png" />
+                  <img
+                    src="pic2.png"
+                    alt="Smart Buildings"
+                    className="img-fluid hover-bubble-map"
+                    style={{ width: '100%', maxWidth: '400px', zIndex: 1 }}
+                  />
+                </picture>
+
+
                 
                 <div className="bubble">
                   <div className="bubble-content">

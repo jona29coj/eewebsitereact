@@ -6,31 +6,31 @@ import './AboutUs.css';
 const teamMembers = [
   {
     id: 1,
-    name: "Aarav Mehta",
-    position: "Lead Energy Analyst",
-    description: "Specializes in smart grid optimization and energy forecasting.",
-    image: "/images/team/aarav.jpg"
+    name: "Auna Sando",
+    position: "CEO",
+    description: "Urban designer with 4+ years of experience in architecture and project coordination, specializing in smart grid optimization and energy forecasting.",
+    image: "team/auna.png"
   },
   {
     id: 2,
-    name: "Sana Kapoor",
-    position: "Sustainability Officer",
-    description: "Focuses on carbon reduction and urban planning strategies.",
-    image: "/images/team/sana.jpg"
+    name: "Chemmal Swami Durai",
+    position: "Head-Operations",
+    description: "Energy analyst with 2+ years of experience in energy engineering, specializing in load forecasting and system efficiency. Worked with Atsuya and Ogni Group.",
+    image: "team/chemmal.png"
   },
   {
     id: 3,
-    name: "Vikram Desai",
-    position: "Tech Lead",
+    name: "Jonathan Prince",
+    position: "Head-Technology",
     description: "Architect behind our energy automation platform.",
-    image: "/images/team/vikram.jpg"
+    image: "team/jonathan.png"
   },
   {
     id: 4,
-    name: "Ishita Rao",
-    position: "Data Scientist",
+    name: "Anson Sando",
+    position: "Advisor",
     description: "Builds ML models for consumption prediction and energy efficiency.",
-    image: "/images/team/ishita.jpg"
+    image: "team/anson.png"
   },
   {
     id: 5,

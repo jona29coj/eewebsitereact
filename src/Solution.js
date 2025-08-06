@@ -20,9 +20,8 @@ const Solutions = () => {
         <>
           <p><strong>Sustainability begins with smart architecture and smarter data.</strong></p>
           <p style={{ textAlign: 'justify' }}>
-            We design infrastructure that is climate-conscious from the ground up — or retrofit
-            existing buildings to become future-ready. Our design phase integrates passive
-            design strategies and system mapping to ensure maximum efficiency and minimal waste.
+            We design infrastructure that is climate-conscious from the ground up & retrofit
+            existing buildings to become future-ready.
           </p>
         </>
       ),
@@ -51,9 +50,8 @@ const Solutions = () => {
         <>
           <p><strong>Bringing clean tech and intelligent systems to life.</strong></p>
           <p style={{ textAlign: 'justify' }}>
-            In this phase, we install the brains and backbone of your sustainability stack.
-            Whether it’s energy meters, IoT sensors, solar panels, battery systems, or thermal storage — 
-            we deploy integrated solutions that are scalable and built to last.
+            We install smart energy systems and scalable storage 
+            to build resilient infrastructure and retrofit facilities for a sustainable future.
           </p>
         </>
       ),
@@ -82,9 +80,8 @@ const Solutions = () => {
         <>
           <p><strong>Real-time visibility, continuous optimization, long-term impact.</strong></p>
           <p style={{ textAlign: 'justify' }}>
-            Once your system is online, our platform kicks in to monitor, learn, and improve — 24x7.
-            Using AI-powered analytics and predictive intelligence, we help you track your energy, water, and air use,
-            optimize performance, reduce costs, and meet ESG goals.
+           We enable intelligent operations with 24x7 monitoring, using AI to optimize 
+           resources, cut costs, and drive ESG impact.
           </p>
         </>
       ),

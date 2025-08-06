@@ -29,7 +29,8 @@ const Spotlight = () => {
           proving that technology can be both smart and sustainable.
         </p>
 
-              <div className="spotlight-row">
+        <div className="spotlight-row">
+          {/* Article 1 */}
           <a 
             href="https://revolve.media/views/sustainable-energy-transition-india" 
             target="_blank" 
@@ -42,28 +43,48 @@ const Spotlight = () => {
                 alt="Sustainable Energy Transition in India"
                 className="spotlight-img"
               />
-              <div className="spotlight-overlay">
+              <div className="spotlight-content">
                 <div className="spotlight-text">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' , marginTop: '-140px'}}>
-                    <div style={{
-                      width: '4.4px',
-                      height: '40px',
-                      backgroundColor: 'red'
-                    }}></div>
-
-                    <p style={{ fontSize: '20px', textAlign: 'left', marginTop:10}}>
-                      <strong>A New Era of Sustainable Infrastructure</strong>
-                    </p>
+                  <div className="spotlight-title-bar">
+                    <div className="spotlight-red-line"></div>
+                    <p><strong>A New Era of Sustainable Infrastructure</strong></p>
                   </div>
+                  <p className="spotlight-article-desc">
+                    Focused on IIT Madras Research Park – this showcases new energy storage systems that reduce reliance on coal. Elements Energy plays a key role in optimizing energy use and integrating renewables.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
 
-                  <p style={{ fontSize: '16px' }}>Focused on the IIT Madras Research Park (IITM-RP) – a hub for innovation – this feature showcases the newly installed battery and thermal energy storage systems that significantly reduce dependency on coal.
-                  Elements Energy, a startup providing advanced energy management systems (EMS), plays a key role in integrating renewable energy and optimizing usage.
-                  Through green building design and smart building integration, this vision captures India's path toward a greener future.</p>
+          {/* Article 2 */}
+          <a 
+            href="https://example.com/new-article" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="spotlight-link"
+          >
+            <div className="spotlight-image-wrapper">
+              <img
+                src="cover2.png"
+                alt="Future of Energy"
+                className="spotlight-img"
+              />
+              <div className="spotlight-content">
+                <div className="spotlight-text">
+                  <div className="spotlight-title-bar">
+                    <div className="spotlight-red-line"></div>
+                    <p><strong>Empowering the Next-Gen Grid</strong></p>
+                  </div>
+                  <p className="spotlight-article-desc">
+                    Discover how AI-driven EMS is transforming campuses and cities by reducing waste, improving uptime, and enabling a green energy future.
+                  </p>
                 </div>
               </div>
             </div>
           </a>
         </div>
+
       </div>
     </section>
   );

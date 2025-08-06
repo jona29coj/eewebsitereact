@@ -78,7 +78,7 @@ function CompanySection() {
         <div className="section-layout">
           <div className="section-image-container">
             <img
-              src="https://images.pexels.com/photos/9800029/pexels-photo-9800029.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/aboutus3.png"
               alt="Clean renewable energy future"
               className="section-image"
             />

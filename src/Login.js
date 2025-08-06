@@ -9,10 +9,13 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [isSignup, setIsSignup] = useState(false);
 
-  // ✅ Always default to Sign In mode on first load
+  // ✅ Load form from sessionStorage on first load
   useEffect(() => {
     setIsSignup(false);
-    setFormData({ email: '', password: '' });
+    const savedForm = sessionStorage.getItem('loginForm');
+    if (savedForm) {
+      setFormData(JSON.parse(savedForm));
+    }
     setErrors({});
   }, []);
 
@@ -30,9 +33,12 @@ function Login() {
     return Object.keys(newErrors).length === 0;
   };
 
+  // ✅ Save form to sessionStorage as user types
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const updatedForm = { ...formData, [name]: value };
+    setFormData(updatedForm);
+    sessionStorage.setItem('loginForm', JSON.stringify(updatedForm));
     if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
@@ -47,23 +53,21 @@ function Login() {
       const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
+        credentials: 'include' // ✅ include cookie
       });
 
       const data = await res.json();
 
       if (res.ok) {
-        alert(data.message);
-
-        // ✅ After successful signup, switch to login mode and clear form
         if (isSignup) {
-          setIsSignup(false);
+          setIsSignup(false); // Switch to login mode after successful registration
         }
 
-        // ✅ Clear form and errors after any success
         setFormData({ email: '', password: '' });
+        sessionStorage.removeItem('loginForm'); // ✅ clear form cache
         setErrors({});
-
+        console.log('Auth cookie should now be set in browser ✅');
       } else {
         alert(data.error || 'Something went wrong');
       }

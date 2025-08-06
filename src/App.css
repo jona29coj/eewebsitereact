@@ -474,35 +474,66 @@ section {
   padding-right: 0rem;
 }
 
+/* Footer.css */
+
 .elements-footer {
-  background-color: #146444; /* dark green or black as per your theme */
+  background-color: #146444;
   color: white;
+  padding: 3rem 0 1.5rem 0;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   margin-top: 4rem;
 }
 
-/* Optional: Make links & text spacing a bit tighter */
+.footer-logo {
+  height: 80px;
+  width: 105px;
+  object-fit: contain;
+}
+
 .elements-footer h5 {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.elements-footer ul {
+  padding-left: 0;
+}
+
+.elements-footer li {
+  list-style: none;
+  margin-bottom: 0.5rem;
 }
 
 .elements-footer p,
 .elements-footer li,
 .elements-footer a {
   font-size: 0.9rem;
-  line-height: 1.2;
+  line-height: 1.5;
+  color: white;
+  text-decoration: none;
 }
 
-.elements-footer h5,
-.elements-footer p,
-.elements-footer a,
-.elements-footer li {
-  color: white !important;
+.elements-footer a:hover {
+  text-decoration: underline;
 }
+
+.social-icon {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+}
+
+.footer-bottom {
+  background-color: #146444;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 0;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
 
 .mb-0{
   color:white;
@@ -625,6 +656,9 @@ section {
 
 .partners-section {
   background-color: #114944;
+  margin-top: -5rem;
+  margin-bottom: -5rem;
+  z-index: 3;
 }
 .partners-section{
   height: 300px;
