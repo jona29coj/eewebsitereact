@@ -1006,3 +1006,172 @@
   background-color: rgba(0, 128, 0, 0.3); /* light green */
   color: #000;
 }
+
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: clamp(14px, 1.8vw, 18px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hero Section */
+.hero-sectionbuild {
+  height: 750px;
+}
+
+.herobuild-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.herobuild-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.herobuild-description {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Passive Strategies Section */
+.passive-strategies-section {
+  padding: 0rem 7.3rem;
+}
+
+.passive-strategies-container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.passive-image {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+}
+
+.passive-image img {
+  width: 100%;
+  height: auto;
+}
+
+.passive-text {
+  flex: 1;
+}
+
+.passive-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.passive-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Design label on image */
+.design-label {
+  position: absolute;
+  left: 27rem;
+  top: 20%;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .passive-strategies-section {
+    padding: 0rem 3rem;
+  }
+
+  .passive-strategies-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .design-label {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .herobuild-title {
+    font-size: 2.2rem;
+  }
+
+  .herobuild-description {
+    font-size: 1rem;
+  }
+
+  .passive-paragraph {
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .design-label {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
