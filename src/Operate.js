@@ -86,8 +86,7 @@ function Operate() {
           ))}
         </div>
 
-        {/* ✅ Add static text on the right side */}
-        <div className="nav-left-text">How it works</div>
+
       </div>
     </nav>
 
