@@ -154,7 +154,7 @@
 .bubble-content1{
   position: relative;
   background: white;
-  padding: 12px;
+  padding: 2px;
   border: 2px solid #e0e0e0;        /* Optional light border */
   border-top: 2px solid #00ce64;    /* Green "margin border" on top */
   border-radius: 10px;
@@ -175,7 +175,7 @@
 .bubble-content2{
   position: relative;
   background: white;
-  padding: 12px;
+  padding: 2px;
   border: 2px solid #e0e0e0;        /* Optional light border */
   border-top: 2px solid #00ce64;    /* Green "margin border" on top */
   border-radius: 10px;
@@ -189,18 +189,18 @@
 .bubble3{
   position: absolute;
   top: 35px;         /* Adjust as needed */
-  left: 14%;   
+  left: 16%;   
         /* Center horizontally */
   transform: translateX(-50%);
 }
 .bubble-content3{
   position: relative;
   background: white;
-  padding: 12px;
+  padding: 2px;
   border: 2px solid #e0e0e0;        /* Optional light border */
   border-top: 2px solid #00ce64;    /* Green "margin border" on top */
   border-radius: 10px;
-  width: 183px;
+  width: 153px;
   height: 52px;                     /* Let it grow naturally */
   font-size: 0.52rem;
   z-index: 1000;
@@ -210,18 +210,18 @@
 .bubble4 {
   position: absolute;
   top: 95px;         /* Adjust as needed */
-  left:10%;   
+  left:12%;   
         /* Center horizontally */
   transform: translateX(-50%);
 }
 .bubble-content4{
   position: relative;
   background: white;
-  padding: 10px;
+  padding: 2px;
   border: 2px solid #e0e0e0;        /* Optional light border */
   border-top: 2px solid #00ce64;    /* Green "margin border" on top */
   border-radius: 10px;
-  width: 140px;
+  width: 110px;
   height: 80px;                     /* Let it grow naturally */
   font-size: 0.52rem;
   z-index: 1000;
@@ -231,18 +231,18 @@
 .bubble5 {
   position: absolute;
   top: -35px;         /* Adjust as needed */
-  left: 14%;   
+  left: 16%;   
         /* Center horizontally */
   transform: translateX(-50%);
 }
 .bubble-content5{
   position: relative;
   background: white;
-  padding: 12px;
+  padding: 2px;
   border: 2px solid #e0e0e0;        /* Optional light border */
   border-top: 2px solid #00ce64;    /* Green "margin border" on top */
   border-radius: 10px;
-  width: 180px;
+  width: 150px;
   height: 67px;                     /* Let it grow naturally */
   font-size: 0.52rem;
   z-index: 1000;
@@ -253,7 +253,7 @@
 .bubble-content {
   position: relative;
   background: white;
-  padding: 12px;
+  padding: 2px;
   border: 2px solid #e0e0e0;        /* Optional light border */
   border-top: 2px solid #00ce64;   /* Green "margin border" on top */
   border-radius: 10px;
@@ -317,7 +317,7 @@
     width: 130px !important;
     height: 45px !important;
     font-size: 0.4rem !important;
-    padding: 8px !important;
+    padding: 2px !important;
   }
 }
 

@@ -16,14 +16,14 @@ import {
 import './Operate.css';
 import DataShowcase from './Datashowcase';
 
-
 function Operate() {
   const [activeSection, setActiveSection] = useState('how-it-works');
-  const [navOffset, setNavOffset] = useState(80); // fallback
+  const [navOffset, setNavOffset] = useState(80);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const updateOffset = () => {
-      const nav = document.querySelector('.sticky-nav'); // ⬅️ Match the actual nav class
+      const nav = document.querySelector('.sticky-nav');
       if (nav) {
         setNavOffset(nav.offsetHeight);
       }
@@ -36,17 +36,21 @@ function Operate() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY + navOffset + 50;
+      const scrollY = window.scrollY;
+      const scrollOffset = scrollY + navOffset + 50;
+
       const features = document.getElementById('features');
       const benefits = document.getElementById('benefits');
 
-      if (features && scrollY >= features.offsetTop) {
+      if (features && scrollOffset >= features.offsetTop) {
         setActiveSection('features');
-      } else if (benefits && scrollY >= benefits.offsetTop) {
+      } else if (benefits && scrollOffset >= benefits.offsetTop) {
         setActiveSection('benefits');
       } else {
         setActiveSection('how-it-works');
       }
+
+      setScrolled(scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -63,28 +67,31 @@ function Operate() {
   };
 
   return (
-    <div className="operate-container">
-      <nav className="sticky-nav">
-        <div className="nav-container">
-          <div className="nav-buttons">
-            {[
-              { id: 'how-it-works', label: 'How it works' },
-              { id: 'benefits', label: 'Benefits' },
-              { id: 'features', label: 'Features' },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`nav-button ${
-                  activeSection === item.id ? 'active' : ''
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
+  <div className="operate-container">
+    <nav className={`sticky-nav ${scrolled ? 'shrunk' : ''}`}>
+      <div className="nav-container">
+        <div className="nav-buttons">
+          {[
+            { id: 'how-it-works', label: 'How it works' },
+            { id: 'benefits', label: 'Benefits' },
+            { id: 'features', label: 'Features' },
+          ].map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`nav-button ${activeSection === item.id ? 'active' : ''}`}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
-      </nav>
+
+        {/* ✅ Add static text on the right side */}
+        <div className="nav-left-text">How it works</div>
+      </div>
+    </nav>
+
+      
 
       {/* Keep your hero, benefits, and features sections as-is here */}
       <section id="how-it-works" className="heroop-section">

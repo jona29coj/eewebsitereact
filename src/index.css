@@ -78,17 +78,6 @@ body {
   position: relative;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-  border-radius: 2px;
-}
 
 .projects-grid {
   display: grid;
@@ -422,28 +411,7 @@ body {
   transform: scale(1.08);
 }
 
-.section-content h3 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 24px;
-  letter-spacing: -0.025em;
-}
 
-.section-content h4 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #3b82f6;
-  margin-bottom: 20px;
-  letter-spacing: -0.025em;
-}
-
-.section-content p {
-  line-height: 1.8;
-  color: #475569;
-  margin-bottom: 24px;
-  font-size: 1.125rem;
-}
 
 .section-content ul {
   list-style: none;
@@ -711,10 +679,7 @@ body {
     font-size: 2rem;
   }
 
-  .section-content h3 {
-    font-size: 1.875rem;
-  }
-
+ 
   .full-width-section h3 {
     font-size: 2rem;
   }

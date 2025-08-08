@@ -6,11 +6,13 @@
   color: #000;
 }
 .about-us-container {
-  max-width: 1200px;
+
   margin: 0 auto;
   padding: 20px;
 }
-
+.full-width-container{
+  background-color: #fff;
+}
 .section-tabs {
   display: flex;
   justify-content: center;
@@ -26,7 +28,7 @@
   display: flex;
   align-items: center;
   padding: 15px 25px;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -44,6 +46,17 @@
 }
 
 .section-main-title {
+    background: linear-gradient(
+    90deg,
+    #00da69 0%, 
+    #00ce64 30%, 
+    #0195cf 65%, 
+    #0164ce 80%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   font-size: 2.5rem;
   font-weight: 600;
   margin-top: 0.2rem;
@@ -62,7 +75,7 @@
 }
 
 .tab.active {
-  background-color: #7ac0b1;
+
   color: white;
 }
 
@@ -108,27 +121,41 @@
 }
 
 .page-title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 3px;
+  font-family: 'Poppins', sans-serif;
 }
+.page-subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  font-family: 'Inter', sans-serif;
+}
+
+
 
 .title-highlight {
-  color: #2e7d32;
+  background: linear-gradient(
+    90deg,
+    #00da69 0%, 
+    #00ce64 30%, 
+    #0195cf 65%, 
+    #0164ce 80%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
-.page-subtitle {
-  font-size: 1.2rem;
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto;
-}
 
 .content-section {
   margin: 30px auto;
-  max-width: 1100px;
+  max-width: 1130px;
   width: 100%;
   padding: 0 20px;
 }
+
 
 
 
@@ -162,13 +189,35 @@
 }
 
 .section-title {
-  font-size: 1.8rem;
+  text-align: left;
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
+    background: linear-gradient(
+    90deg,
+    #00da69 0%, 
+    #00ce64 30%, 
+    #0195cf 65%, 
+    #0164ce 80%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .section-text {
-  line-height: 1.6;
+  line-height: 1.4;
   color: #555;
+  font-family: 'Inter', serif; 
+}
+.section-text p {
+  font-size: 0.9rem;
+
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: justify; /* Optional for better paragraph alignment */
 }
 
 .text-highlight {
@@ -186,27 +235,26 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.dark-section {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 8px;
+
+.lightblue-overlay {
+  background-color: rgba(117, 178, 194, 0.219);/* light blue */
+  padding: 10px 0; /* top and bottom padding for spacing */
 }
 
+
 .team-content, .career-content {
-  max-width: 1200px;
-  margin: 0 auto;
+ 
+  margin: 30px auto;
+  max-width: 1130px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .section-intro {
-  left: 70;
+  left: 90;
   margin-bottom: 40px;
 }
 
-.section-main-title {
-  left: 70;
-  font-size: 2.2rem;
-  margin: 15px 0;
-}
 
 .section-subtitle {
   font-size: 1.1rem;

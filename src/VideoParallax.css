@@ -38,7 +38,7 @@
 
 
 .desktop-frame {
-    margin-left: 50px;
+    margin-left: 10px;
     z-index: 1; /* Ensures it's above the background text and overlay */
     width: 76.7vw; /* Much wider, takes up more viewport width */
     max-width: 1200px; /* Increased max width */

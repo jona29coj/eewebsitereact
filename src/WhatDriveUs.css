@@ -41,9 +41,9 @@
 .heading-gradient {
   background: linear-gradient(to right, 
   #00ff7b 0%, 
-  #00ff7b 30%,  /* Hold green longer */
-  #00b7ff 65%, 
-  #007bff 80%);
+  #00ff7b 10%,  /* Hold green longer */
+  #00b7ff 35%, 
+  #007bff 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

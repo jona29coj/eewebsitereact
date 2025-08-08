@@ -1,62 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  Building2, 
-  Wind, 
-  Sun, 
-  Lightbulb,
-  Thermometer,
+import React from 'react';
+import {
+  Building2,
   Leaf,
   ArrowRight,
-  Settings,
-  Monitor
 } from 'lucide-react';
 import './Design.css';
 
 function Design() {
-  const [modalContent, setModalContent] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const explanations = {
-    "Form and Orientation": "Optimizing building shape and placing windows to align with sun path for natural lighting and heat gain reduction.",
-    "Shading": "Using overhangs, louvers, or vegetation to reduce solar heat gain and improve comfort.",
-    "Cool Roofs": "Reflective materials on roofs to reduce heat absorption and lower indoor temperatures.",
-    "Fenestrations": "Designing window placement and type for light and airflow while minimizing energy loss.",
-    "Insulation": "Materials that reduce heat transfer, improving energy efficiency and comfort.",
-    "Daylighting": "Harnessing natural light through windows, skylights, or reflective surfaces to reduce lighting energy.",
-    "Natural Ventilation": "Designing openings and layout to allow air movement for cooling without mechanical systems.",
-    "Thermal Mass": "Using heavy materials that absorb and release heat slowly to stabilize indoor temperature.",
-    "HVAC": "Heating, Ventilation, and Air Conditioning systems designed for high efficiency, smart controls, and reduced energy consumption.",
-    "Lighting": "Use of energy-efficient lighting (like LEDs), automated daylight sensors, and intelligent lighting controls.",
-    "Other Appliances": "Smart appliances and equipment selected for low energy consumption, often integrated with building automation systems."
-  };
-
-  const openModal = (feature) => {
-    setModalContent({ title: feature, description: explanations[feature] });
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => setIsModalOpen(false);
-
-  useEffect(() => {
-    if (isModalOpen) {
-      const modal = document.querySelector('.modal-sheet');
-      if (modal) {
-        modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  }, [isModalOpen]);
-
   return (
-    <div className={`app-container${isModalOpen ? ' modal-open' : ''}`}>
-      <section className="hero-sectionbuild">
-        <div className="herobuild-container">
+    <div className="app-container">
+      <section className="passive-strategies-section">
+        <div className="section-wrapper">
           <div className="herobuild-text">
-            <h2 className="herobuild-title"><br/>
-              The Future of Buildings
-              <span className="hero-title-gradient">&nbsp;Starts Here!</span>
+            <h2 className="herobuild-title">
+              <br />The Future of Buildings Starts Here!
             </h2>
             <p className="herobuild-description">
-              Transforming passive energy consumers into active contributors through innovative 
+              Transforming passive energy consumers into active contributors through innovative
               sustainable design strategies and smart building technologies.
             </p>
           </div>
@@ -69,7 +29,7 @@ function Design() {
               <h3 className="card-title">FROM</h3>
               <div className="passive-badge">PASSIVE CONSUMERS</div>
               <p className="card-description">
-                Buildings today are passive energy consumers - taking in power with no built-in 
+                Buildings today are passive energy consumers - taking in power with no built-in
                 mechanisms to conserve or optimize.
               </p>
             </div>
@@ -94,97 +54,91 @@ function Design() {
         </div>
       </section>
 
-      <section className="design-section">
-        <div className="design-container">
-          <div className="design-header">
-            <h2 className="design-title">Sustainable Design Strategies</h2>
-            <p className="design-description">
-              We incorporate both Passive and Active design strategies in new buildings.
+      {/* Design & Measure Section */}
+      <section className="transformation-sectiondesign1">
+      <section className="design-measure-section">
+        <div className="design-measure-container">
+          {/* Left Text Section */}
+          <div className="design-text">
+            <h3 className="design-title">
+              Design & Measure to<br />Reduce Consumption
+            </h3>
+            <p className="design-paragraph">
+              The greenest form of energy is the one we don’t use – which is why the first step toward true efficiency is identifying where energy is wasted. HVACs, lifts, heavy equipment, exhausts all consume high energy on a continuous basis; identifying and eliminating inefficiencies can go a long way towards saving cost and carbon.
+            </p>
+            <p className="design-paragraph">
+              In commercial facilities, cooling typically accounts for nearly 40% of total energy consumption, making it a critical focus area. Through thermal mapping and solar heat gain analysis, we uncover hidden inefficiencies — from overexposed facades to poorly performing zones — that lead to unnecessarily energy use in large, complex spaces.
+            </p>
+            <p className="design-paragraph">
+              Our technology addresses these gaps head-on, using data-driven insights to guide smarter steps in design, operation, and control, ensuring energy is used only where and when it's truly needed.
             </p>
           </div>
 
-          <div className="strategies-grid">
-            <div className="strategy-card passive-card">
-              <div className="strategy-badge passive-badge-header">PASSIVE DESIGN STRATEGIES</div>
-              <div className="strategy-stats">
-                <p>Can reduce energy use by up to <span className="highlight">25%</span></p>
-              </div>
+          {/* Right Image and Labels */}
+          <div className="design-image-section">
+            <img
+              src="/Design.png"
+              alt="Design Visual"
+              className="design-graphic"
+            />
 
-              <div className="features-grid">
-                <div className="feature-list">
-                  <div className="feature-item" onClick={() => openModal("Form and Orientation")}> <Sun style={{ color: '#f97316' }} /> <span>Form and Orientation</span> </div>
-                  <div className="feature-item" onClick={() => openModal("Shading")}> <Building2 style={{ color: '#3b82f6' }} /> <span>Shading</span> </div>
-                  <div className="feature-item" onClick={() => openModal("Cool Roofs")}> <Thermometer style={{ color: '#ef4444' }} /> <span>Cool Roofs</span> </div>
-                  <div className="feature-item" onClick={() => openModal("Fenestrations")}> <Monitor style={{ color: '#6b7280' }} /> <span>Fenestrations</span> </div>
-                </div>
-                <div className="feature-list">
-                  <div className="feature-item" onClick={() => openModal("Insulation")}> <Building2 style={{ color: '#8b5cf6' }} /> <span>Insulation</span> </div>
-                  <div className="feature-item" onClick={() => openModal("Daylighting")}> <Lightbulb style={{ color: '#eab308' }} /> <span>Daylighting</span> </div>
-                  <div className="feature-item" onClick={() => openModal("Natural Ventilation")}> <Wind style={{ color: '#06b6d4' }} /> <span>Natural Ventilation</span> </div>
-                  <div className="feature-item" onClick={() => openModal("Thermal Mass")}> <Thermometer style={{ color: '#f97316' }} /> <span>Thermal Mass</span> </div>
-                </div>
-              </div>
+            <div className="design-label label-top">
+              <h4>Digital Twin of the Facility</h4>
+              <p>
+                A real-time virtual replica of your facility that visualizes, simulates, and optimizes energy and system performance for smarter decision-making.
+              </p>
             </div>
 
-            <div className="strategy-card active-card">
-              <div className="strategy-badge active-badge-header">ACTIVE DESIGN STRATEGIES</div>
-              <div className="strategy-stats">
-                <p>Can improve efficiency by up to <span className="highlight">30%</span></p>
-              </div>
-              <div className="active-systems">
-                <div className="system-item" onClick={() => openModal("HVAC")} > <div className="system-icon hvac-icon"> <Wind /> </div><h4 className="system-title">HVAC</h4></div>
-                <div className="system-item" onClick={() => openModal("Lighting")} > <div className="system-icon lighting-icon"> <Lightbulb /> </div><h4 className="system-title">LIGHTING</h4></div>
-              </div>
-              <div className="other-appliances">
-                <div className="appliances-container">
-                  <div className="appliances-item" onClick={() => openModal("Other Appliances")}>
-                    <div className="appliances-icon"> <Settings /> </div>
-                    <span className="appliances-title">OTHER APPLIANCES</span>
+            <div className="design-label label-middle">
+              <h4>Energy Modeling</h4>
+              <p>
+                Full scale simulation of a facility’s energy use is generated to predict performance, identify inefficiencies, and guide design and operational improvements.
+              </p>
+            </div>
 
-
-                  </div>
-                </div>
-              </div>
+            <div className="design-label label-bottom">
+              <h4>Thermal and Heat Mapping</h4>
+              <p>
+                This evaluates how sunlight and heat enters and impacts a building, helping optimize shading, glazing, and HVAC design to reduce cooling loads and energy consumption.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section className="three-columns-section">
-        <div className="image-text-block">
-          <div className="image-side left" style={{ backgroundImage: `url(/images/form.jpg)` }}></div>
-          <div className="text-side right">
-            <h3>Form & Orientation</h3>
-            <p>Optimizing building shape and window placement to reduce heat gain and improve lighting naturally.</p>
+      </section>
+      <section className="passive-strategies-section">
+        <div className="passive-strategies-container">
+          {/* Left Image Section */}
+          <div className="passive-image-section">
+            <img
+              src="/sustainability.png"
+              alt="Sustainable Passive Design Strategies"
+              className="passive-graphic"
+            />
           </div>
-        </div>
 
-        <div className="image-text-block">
-          <div className="text-side left">
-            <h3>Natural Ventilation</h3>
-            <p>Strategically placed openings and airflow paths cool buildings without relying on mechanical systems.</p>
-          </div>
-          <div className="image-side right" style={{ backgroundImage: `url(/images/ventilation.jpg)` }}></div>
-        </div>
-
-        <div className="image-text-block">
-          <div className="image-side left" style={{ backgroundImage: `url(/images/hvac.jpg)` }}></div>
-          <div className="text-side right">
-            <h3>Smart HVAC Systems</h3>
-            <p>Energy-efficient climate control systems that adapt to occupancy and environmental changes.</p>
+          {/* Right Text Section */}
+          <div className="passive-text-section">
+            <h3 className="passive-title">Sustainable Design Strategies</h3>
+            <p className="passive-paragraph">
+              Sustainable design combines both passive and active strategies to minimise energy consumption while enhancing occupant comfort and environmental performance.
+            </p>
+            <p className="passive-paragraph">
+              <strong>Passive strategies</strong> harness natural elements—like daylight, ventilation, thermal mass, and building orientation—to reduce reliance on mechanical systems. These include techniques such as optimal window placement, shading devices, and natural cooling.
+            </p>
+            <p className="passive-paragraph">
+              <strong>Active strategies</strong> involve the use of efficient technologies and systems—like high-performance HVAC, lighting controls, solar panels, and energy monitoring—to optimise energy use and reduce emissions.
+            </p>
+            <p className="passive-paragraph">
+              Together, these approaches create buildings that are not only energy-efficient but also resilient, cost-effective, and climate-responsive.
+            </p>
           </div>
         </div>
       </section>
 
+     
 
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-sheet" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close-button" onClick={closeModal}>Close</button>
-            <h2>{modalContent.title}</h2>
-            <p>{modalContent.description}</p>
-          </div>
-        </div>
-      )}
+      
     </div>
   );
 }

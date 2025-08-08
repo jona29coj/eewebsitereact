@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, Briefcase, Target, Eye, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
+import { Users, Briefcase, Target, ChevronDown, ChevronUp } from 'lucide-react';
 import './AboutUs.css';
 
 
@@ -68,7 +68,7 @@ function AboutUs() {
   ];
 
   return (
-    <div className="about-us-container"><br/><br/><br/>
+    <div className="about-us-container">
 
       {/* Navigation Tabs */}
       <div className="section-tabs">
@@ -122,14 +122,14 @@ function AboutUs() {
                       src="/images/buildings-reimagined.png" // Save the uploaded image here
                       alt="Buildings Before and After"
                       className="section-image"
-                      style={{ maxWidth: '100%', borderRadius: '8px' }}
+                      style={{ maxWidth: '106%', borderRadius: '8px' }}
                     />
                   </div>
                   <div className="section-content">
-                    <h2 className="section-title" style={{ color: '#1f7145', fontWeight: '600' }}>
+                    <div className="section-title" style={{ color: '#1f7145' , fontSize: '1.5rem', fontWeight: '700' , fontFamily: 'Poppins, sans-serif' }}>
                       Buildings Reimagined: From Passive Consumers to Active Contributors
-                    </h2>
-                    <p style={{ marginTop: '0.5rem' }}>
+                    </div>
+                    <p style={{ marginTop: '0.3rem' , fontSize:'0.9rem' }}>
                       A visual shift from high-emission, energy-hungry buildings to intelligent, climate-responsive infrastructure.
                       Powered by Elements Energy, buildings become active participants in the clean energy future —
                       <strong> monitoring, optimizing, and decarbonizing</strong> every day.
@@ -144,7 +144,7 @@ function AboutUs() {
                 <div className="section-layout">
                   <div className="section-content">
                     <div className="section-header">
-                      <Target className="section-icon" />
+                      
                       <h2 className="section-title">Our Commitment</h2>
                     </div>
                     <div className="section-text">
@@ -178,7 +178,7 @@ function AboutUs() {
                   </div>
                   <div className="section-content">
                     <div className="section-header">
-                      <Eye className="section-icon" />
+                      
                       <h2 className="section-title">Our Vision</h2>
                     </div>
                     <div className="section-text">
@@ -198,7 +198,7 @@ function AboutUs() {
                 <div className="section-layout">
                   <div className="section-content">
                     <div className="section-header">
-                      <MapPin className="section-icon" />
+                    
                       <h2 className="section-title">Transforming Our Urban Landscapes</h2>
                     </div>
                     <div className="section-text">

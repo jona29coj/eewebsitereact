@@ -186,7 +186,7 @@ useEffect(() => {
                       return !prev;
                     });
                   }}
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: 'pointer' , fontSize: '1rem', fontWeight: '300' }}
                 >
                   About Us
                 </span>
@@ -235,7 +235,7 @@ useEffect(() => {
                       return !prev;
                     });
                   }}
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: 'pointer' , fontSize: '1rem', fontWeight: '300' }}
                 >
                   Solutions
                 </span>
@@ -518,66 +518,74 @@ useEffect(() => {
       {activePage === 'Design' && <Design />}
       {activePage === 'Build' && <Build />}
       {activePage === 'Projects' && <ProjectsContent setActivePage={setActivePage} />}
-      {activePage === 'Project2' && <Project2 />}
-      {activePage === 'Project3' && <Project3 />}
-      {activePage === 'Project4' && <Project4 />}
+      {activePage === 'Project2' && <Project2  setActivePage={setActivePage}/>}
+      {activePage === 'Project3' && <Project3 setActivePage={setActivePage}/>}
+      {activePage === 'Project4' && <Project4 setActivePage={setActivePage}/>}
       {activePage === 'Login' && <Login />}
       {activePage === 'CompanySection' && <CompanySection />}
       {activePage === 'TeamSection' && <TeamSection />}
       {activePage === 'CareerSection' && <CareerSection />}
 
-      <footer className="elements-footer py-2 " style={{
-       
-        color: 'white',
-        padding: '7rem ',
-        marginTop: '0rem',
-      }}>
+ <footer className="elements-footer">
+  <Container>
+    <div className="row gx-5 gy-4 justify-content-between">
 
-        <Container>
-          <div className="row justify-content-between align-items-start gx-5 gy-4" style={{marginTop: '1rem'}}>
-            <div className="col-md-auto mb-4">
-              <img src="/logo-white.png" alt="Elements Energy Logo" height="40" className="mb-3" />
-            </div>
+      {/* Logo + Follow Us */}
+      <div className="col-md-3 ">
+        <img src="/logo-white.png" alt="Elements Energy Logo" height="50" width="50" className="mb-3" />
+        
+        <h5 className='follow' style={{marginTop:"23px"}}>Follow Us</h5>
+        <div className="social-icons d-flex gap-3 mt-2">
+          <a href="https://in.linkedin.com/company/elements.energies">
+            <img src="./linkdin.png" alt="LinkedIn" className="social-icon-lg" />
+          </a>
+          <a href="https://www.instagram.com/elements_energies">
+            <img src="./insta.png" alt="Instagram" className="social-icon-lg" />
+          </a>
+        </div>
+      </div>
 
-            <div className="col-md mb-4 ms-md-5" >
-              <h5>Quick Links</h5>
-              <ul className="list-unstyled" >
-                <li><a href="#CompanySection" className="text-white text-decoration-none">About Us</a></li>
-                <li><a href="#Design" className="text-white text-decoration-none">Solutions</a></li>
-                <li><a href="#Projects" className="text-white text-decoration-none">Projects</a></li>
-              </ul>
-            </div>
+      {/* Quick Links */}
+      <div className="col-md-2 ">
+        <h5>Quick Links</h5>
+        <ul className="list-unstyled">
+          <li><a href="#CompanySection">About Us</a></li>
+          <li><a href="#Design">Solutions</a></li>
+          <li><a href="#Projects">Projects</a></li>
+        </ul>
+      </div>
 
-            <div className="col-md mb-4">
-              <h5>Contact Us</h5>
-              <ul className="list-unstyled">
-                <li><a href="tel:+919916585292" className="text-white text-decoration-none">+91 99165 85292</a></li>
-                <li><a href="mailto:info@elementsenergies.com" className="text-white text-decoration-none">info@elementsenergies.com</a></li>
-              </ul>
-              <div className="mt-3">
-                <h5>Address</h5>
-                <p className="mb-0">
-                  IIT-Madras Research Park<br />
-                  Kanagam Road, Tharamani<br />
-                  Chennai, Tamil Nadu
-                </p>
-              </div>
-            </div>
+      {/* Contact Info */}
+      <div className="col-md-3 ">
+        <h5>Contact Us</h5>
+        <ul className="list-unstyled">
+          <li><a href="tel:+919916585292">+91 99165 85292</a></li>
+          <li><a href="mailto:info@elementsenergies.com">info@elementsenergies.com</a></li>
+        </ul>
+        <h5 className="mt-3">Address</h5>
+        <p className="mb-0">
+          IIT-Madras Research Park<br />
+          Kanagam Road, Tharamani<br />
+          Chennai, Tamil Nadu
+        </p>
+      </div>
 
-            <div className="col-md mb-4">
-              <h5>Follow Us</h5>
-              <div className="d-flex align-items-center gap-3 mt-3">
-                <a href="https://in.linkedin.com/company/elements.energies">
-                  <img src="./linkdin.png" alt="LinkedIn" className="social-icon" />
-                </a>
-                <a href="https://www.instagram.com/elements_energies">
-                  <img src="./insta.png" alt="Instagram" className="social-icon" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </footer>
+      {/* Subscribe */}
+      <div className="col-md-3 ">
+        <h5>Contact Us </h5>
+        <form className="subscribe-form d-flex mt-2">
+          <input type="email" placeholder="Email" className="form-control me-2" />
+          <button type="submit" className="btn btn-light">Send</button>
+        </form>
+      </div>
+      <div className="footer-bottom">
+        © 2025 Elements Energy. All rights reserved.
+      </div>
+
+    </div>
+  </Container>
+</footer>
+
     </>
   );
 }

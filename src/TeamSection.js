@@ -27,31 +27,39 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Anson Sando",
+    name: "Immanuvel",
     position: "Advisor",
     description: "Builds ML models for consumption prediction and energy efficiency.",
-    image: "team/anson.png"
+    image: "/images/team/neha.jpg"
   },
-  {
+    {
     id: 5,
-    name: "Rohan Patel",
-    position: "Operations Manager",
-    description: "Oversees deployment and client integration.",
-    image: "/images/team/rohan.jpg"
-  },
-  {
-    id: 6,
-    name: "Neha Singh",
+    name: "Tharun ",
     position: "Product Designer",
     description: "Designs user-centric interfaces for energy dashboards.",
     image: "/images/team/neha.jpg"
   },
   {
+    id: 6,
+    name: "Anandha Krishnan",
+    position: "Project Associate-IT",
+    description: "Develops and maintains our energy management software.",
+    image: "team/anandha.png"
+  },
+
+   {
     id: 7,
-    name: "Ankit Sharma",
-    position: "Renewables Consultant",
+    name: "Harshetha V",
+    position: "Product Designer",
+    description: "Designs user-centric interfaces for energy dashboards.",
+    image: "/images/team/neha.jpg"
+  },
+  {
+    id: 8,
+    name: "Anson Sando",
+    position: "Advisor",
     description: "Advises on solar and wind integration strategies.",
-    image: "/images/team/ankit.jpg"
+    image: "team/anson.png"
   }
 ];
 

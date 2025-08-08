@@ -24,7 +24,7 @@ const WhatDrivesUs = () => {
           
         </div>
         <div className="firsttext-column ">
-          <h2 className="text-center heading-gradient">What Drives Us<br /></h2>
+          <h2 className="text-left heading-gradient">What Drives Us<br /></h2>
           <p>
             Climate change is no longer a distant concern — it's a present, accelerating crisis
             that touches every building, business, and community. From energy shortages to

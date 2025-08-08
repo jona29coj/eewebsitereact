@@ -7,7 +7,8 @@ const Spotlight = () => {
       <div className="spotlight-wrapper">
         <h4 className="spotlight-heading text-center">In The Spotlight</h4>
         <p className="spotlight-subtitle text-center">
-          Real change. Real numbers. Real sustainability.
+          Where Innovation Meets Recognition.
+
         </p>
 
         <p
@@ -22,11 +23,8 @@ const Spotlight = () => {
             textAlign: 'center'
           }}
         >
-          At Elements Energy, impact isn’t an afterthought — it’s at the core of everything we do.
-          From slashing energy bills to cutting carbon emissions, we help organizations turn their
-          sustainability goals into tangible results. Backed by intelligent design and real-time data,
-          our solutions are driving meaningful change across campuses, industries, and communities —
-          proving that technology can be both smart and sustainable.
+          Elements Energy has been featured in recent media coverage for our pioneering work in energy optimization and sustainable infrastructure. These stories shine a light on our mission to decarbonize buildings, empower energy users, and create smarter, cleaner energy systems for tomorrow.
+
         </p>
 
         <div className="spotlight-row">
