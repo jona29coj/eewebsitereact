@@ -82,12 +82,16 @@ function Login() {
 
   return (
     <div className="login-container">
+      {/* Background video */}
+      <video className="background-video" autoPlay loop muted playsInline>
+        <source src="/login.mp4" type="video/mp4" />
+      </video>
       <div className="login-content">
         <div className="login-form-section">
           <div className="login-form-wrapper">
             <div className="login-header">
-              <h1>{isSignup ? 'Create Account' : 'Welcome Back'}</h1>
-              <p>{isSignup ? 'Sign up to get started' : 'Sign in to your account'}</p>
+              <h1>{'Welcome Back'}</h1>
+              <p>{ 'Sign in to your account'}</p>
             </div>
 
             <form onSubmit={handleSubmit} className="login-form">
@@ -129,14 +133,6 @@ function Login() {
                 {errors.password && <span className="error-message">{errors.password}</span>}
               </div>
 
-              <div className="form-options">
-                <label className="checkbox-container">
-                  <input type="checkbox" />
-                  <span className="checkmark"></span>
-                  Remember me
-                </label>
-              </div>
-
               <button
                 type="submit"
                 className={`login-button ${isLoading ? 'loading' : ''}`}
@@ -145,50 +141,20 @@ function Login() {
                 {isLoading ? (
                   <>
                     <div className="spinner"></div>
-                    {isSignup ? 'Signing Up...' : 'Signing In...'}
+                    Signing In...
                   </>
                 ) : (
-                  isSignup ? 'Sign Up' : 'Sign In'
+                  'Login'
                 )}
               </button>
 
-              <div className="toggle-auth-mode">
-                {isSignup ? (
-                  <p>
-                    Already have an account?{' '}
-                    <span onClick={() => {
-                      setIsSignup(false);
-                      setFormData({ email: '', password: '' });
-                      setErrors({});
-                    }}>Sign In</span>
-                  </p>
-                ) : (
-                  <p>
-                    Don’t have an account?{' '}
-                    <span onClick={() => {
-                      setIsSignup(true);
-                      setFormData({ email: '', password: '' });
-                      setErrors({});
-                    }}>Sign Up</span>
-                  </p>
-                )}
-              </div>
+
+
             </form>
           </div>
         </div>
 
-        <div className="video-section">
-          <video
-            className="background-video"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="/login.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+
       </div>
     </div>
   );

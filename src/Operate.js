@@ -110,10 +110,10 @@ function Operate() {
             {/* Left Content */}
             <div className="heroop-left">
               <div className="info-card">
-                <h3 className="info-title">
+                <h3 className="info-title1">
                   Data-driven energy optimization
                 </h3>
-                <p className="info-description">
+                <p className="info-description1">
                   Through an end-to-end mapped system, we provide a real-time dashboard to visualize, 
                   quantify and showcase the complete energy scenario of your building.
                 </p>
@@ -286,7 +286,7 @@ function Operate() {
       <section id="features" className="features-section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title white">Advanced Features for Modern Buildings</h2>
+            <h2 className="section-title">Advanced Features for Modern Buildings</h2>
             <p className="section-description light">
               <br/>Cutting-edge technology that puts you in complete control of your energy future
             </p>
@@ -294,32 +294,32 @@ function Operate() {
 
           <div className="features-grid">
             <div className="feature-item">
-              <div className="feature-icon-wrapper">
+              <div className="feature-icon-wrapper1">
                 <Activity />
               </div>
-              <h3 className="feature-title">Real-time Analytics</h3>
-              <p className="feature-description">Live energy data and performance metrics</p>
+              <h3 className="feature-title1">Real-time Analytics</h3>
+              <p className="feature-description1">Live energy data and performance metrics</p>
             </div>
             <div className="feature-item">
-              <div className="feature-icon-wrapper">
+              <div className="feature-icon-wrapper1">
                 <Shield />
               </div>
-              <h3 className="feature-title">Predictive Maintenance</h3>
-              <p className="feature-description">AI-powered equipment health monitoring</p>
+              <h3 className="feature-title1">Predictive Maintenance</h3>
+              <p className="feature-description1">AI-powered equipment health monitoring</p>
             </div>
             <div className="feature-item">
-              <div className="feature-icon-wrapper">
+              <div className="feature-icon-wrapper1">
                 <Battery />
               </div>
-              <h3 className="feature-title">Energy Storage</h3>
-              <p className="feature-description">Smart battery management and optimization</p>
+              <h3 className="feature-title1">Energy Storage</h3>
+              <p className="feature-description1">Smart battery management and optimization</p>
             </div>
             <div className="feature-item">
-              <div className="feature-icon-wrapper">
+              <div className="feature-icon-wrapper1">
                 <Sun />
               </div>
-              <h3 className="feature-title">Solar Integration</h3>
-              <p className="feature-description">Seamless renewable energy integration</p>
+              <h3 className="feature-title1">Solar Integration</h3>
+              <p className="feature-description1">Seamless renewable energy integration</p>
             </div>
           </div>
 
