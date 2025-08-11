@@ -164,31 +164,7 @@ z-index: 2; /* ensure it's above animated shapes */
   margin-bottom: 30px;
 }
 
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 0.9rem;
-  color: #7f8c8d;
-}
 
-.checkbox-container input {
-  margin-right: 10px;
-  transform: scale(1.2);
-}
-
-.forgot-password {
-  color: #4A90E2;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.forgot-password:hover {
-  color: #357abd;
-  text-decoration: underline;
-}
 
 .login-button {
   width: 100%;
@@ -310,55 +286,7 @@ z-index: 2; /* ensure it's above animated shapes */
   50% { transform: scale(1.3); opacity: 0.25; }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .login-content {
-    flex-direction: column;
-    max-width: 500px;
-    min-height: auto;
-  }
-  
-  .login-form-section {
-    padding: 40px 30px;
-  }
-  
-  .animation-section {
-    min-height: 200px;
-    order: -1;
-  }
-  
-  .login-header h1 {
-    font-size: 2rem;
-  }
-  
-  .shape {
-    transform: scale(0.7);
-  }
-}
 
-@media (max-width: 480px) {
-  .video-section {
-    display: none;
-  }
-
-  .login-container {
-    padding: 10px;
-  }
-  
-  .login-form-section {
-    padding: 30px 20px;
-  }
-  
-  .login-header h1 {
-    font-size: 1.8rem;
-  }
-  
-  .form-options {
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
-  }
-}
 .toggle-auth-mode span {
   color: #4A90E2;
   cursor: pointer;
@@ -385,4 +313,70 @@ z-index: 2; /* ensure it's above animated shapes */
 *::selection {
   background-color: rgba(0, 128, 0, 0.3); /* light green */
   color: #000;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  body {
+    margin: 0; /* Remove huge 90px margin for small screens */
+  }
+
+  .background-video {
+    display: none !important; /* Remove video */
+  }
+
+  .login-container {
+    padding: 10px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-content {
+    margin: 0;
+    width: 100%;
+    max-width: 350px;
+    min-height: auto;
+    backdrop-filter: none; /* optional: can keep blur if wanted */
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .login-form-section {
+    padding: 20px;
+    background: transparent;
+  }
+}
+/* Tablets & Phones */
+@media (max-width: 1024px) {
+  body {
+    margin: 0; /* Remove large desktop margin */
+  }
+
+  .background-video {
+    display: none !important; /* Hide video */
+  }
+
+  .login-container {
+    padding: 10px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-content {
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
+    min-height: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .login-form-section {
+    padding: 20px;
+    background: transparent;
+  }
 }
