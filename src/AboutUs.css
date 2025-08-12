@@ -413,9 +413,10 @@
   font-size: 1.1rem;
   border-radius: 4px;
   cursor: pointer;
+  align-items: center;
   transition: background-color 0.3s ease;
   margin-top:70px;
-  margin-left: 180px; /* or use float/text-align depending on layout */
+  margin-left: 0px; /* or use float/text-align depending on layout */
 }
 
 .cta-button:hover {
