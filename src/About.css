@@ -14,6 +14,16 @@
   flex-wrap: wrap;
   
 }
+.btn-primary {
+  background-color: #22a46f !important; /* new background */
+  border-color: #22a46f !important;     /* match border */
+}
+
+.btn-primary:hover {
+  background-color: #22a46f !important; /* hover state */
+  border-color: #22a46f !important;
+}
+
 
 .about-text-section {
   flex: 1;

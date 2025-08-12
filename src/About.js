@@ -60,12 +60,13 @@ const About = () => {
 
               <button
                 onClick={() => setShowForm(true)}
-                className="btn-primary mt-3 small-width-btn text-decoration-none"
+                className="btn btn-primary mt-3 small-width-btn text-decoration-none"
                 style={{
                   borderRadius: '3px',
                   width: 'fit-content',
                   height: '40px',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  
                 }}
               >
                 Request a Demo

@@ -124,6 +124,7 @@ function Login() {
                   <button
                     type="button"
                     className="toggle-password"
+                    style={{color: '#3f3f3fff'}}
                     onClick={() => setShowPassword(prev => !prev)}
                     tabIndex={-1}
                   >

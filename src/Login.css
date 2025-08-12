@@ -126,6 +126,20 @@ z-index: 2; /* ensure it's above animated shapes */
   color: #2c3e50;
   font-size: 1rem;
 }
+/* Default form input style */
+
+
+/* When focused (clicked into) */
+.form-input:focus {
+  border-color: #3f3f3f; /* your chosen highlight color */
+  box-shadow: 0 0 0 2px rgba(63, 63, 63, 0.3); /* subtle glow */
+}
+
+/* If there's an error */
+.form-input.error {
+  border-color: #d9534f;
+}
+
 
 .form-input {
   width: 100%;
@@ -137,11 +151,36 @@ z-index: 2; /* ensure it's above animated shapes */
   background-color: #ffffff;
 }
 
-.form-input:focus {
+/* Consistent styling for email & password inputs */
+input[type="email"].form-input,
+input[type="password"].form-input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 50px; /* ✅ fixed height for both */
+  padding: 0 12px; /* horizontal padding only since height is fixed */
   outline: none;
-  border-color: #4A90E2;
-  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
-  transform: translateY(-2px);
+  background-color: #fff;
+  color: #000;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Focus effect */
+input[type="email"].form-input:focus,
+input[type="password"].form-input:focus {
+  border-color: #3f3f3f;
+  box-shadow: 0 0 0 2px rgba(63, 63, 63, 0.3);
+}
+
+/* Error state */
+input[type="email"].form-input.error,
+input[type="password"].form-input.error {
+  border-color: #d9534f;
 }
 
 .form-input.error {

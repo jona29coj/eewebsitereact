@@ -44,7 +44,7 @@ const teamMembers = [
     name: "Anandha Krishnan",
     position: "Project Associate-IT",
     description: "Develops and maintains our energy management software.",
-    image: "team/anandha.png"
+    image: "team/anandhaK.png"
   },
 
    {
