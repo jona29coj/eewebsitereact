@@ -169,7 +169,7 @@ z-index: 2; /* ensure it's above animated shapes */
 .login-button {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(135deg, #4A90E2 0%, #357abd 100%);
+  background-color: #22a46f;
   color: white;
   border: none;
   border-radius: 12px;
