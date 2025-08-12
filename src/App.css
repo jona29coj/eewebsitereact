@@ -344,12 +344,6 @@
   z-index: 2;
 }
 
-/* Content Sections */
-section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 
 .card-body p {
   font-size: 1.2rem;  /* or 1.2rem for slightly bigger */
@@ -652,7 +646,7 @@ section {
 
 .partners-section {
   background-color: #114944;
-  margin-top: -5rem;
+
   margin-bottom: -5rem;
   z-index: 3;
 }

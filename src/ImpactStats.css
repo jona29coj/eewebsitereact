@@ -1,9 +1,10 @@
 .impact-section {
   text-align: center;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2rem;
   font-family: 'Inter', sans-serif;
   max-width: 1400px;
   margin: 0 auto;
+  background-color: white;
 }
 .impact-subtitle{
   color: black;

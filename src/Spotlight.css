@@ -1,11 +1,11 @@
 /* === Section Wrapper === */
 .spotlightsection {
-  margin-bottom: 0rem;
+
   background: rgba(192, 217, 223, 0.219);
   color: #000;
   height: auto;
   padding-bottom: 2rem;
-  margin-bottom: 0rem;
+
   position: relative;
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
 /* === Wrapper === */
 .spotlight-wrapper {
   width: 100%;
-  padding: 0 2rem;
+  padding: 1.5rem ;
 }
 
 /* === Heading === */

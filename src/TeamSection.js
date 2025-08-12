@@ -50,7 +50,7 @@ const teamMembers = [
    {
     id: 7,
     name: "Harshetha V",
-    position: "Product Designer",
+    position: "Software Developer-Intern",
     description: "Designs user-centric interfaces for energy dashboards.",
     image: "/images/team/neha.jpg"
   },

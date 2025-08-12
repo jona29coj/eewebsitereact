@@ -73,7 +73,7 @@
 }
 .solution {
   min-height: auto;         /* Still gives a tall section on large screens */
-  padding: 0rem 0rem;        /* Add some breathing room */
+  padding: 1.5rem 0rem;        /* Add some breathing room */
   display: flex;
   flex-direction: column;
   justify-content: center;
