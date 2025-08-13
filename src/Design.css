@@ -453,6 +453,28 @@
   font-family: 'Inter', sans-serif;
 }
 
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .design-paragraph {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .design-paragraph {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 480px) {
+  .design-paragraph {
+    font-size: 0.75rem;
+  }
+}
+
+
 /* Rest of the existing CSS remains unchanged */
 .design-image-section {
   display: none;
@@ -482,6 +504,30 @@
   padding-left: 1rem;
   font-size: 0.8rem;
   font-family: 'Inter', sans-serif;
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .design-label {
+    width: 40%;
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .design-label {
+    width: 50%;
+    font-size: 0.65rem;
+  }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 480px) {
+  .design-label {
+    width: 60%;
+    font-size: 0.6rem;
+  }
 }
 
 .label-top { top: 15%; left: 60%; }
