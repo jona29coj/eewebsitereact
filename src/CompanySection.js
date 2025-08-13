@@ -125,8 +125,8 @@ And we believe those tools must be simple, scalable, and grounded in real-world 
           </div>
           <div className="section-image-container">
             <img
-              src="https://images.pexels.com/photos/2603464/pexels-photo-2603464.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Urban transformation and sustainability"
+              src=""
+              
               className="section-image"
             />
           </div>

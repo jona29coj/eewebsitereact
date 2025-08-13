@@ -37,7 +37,7 @@ const teamMembers = [
     name: "Tharun ",
     position: "Product Designer",
     description: "Designs user-centric interfaces for energy dashboards.",
-    image: "/images/team/neha.jpg"
+    image: "team/Tharun.jpg"
   },
   {
     id: 6,
@@ -52,7 +52,7 @@ const teamMembers = [
     name: "Harshetha V",
     position: "Software Developer-Intern",
     description: "Designs user-centric interfaces for energy dashboards.",
-    image: "/images/team/neha.jpg"
+    image: "team/Harshetha.jpg"
   },
   {
     id: 8,
