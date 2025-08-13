@@ -49,7 +49,7 @@ function Build() {
            <section id="features" className="build-section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title black">Advanced Features for Modern Buildings</h2>
+            <h2 className="section-title black">Our Integrated Solutions</h2>
             <p className="section-description dark" style={{fontSize:'1.1rem', textAlign:'center'}}>
               <br/>Cutting-edge technology that puts you in complete control of your energy future
             </p>
