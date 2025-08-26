@@ -359,7 +359,7 @@ useEffect(() => {
                     padding: '12px 24px',
                     fontWeight: 600,
                     borderRadius: '4px',
-                    marginBottom: '1rem',
+                    marginBottom: '2rem',
                   }}
                 >
                   Book a Free Energy Assessment

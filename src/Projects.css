@@ -14,8 +14,10 @@
 }
 
 .projects-subtitle {
-  color: #555;
+  color: #000000;
   margin-bottom: 3rem;
+  text-align: justify;
+  font-size: 0.9rem;
 }
 
 .projects-container {
@@ -28,7 +30,7 @@
 /* Default card style */
 .project-card {
   background: white;
-  border-radius: 16px;
+  border-radius: 45px;
   width: 600px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -40,6 +42,8 @@
 .project-card.vertical {
   width: 23rem;
   height: 23rem;
+  border: 1.7px solid #000000; /* 2px thick, solid line, dark gray color */
+  border-radius: 45px;
 }
 
 .vertical-projects {
@@ -57,7 +61,9 @@
   flex-direction: row;
   width: 100%;
   max-width: 1200px;
-  height: 350px;
+  height: 300px;
+  border: 1.7px solid #000000; /* 2px thick, solid line, dark gray color */
+  border-radius: 45px;
 }
 
 .card-image1,
@@ -100,12 +106,32 @@
 .card-content {
   padding: 1.2rem;
 }
-
-.card-content h3 {
+.card-content h2 {
   font-size: 1.2rem;
+  font-weight: bold;
   font-family: "Poppins", sans-serif;
   margin-bottom: 0.25rem;
   color: #1a1a1a;
+}
+.card-content h3 {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.25rem;
+  color: #1a1a1a;
+}
+.logo-title {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    gap: 12px; /* Space between logo and heading */
+    margin-bottom: 12px;
+}
+
+.logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+.mwlogo{
+  width: 10rem;
 }
 
 .category {
@@ -116,10 +142,12 @@
 }
 
 .card-content p {
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   color: #444;
   font-family: "Inter", sans-serif;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
+  margin-top: 0.5rem;
+  
 }
 
 .view-button {
