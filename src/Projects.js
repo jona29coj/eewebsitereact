@@ -61,7 +61,7 @@ unique needs of our clients.</p>
              
             </div>
             <div className="card-content">
-              <img src="Metal-logo.png"  className="mwlogo" />
+              <img src="Metal-logo.png" alt="metalware" className="mwlogo" />
               <p className="category">Elements Energy is working with Metalware
                 Corporation to transform their
                 manufacturing facilities into a model of
@@ -81,8 +81,11 @@ unique needs of our clients.</p>
 
             </div>
             <div className="card-content">
-              <h3>Ecotech Factory</h3>
-              <p className="category">ENERGY ANALYSIS</p>
+              <img src="Metal-logo.png" alt="rmz" className="mwlogo" />
+              <p className="category">Elements Energy is partnering with RMZ
+                Developers to integrate sustainable
+                energy solutions into their commercial
+                and mixed-use developments.</p>
               <button
                 className="view-button-vertical"
                 onClick={() => setActivePage('Project4')}
@@ -90,6 +93,27 @@ unique needs of our clients.</p>
                 Explore <ArrowRight size={16} />
               </button>
             </div>
+            
+          </div>
+          {/* Project 4 */}
+          <div className="project-card vertical">
+            <div className="card-image3">
+
+            </div>
+            <div className="card-content">
+              <img src="Metal-logo.png" alt="crown" className="mwlogo" />
+              <p className="category">Elements Energy is enhancing the energy
+                performance of Crown Interiorz Mall by
+                implementing smart energy management
+                and optimization solutions.</p>
+              <button
+                className="view-button-vertical"
+                onClick={() => setActivePage('Project4')}
+              >
+                Explore <ArrowRight size={16} />
+              </button>
+            </div>
+            
           </div>
         </div>
 

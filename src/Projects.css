@@ -40,7 +40,7 @@
 }
 /* Smaller vertical cards */
 .project-card.vertical {
-  width: 23rem;
+  width: 19rem;
   height: 23rem;
   border: 1.7px solid #000000; /* 2px thick, solid line, dark gray color */
   border-radius: 45px;
@@ -68,7 +68,8 @@
 
 .card-image1,
 .card-image2,
-.card-image3 {
+.card-image3,
+.card-image4 {
   height: 350px;
   background-size: cover;
   background-position: center;
@@ -84,7 +85,10 @@
 }
 
 .card-image3 {
-  background-image: url("/public/eco.png");
+  background-image: url("/public/rmz.png");
+}
+.card-image4 {
+  background-image: url("/public/crown.jpg");
 }
 
 .horizontal .card-image1 {
@@ -104,7 +108,7 @@
 
 
 .card-content {
-  padding: 1.2rem;
+  padding: 1rem;
 }
 .card-content h2 {
   font-size: 1.2rem;
@@ -131,7 +135,7 @@
     height: auto;
 }
 .mwlogo{
-  width: 10rem;
+  width: 9rem;
 }
 
 .category {
