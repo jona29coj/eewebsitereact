@@ -18,6 +18,16 @@
   overflow-x: hidden;
   
 }
+.content-image-overlay {
+    height: 50vh;
+    width: 40vw;
+    border: 2px solid rgb(195, 195, 195);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
 
 /* Hero Section */
 .hero-sectionpro {
@@ -27,7 +37,7 @@
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
-  padding: 0 5%;
+  padding:0rem 8rem;
   overflow: hidden;
 }
 
@@ -45,6 +55,7 @@
 
 .hero-content-wrapperpro {
    margin-top:30px;
+   
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: rem;
@@ -112,6 +123,7 @@
   position: relative;
   height: 500px;
   border-radius: 24px;
+  
   overflow: hidden;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
@@ -141,7 +153,7 @@
 
 /* Project Details */
 .project-details {
-  padding: 3rem 5%;
+  padding: 3rem 4rem;
   background: #0f172a;
   color: white;
   position: relative;

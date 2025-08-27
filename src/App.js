@@ -17,6 +17,7 @@ import ProjectsContent from './Projects';
 import Project2 from './Project2';
 import Project3 from './Project3';
 import Project4 from './Project4';
+import Project5 from './Project5';
 import Login from './Login';
 import CompanySection from './CompanySection';
 import TeamSection from './TeamSection';
@@ -522,6 +523,7 @@ useEffect(() => {
       {activePage === 'Project2' && <Project2  setActivePage={setActivePage}/>}
       {activePage === 'Project3' && <Project3 setActivePage={setActivePage}/>}
       {activePage === 'Project4' && <Project4 setActivePage={setActivePage}/>}
+      {activePage === 'Project5' && <Project5 setActivePage={setActivePage}/>}
       {activePage === 'Login' && <Login />}
       {activePage === 'CompanySection' && <CompanySection />}
       {activePage === 'TeamSection' && <TeamSection />}

@@ -25,7 +25,7 @@ const Project3 = () => {
           </div>
           <div className="hero-image-containerpro">
             <img 
-              src="https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="mw-factory.png" 
               alt="Metalware Corporation"
             />
             <div className="hero-image-overlaypro"></div>
@@ -76,7 +76,7 @@ const Project3 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="mw2.png" 
               alt="Project Overview"
             />
             <div className="content-image-overlay"></div>
@@ -102,7 +102,7 @@ const Project3 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="mw3.png" 
               alt="Design Approach"
             />
             <div className="content-image-overlay"></div>
@@ -137,7 +137,7 @@ const Project3 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/159220/printed-circuit-board-print-plate-via-macro-159220.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="mw4.png" 
               alt="Energy Systems"
             />
             <div className="content-image-overlay"></div>
@@ -167,7 +167,7 @@ const Project3 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="mw5.png" 
               alt="Efficiency Recommendations"
             />
             <div className="content-image-overlay"></div>
@@ -191,8 +191,9 @@ const Project3 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="mw6.png" 
               alt="Operations"
+              
             />
             <div className="content-image-overlay"></div>
           </div>

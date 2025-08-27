@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import Project2 from './Project2';
 import Project3 from './Project3';
 import Project4 from './Project4';
+import Project5 from './Project5';
 
 function ProjectsContent({ activePage, setActivePage }) {
   if (activePage === 'Project2') {
@@ -17,7 +18,9 @@ function ProjectsContent({ activePage, setActivePage }) {
   if (activePage === 'Project4') {
     return <Project4 setActivePage={setActivePage} />;
   }
-
+  if (activePage === 'Project5') {
+    return <Project5 setActivePage={setActivePage} />;
+  }
   return (
     <div className="projects-page">
       <h2 className="projects-title">Impact Stories</h2>
@@ -47,9 +50,12 @@ unique needs of our clients.</p>
             ​</p>
             <button
               className="view-button"
-              onClick={() => setActivePage('Project2')}
+              onClick={() => {
+                setActivePage('Project2');
+                window.location.hash = 'Project2'; // ✅ updates the URL
+              }}
             >
-              Explore<ArrowRight size={16} />
+              Explore <ArrowRight size={16} />
             </button>
           </div>
         </div>
@@ -66,12 +72,16 @@ unique needs of our clients.</p>
                 Corporation to transform their
                 manufacturing facilities into a model of
                 energy efficiency and smart operations</p>
+
               <button
-                className="view-button-vertical"
-                onClick={() => setActivePage('Project3')}
-              >
-                Explore <ArrowRight size={16} />
-              </button>
+              className="view-button-vertical"
+              onClick={() => {
+                setActivePage('Project3');
+                window.location.hash = 'Project3'; // ✅ updates the URL
+              }}
+            >
+              Explore <ArrowRight size={16} />
+            </button>
             </div>
           </div>
 
@@ -81,17 +91,21 @@ unique needs of our clients.</p>
 
             </div>
             <div className="card-content">
-              <img src="Metal-logo.png" alt="rmz" className="mwlogo" />
+              <img src="rmz-logo.png" alt="rmz" className="rmzlogo" />
               <p className="category">Elements Energy is partnering with RMZ
                 Developers to integrate sustainable
                 energy solutions into their commercial
                 and mixed-use developments.</p>
+
               <button
-                className="view-button-vertical"
-                onClick={() => setActivePage('Project4')}
-              >
-                Explore <ArrowRight size={16} />
-              </button>
+              className="view-button-vertical"
+              onClick={() => {
+                setActivePage('Project4');
+                window.location.hash = 'Project4'; // ✅ updates the URL
+              }}
+            >
+              Explore <ArrowRight size={16} />
+            </button>
             </div>
             
           </div>
@@ -101,17 +115,21 @@ unique needs of our clients.</p>
 
             </div>
             <div className="card-content">
-              <img src="Metal-logo.png" alt="crown" className="mwlogo" />
+              <img src="crown-logo.png" alt="crown" className="crownlogo" />
               <p className="category">Elements Energy is enhancing the energy
-                performance of Crown Interiorz Mall by
+                performance of Crown Interior Mall by
                 implementing smart energy management
                 and optimization solutions.</p>
+              
               <button
-                className="view-button-vertical"
-                onClick={() => setActivePage('Project4')}
-              >
-                Explore <ArrowRight size={16} />
-              </button>
+              className="view-button-vertical"
+              onClick={() => {
+                setActivePage('Project5');
+                window.location.hash = 'Project5'; 
+              }}
+            >
+              Explore <ArrowRight size={16} />
+            </button>
             </div>
             
           </div>

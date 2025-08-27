@@ -25,7 +25,7 @@ const Project2 = () => {
           </div>
           <div className="hero-image-containerpro">
             <img 
-              src="https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=1200https://images.pexels.com/photos/159298/science-chemistry-lab-laboratory-159298.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="quantum-lab.png" 
               alt="State-of-the-art Quantum Computing Laboratory"
             />
             <div className="hero-image-overlay"></div>
@@ -77,7 +77,7 @@ const Project2 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="quantum2.png" 
               alt="Futuristic Laboratory Design Concept"
             />
             <div className="content-image-overlay"></div>
@@ -106,7 +106,7 @@ const Project2 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="quantum3.png" 
               alt="Modern Industrial Laboratory Design"
             />
             <div className="content-image-overlay"></div>
@@ -134,7 +134,7 @@ const Project2 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/159220/printed-circuit-board-print-plate-via-macro-159220.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="quantum4.png" 
               alt="Energy Efficient Technology Systems"
             />
             <div className="content-image-overlay"></div>
@@ -163,7 +163,7 @@ const Project2 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="quantum5.png" 
               alt="Premium Office Materials and Finishes"
             />
             <div className="content-image-overlay"></div>
@@ -196,7 +196,7 @@ const Project2 = () => {
             </div>
             <div className="content-image-wrapper">
               <img 
-                src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                src="quantum6.png" 
                 alt="Sustainable Technology Implementation"
               />
               <div className="content-image-overlay"></div>
