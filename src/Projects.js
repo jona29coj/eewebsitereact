@@ -97,7 +97,7 @@ unique needs of our clients.</p>
           </div>
           {/* Project 4 */}
           <div className="project-card vertical">
-            <div className="card-image3">
+            <div className="card-image4">
 
             </div>
             <div className="card-content">
