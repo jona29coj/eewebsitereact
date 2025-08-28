@@ -21,7 +21,7 @@
 .content-image-overlay {
     height: 50vh;
     width: 40vw;
-    border: 2px solid rgb(195, 195, 195);
+    object-fit: scale-down;
     display: flex;
     justify-content: center;
     align-items: center;

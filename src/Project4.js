@@ -8,14 +8,14 @@ const Project4 = ({ setActivePage }) => {
       <section className="hero-sectionpro">
         <div className="hero-content-wrapperpro">
           <div className="hero-contentpro">
-            <h1 className="hero-titlepro">Ecotech Factory</h1>
+            <h1 className="hero-titlepro">RMZ</h1>
             <p className="hero-subtitlepro">
-              Energy Optimization & Solar Integration
+              evaluate the potential for solar energy generation and lighting analysis​
             </p>
             <div className="hero-statspro">
               <div className="stat-item">
-                <div className="stat-number">18K</div>
-                <div className="stat-label">Square Feet</div>
+                <div className="stat-number">2.1K</div>
+                <div className="stat-label">Square Meter</div>
               </div>
               <div className="stat-item">
                 <div className="stat-number">2024</div>
@@ -25,8 +25,8 @@ const Project4 = ({ setActivePage }) => {
           </div>
           <div className="hero-image-containerpro">
             <img 
-              src="https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-              alt="Ecotech Factory Rooftop Solar"
+              src="rmz-factory.png" 
+              alt="rmz Factory Rooftop Solar"
             />
             <div className="hero-image-overlay"></div>
           </div>
@@ -42,15 +42,15 @@ const Project4 = ({ setActivePage }) => {
           <div className="details-grid">
             <div className="detail-card">
               <h3>Client</h3>
-              <p>Ecotech Factory</p>
+              <p> RMZ</p>
             </div>
             <div className="detail-card">
               <h3>Location</h3>
-              <p>Greater Noida, Uttar Pradesh, India</p>
+              <p>Bengaluru,India </p>
             </div>
             <div className="detail-card">
               <h3>Size</h3>
-              <p>Approx. 18,000 sqft</p>
+              <p>Approx. 2106 sq meters</p>
             </div>
           </div>
         </div>
@@ -68,15 +68,15 @@ const Project4 = ({ setActivePage }) => {
         <div className="content-layout">
           <div className="content-text">
             <p>
-              The Ecotech Factory in Greater Noida, India, aims to achieve energy efficiency and sustainability through the integration of solar energy and advanced lighting systems.
+              RMW in Bengaluru , India aims to achieve energy efficiency and sustainability through the integration of solar energy and advanced lighting systems.
             </p>
             <p>
-              With a total roof area of 20,430 sq. ft. and a proposed solar PV capacity of approximately 265 kW, this project reflects a commitment to carbon footprint reduction and long-term cost savings.
+              With a total roof area of 2,106 sq. meter. and a proposed solar PV capacity of approximately 446 kW, this project reflects a commitment to carbon footprint reduction and long-term cost savings.
             </p>
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="rmz2.png" 
               alt="Solar Rooftop Overview"
             />
             <div className="content-image-overlay"></div>
@@ -96,14 +96,14 @@ const Project4 = ({ setActivePage }) => {
         <div className="content-layout reverse">
           <div className="content-text">
             <ul>
-              <li><strong>Annual Solar Energy Production:</strong> 4,60,000 to 4,75,000 kWh/year</li>
-              <li><strong>Energy Savings:</strong> Approx. ₹38 lakhs annually</li>
-              <li><strong>Carbon Offset:</strong> 423,200 kg CO₂/year (equal to planting 20,152 trees)</li>
+              <li><strong>Annual Solar Energy Production:</strong> 5,50,000 to 5,70,000 kWh/year</li>
+              <li><strong>Energy Savings:</strong> Approx. ₹43 lakhs annually</li>
+              <li><strong>Carbon Offset:</strong> 466,060 kg CO₂/year (equal to planting 21,185 trees)</li>
             </ul>
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/159220/printed-circuit-board-print-plate-via-macro-159220.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="rmz4.png" 
               alt="Energy Monitoring"
             />
             <div className="content-image-overlay"></div>
@@ -117,18 +117,18 @@ const Project4 = ({ setActivePage }) => {
           <div className="section-number">03</div>
           <h2 className="section-title">Solar Panel Orientation</h2>
           <p className="section-description">
-            Tilted at 28° and aligned due south for peak efficiency
+            Tilted at 13° and aligned due North for peak efficiency
           </p>
         </div>
         <div className="content-layout">
           <div className="content-text">
             <p>
-              The system is carefully optimized for maximum solar exposure by aligning the panels to true south and tilting them at Noida’s latitude of 28°. This strategic setup ensures consistent energy generation throughout the year.
+              The system is carefully optimized for maximum solar exposure by aligning the panels to true North and tilting them at Bengaluru latitude of 13°. This strategic setup ensures consistent energy generation throughout the year.
             </p>
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="rmz3.png" 
               alt="Panel Installation Orientation"
             />
             <div className="content-image-overlay"></div>
@@ -148,12 +148,12 @@ const Project4 = ({ setActivePage }) => {
         <div className="content-layout reverse">
           <div className="content-text">
             <p>
-              Over 73% of indoor spaces require additional daylight enhancements to meet the ideal average daylight factor of 5% for precision tasks. The lighting ranges from 500 to 1,000 lux, ensuring workplace comfort and safety.
+              Over 50% of indoor spaces require additional daylight enhancements to meet the ideal average daylight factor of 3% for precision tasks. The lighting ranges from 500 to 1,000 lux, ensuring workplace comfort and safety.
             </p>
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="rmz5.png" 
               alt="Lighting Optimization"
             />
             <div className="content-image-overlay"></div>

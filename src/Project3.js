@@ -167,7 +167,7 @@ const Project3 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="mw5.png" 
+              src="mw6.png" 
               alt="Efficiency Recommendations"
             />
             <div className="content-image-overlay"></div>
@@ -191,7 +191,7 @@ const Project3 = () => {
           </div>
           <div className="content-image-wrapper">
             <img 
-              src="mw6.png" 
+              src="mw7.png" 
               alt="Operations"
               
             />
