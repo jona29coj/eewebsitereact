@@ -30,7 +30,7 @@ const teamMembers = [
     name: "Immanuvel",
     position: "Sustainability Analyst",
     description: "Works on designing sustainability assessments and carbon reduction strategies.",
-    image: "/images/team/neha.jpg"
+    image: "/team/Immanuvel.jpeg"
   },
     {
     id: 5,

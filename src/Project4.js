@@ -14,7 +14,7 @@ const Project4 = ({ setActivePage }) => {
             </p>
             <div className="hero-statspro">
               <div className="stat-item">
-                <div className="stat-number">2.1K</div>
+                <div className="stat-number">22K</div>
                 <div className="stat-label">Square Meter</div>
               </div>
               <div className="stat-item">
@@ -46,11 +46,11 @@ const Project4 = ({ setActivePage }) => {
             </div>
             <div className="detail-card">
               <h3>Location</h3>
-              <p>Bengaluru,India </p>
+              <p>Bengaluru,Karnataka,India </p>
             </div>
             <div className="detail-card">
               <h3>Size</h3>
-              <p>Approx. 2106 sq meters</p>
+              <p>Approx. 22668 sqft</p>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const Project4 = ({ setActivePage }) => {
               RMW in Bengaluru , India aims to achieve energy efficiency and sustainability through the integration of solar energy and advanced lighting systems.
             </p>
             <p>
-              With a total roof area of 2,106 sq. meter. and a proposed solar PV capacity of approximately 446 kW, this project reflects a commitment to carbon footprint reduction and long-term cost savings.
+              A proposed solar PV capacity of approximately 446 kW, this project reflects a commitment to carbon footprint reduction and long-term cost savings.
             </p>
           </div>
           <div className="content-image-wrapper">
@@ -123,7 +123,7 @@ const Project4 = ({ setActivePage }) => {
         <div className="content-layout">
           <div className="content-text">
             <p>
-              The system is carefully optimized for maximum solar exposure by aligning the panels to true North and tilting them at Bengaluru latitude of 13°. This strategic setup ensures consistent energy generation throughout the year.
+              The system is carefully optimized for maximum solar exposure by aligning the panels to true North and tilting them at Faridabad latitude of 13°. This strategic setup ensures consistent energy generation throughout the year.
             </p>
           </div>
           <div className="content-image-wrapper">
@@ -148,7 +148,7 @@ const Project4 = ({ setActivePage }) => {
         <div className="content-layout reverse">
           <div className="content-text">
             <p>
-              Over 50% of indoor spaces require additional daylight enhancements to meet the ideal average daylight factor of 3% for precision tasks. The lighting ranges from 500 to 1,000 lux, ensuring workplace comfort and safety.
+              Over 50% of indoor spaces require additional daylight enhancements to meet the ideal average daylight factor of 3% for precision tasks. The lighting ranges from 200 to 500 lux, ensuring workplace comfort and safety.
             </p>
           </div>
           <div className="content-image-wrapper">

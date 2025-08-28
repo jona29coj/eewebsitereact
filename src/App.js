@@ -576,10 +576,34 @@ useEffect(() => {
       {/* Subscribe */}
       <div className="col-md-3 ">
         <h5>Contact Us </h5>
-        <form className="subscribe-form d-flex mt-2">
-          <input type="email" placeholder="Email" className="form-control me-2" />
-          <button type="submit" className="btn btn-light">Send</button>
+        <form 
+          action="https://formsubmit.co/harshetha.venkatesan@gmail.com" 
+          method="POST" 
+          className="subscribe-form d-flex mt-2"
+        >
+          {/* Hidden FormSubmit fields */}
+          <input type="hidden" name="_subject" value="Contact email" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          {/* Email Input */}
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Email" 
+            className="form-control me-2" 
+            required
+          />
+
+          {/* Submit Button */}
+          <button 
+            type="submit" 
+            className="btn btn-light"
+          >
+            Send
+          </button>
         </form>
+
       </div>
       <div className="footer-bottom">
         © 2025 Elements Energy. All rights reserved.
