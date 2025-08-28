@@ -105,7 +105,7 @@ function Contact() {
 
               <form
                 className="contact-form"
-                action="https://formsubmit.co/harshetha.venkatesan@gmail.com" method="POST"
+                action="https://formsubmit.co/support@elementsenergies.com" method="POST"
               >
                 <input type="hidden" name="_subject" value="New Contact Message from Website" />
 

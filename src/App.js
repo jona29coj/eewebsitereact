@@ -409,7 +409,7 @@ useEffect(() => {
                   </button>
 
                   <form 
-                    action="https://formsubmit.co/harshetha.venkatesan@gmail.com" method="POST"
+                    action="https://formsubmit.co/support@elementsenergies.com" method="POST"
                     className="cta-form"
                     encType="multipart/form-data"
                   >
@@ -577,7 +577,7 @@ useEffect(() => {
       <div className="col-md-3 ">
         <h5>Contact Us </h5>
         <form 
-          action="https://formsubmit.co/harshetha.venkatesan@gmail.com" 
+          action="https://formsubmit.co/support@elementsenergies.com" 
           method="POST" 
           className="subscribe-form d-flex mt-2"
         >

@@ -60,7 +60,7 @@ function CareerSection() {
 
                 <form
                   className="cta-form"
-                  action="https://formsubmit.co/harshetha.venkatesan@gmail.com"
+                  action="https://formsubmit.co/support@elementsenergies.com"
                   method="POST"
                   
                 >
