@@ -27,7 +27,7 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Immanuvel",
+    name: "Immanuvel Martin",
     position: "Sustainability Analyst",
     description: "Works on designing sustainability assessments and carbon reduction strategies.",
     image: "/team/Immanuvel.jpeg"
