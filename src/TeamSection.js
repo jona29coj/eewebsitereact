@@ -34,7 +34,7 @@ const teamMembers = [
   },
     {
     id: 5,
-    name: "Tharun ",
+    name: "Tharun Aadith S ",
     position: "Electrical & Electronics Engineer",
     description: "Focused on hardware integration and smart energy systems.",
     image: "team/Tharun.jpg"
