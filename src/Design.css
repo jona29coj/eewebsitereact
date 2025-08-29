@@ -531,7 +531,7 @@
 }
 
 .label-top { top: 15%; left: 60%; }
-.label-middle { top: 47%; left: 60%; }
+.label-middle { top: 46.5%; left: 60%; }
 .label-bottom { top: 78%; left: 60%; }
 
 .design-label h4 {
@@ -549,7 +549,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
 }
 
 /* Strategies Grid */
