@@ -39,7 +39,7 @@ function Login() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('http://localhost:3000/login', {
+      const res = await fetch('https://elementsenergies.com/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData), // ✅ matches backend {username, password}
