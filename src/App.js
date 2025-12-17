@@ -5,7 +5,6 @@ import './App.css';
 import Partners from './Partner';
 import Solutions from './Solution';
 import About from './About';
-import VideoParallaxSection from './VideoParallax';
 import WhatDrivesUs from './WhatDriveUs';
 import ImpactStats from './ImpactStats';
 import Spotlight from './Spotlight';
@@ -507,7 +506,6 @@ useEffect(() => {
           <section className="section about-section"><About /></section>
           <section className="section drives-section"><WhatDrivesUs /></section>
           <section className="section solutions-section"><Solutions /></section>
-          <section className="section parallax-section"><VideoParallaxSection /></section>
           <section className="section impact-section"><ImpactStats /></section>
           <section className="section spotlight-section"><Spotlight /></section>
           <section className="section partners-section"><Partners /></section>
