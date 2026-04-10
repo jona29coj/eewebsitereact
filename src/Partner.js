@@ -15,6 +15,7 @@ const Partners = () => {
               {/* Logos repeated inline */}
               {Array.from({ length: 3 }).map((_, i) => (
                 <React.Fragment key={i}>
+                  <img src="/citi.jpeg" alt="Citi" style={{ maxHeight: '70px', margin: '0 40px' }} />
                   <img src="/partner1.png" alt="Partner 1" style={{ maxHeight: '60px', margin: '0 40px' }} />
                   <img src="/partner2.png" alt="Partner 2" style={{ maxHeight: '60px', margin: '0 40px' }} />
                   <img src="/partner3.png" alt="Partner 3" style={{ maxHeight: '60px', margin: '0 40px' }} />

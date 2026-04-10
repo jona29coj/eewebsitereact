@@ -61,7 +61,7 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
         display: 'flex',
         fontSize: 'clamp(1rem, 2vw, 1.2rem)',
         lineHeight: 1.3,
-        
+
         textAlign: 'left',
         fontWeight: '600',
         fontFamily:'Poppins, sans-serif',
@@ -81,8 +81,8 @@ function Typewriter({ texts, speed = 100, pause = 2000 }) {
           fontWeight: '600',
           display: 'inline-block',
           lineHeight:1.55,
-          
-          
+
+
           textAlign: 'left',
         }}
       >
@@ -210,16 +210,13 @@ useEffect(() => {
                     }}
                   >
                     <div className="text-start">
-                      <a href="#CompanySection" className="d-block fw-semibold text-dark text-decoration-none mb-1" onClick={() => setShowAboutMega(false)}>Company</a>
-                      <p className="text-muted mb-0 " style={{ fontSize: '12px' }}>Smart building layouts and passive energy strategies.</p>
+                      <a href="#CompanySection" className="d-block fw-semibold text-dark text-decoration-none mb-1 text-center" onClick={() => setShowAboutMega(false)}>Company</a>
+                      <p className="text-muted mb-0 text-center" style={{ fontSize: '12px' }}>Smart building layouts and passive energy strategies.</p>
                     </div>
+
                     <div className="text-start">
-                      <a href="#TeamSection" className="d-block fw-semibold text-dark text-decoration-none mb-1" onClick={() => setShowAboutMega(false)}>Team</a>
-                      <p className="text-muted mb-0" style={{ fontSize: '12px' }}>Efficient construction with integrated energy systems.</p>
-                    </div>
-                    <div className="text-start">
-                      <a href="#CareerSection" className="d-block fw-semibold text-dark text-decoration-none mb-1" onClick={() => setShowAboutMega(false)}>Career</a>
-                      <p className="text-muted mb-0" style={{ fontSize: '12px' }}>Manage and monitor usage with intelligent analytics.</p>
+                      <a href="#CareerSection" className="d-block fw-semibold text-dark text-decoration-none mb-1 text-center" onClick={() => setShowAboutMega(false)}>Career</a>
+                      <p className="text-muted mb-0 text-center" style={{ fontSize: '12px' }}>Manage and monitor usage with intelligent analytics.</p>
                     </div>
                   </div>
                 )}
@@ -304,12 +301,12 @@ useEffect(() => {
               <source src="hero.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            
+
            <Container
               className="hero-inner-text"
-              
+
             >
-              
+
                 <h1
                   style={{
                     fontSize: 'clamp(1.5rem, 3vw, 2rem)',
@@ -364,11 +361,11 @@ useEffect(() => {
                 >
                   Book a Free Energy Assessment
                 </Button>
-              
+
             </Container>
 
 
-           
+
 
             {showAssessmentForm && (
               <div className="form-overlay" style={{
@@ -391,8 +388,8 @@ useEffect(() => {
                   maxWidth: '500px',
                   position: 'relative'
                 }}>
-                  <button 
-                    className="close-button" 
+                  <button
+                    className="close-button"
                     onClick={() => setShowAssessmentForm(false)}
                     style={{
                       position: 'absolute',
@@ -407,7 +404,7 @@ useEffect(() => {
                     ×
                   </button>
 
-                  <form 
+                  <form
                     action="https://formsubmit.co/support@elementsenergies.com" method="POST"
                     className="cta-form"
                     encType="multipart/form-data"
@@ -415,16 +412,16 @@ useEffect(() => {
                     {/* FormSubmit hidden fields */}
                     <input type="hidden" name="_subject" value="New Energy Assessment Request" />
                     <input type="hidden" name="_captcha" value="false" />
-                    
+
                     <input type="hidden" name="_template" value="table" />
 
                     <div className="form-group" style={{ marginBottom: '1rem' }}>
                       <label style={{ display: 'block', marginBottom: '0.5rem' }}>Name</label>
-                      <input 
-                        type="text" 
-                        name="name" 
-                        placeholder="Your full name" 
-                        required 
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Your full name"
+                        required
                         style={{
                           width: '100%',
                           padding: '0.5rem',
@@ -436,11 +433,11 @@ useEffect(() => {
 
                     <div className="form-group" style={{ marginBottom: '1rem' }}>
                       <label style={{ display: 'block', marginBottom: '0.5rem' }}>Contact Number</label>
-                      <input 
-                        type="tel" 
-                        name="phone" 
-                        placeholder="Your contact number" 
-                        required 
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Your contact number"
+                        required
                         style={{
                           width: '100%',
                           padding: '0.5rem',
@@ -452,11 +449,11 @@ useEffect(() => {
 
                     <div className="form-group" style={{ marginBottom: '1rem' }}>
                       <label style={{ display: 'block', marginBottom: '0.5rem' }}>Email</label>
-                      <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Your email address" 
-                        required 
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Your email address"
+                        required
                         style={{
                           width: '100%',
                           padding: '0.5rem',
@@ -468,10 +465,10 @@ useEffect(() => {
 
                     <div className="form-group" style={{ marginBottom: '1rem' }}>
                       <label style={{ display: 'block', marginBottom: '0.5rem' }}>Subject</label>
-                      <input 
-                        type="text" 
-                        name="subject" 
-                        placeholder="Subject of message" 
+                      <input
+                        type="text"
+                        name="subject"
+                        placeholder="Subject of message"
                         style={{
                           width: '100%',
                           padding: '0.5rem',
@@ -481,8 +478,8 @@ useEffect(() => {
                       />
                     </div>
 
-                    <button 
-                      type="submit" 
+                    <button
+                      type="submit"
                       className="submit-button"
                       style={{
                         backgroundColor: '#28a745',
@@ -513,7 +510,7 @@ useEffect(() => {
       )}
 
       {activePage === 'Contact' && <Contact />}
-      
+
       {activePage === 'operate' && <Operate />}
       {activePage === 'Design' && <Design />}
       {activePage === 'Build' && <Build />}
@@ -534,7 +531,7 @@ useEffect(() => {
       {/* Logo + Follow Us */}
       <div className="col-md-3 ">
         <img src="/logo-white.png" alt="Elements Energy Logo" height="50" width="50" className="mb-3" />
-        
+
         <h5 className='follow' style={{marginTop:"23px"}}>Follow Us</h5>
         <div className="social-icons d-flex gap-3 mt-2">
           <a href="https://in.linkedin.com/company/elements.energies">
@@ -574,9 +571,9 @@ useEffect(() => {
       {/* Subscribe */}
       <div className="col-md-3 ">
         <h5>Contact Us </h5>
-        <form 
-          action="https://formsubmit.co/support@elementsenergies.com" 
-          method="POST" 
+        <form
+          action="https://formsubmit.co/support@elementsenergies.com"
+          method="POST"
           className="subscribe-form d-flex mt-2"
         >
           {/* Hidden FormSubmit fields */}
@@ -585,17 +582,17 @@ useEffect(() => {
           <input type="hidden" name="_template" value="table" />
 
           {/* Email Input */}
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Email" 
-            className="form-control me-2" 
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className="form-control me-2"
             required
           />
 
           {/* Submit Button */}
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="btn btn-light"
           >
             Send
